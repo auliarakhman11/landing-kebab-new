@@ -1,0 +1,49 @@
+@use 'base/variable' as *;
+@use 'base/mixin' as *;
+
+/* About 1 ---------------------------------- */
+
+.about-1-owner {
+    margin-top: 30px;
+    margin-bottom: 3px;
+
+    .box-title {
+        margin-bottom: 1px;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+@include xl {}
+
+/* About 2 ---------------------------------- */
+.img-box2 {
+    position: relative;
+    z-index: 2;
+
+    .img1 {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+
+        img {
+            border-radius: 30px;
+            width: 100%;
+        }
+    }
+}
+
+.about-wrap2 {
+    .checklist.style-line {
+        li {
+            color: $light-color;
+
+            &::before {
+                width: 60px;
+            }
+        }
+    }
+}
+
