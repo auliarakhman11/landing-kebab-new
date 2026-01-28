@@ -267,8 +267,8 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html"><img src="{{ asset('kebab') }}/img/logo.svg"
-                                        alt="Kebab Yasmin"></a>
+                                <a href="index.html"><img src="{{ asset('img') }}/kebab-yasmin.png"
+                                        alt="Kebab Yasmin" width="140px;"></a>
                             </div>
                         </div>
                         <div class="col-auto">
@@ -498,7 +498,7 @@ Hero Area
     <div class="th-hero-wrapper hero-2" id="hero">
         <img class="round-shape-bottom" src="{{ asset('kebab') }}/img/shape/shape-bottom.png" alt="img">
         <div class="shape-mockup movingX hero-shape-2-1" data-top="4%" data-left="5%">
-            <img src="{{ asset('kebab') }}/img/icon/hero-2-1.png" alt="img">
+            <img src="{{ asset('img') }}/ilustrasi-kebab.png" alt="img">
         </div>
         <div class="shape-mockup jump hero-shape-2-2" data-top="8%" data-right="5%">
             <img src="{{ asset('kebab') }}/img/icon/hero-2-2.png" alt="img">
@@ -521,10 +521,10 @@ Hero Area
                                         <div class="swiper-slide">
                                             <div class="hero-2-content-slider">
                                                 <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">welcome to Kebab Yasmin food</span>
+                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
                                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Delicious Pizza in the city</h1>
-                                                <div class="size-top-wrap style-2 " data-ani="slideinup"
+                                                    Surganya Ngebab!</h1>
+                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
                                                     data-ani-delay="0.6s">
                                                     <div class="size-item-wrap box-social">
                                                         <div class="box-btn">
@@ -539,16 +539,16 @@ Hero Area
                                                     data-ani-delay="0.8s">
                                                     <div class="price"> <span class="small-txt">Only</span> $45</div>
                                                     <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="hero-2-content-slider">
                                                 <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">welcome to Kebab Yasmin food</span>
+                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
                                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Your City’s Best Pizza Spot</h1>
-                                                <div class="size-top-wrap style-2 " data-ani="slideinup"
+                                                    Dari Banua, Untuk Selera Kita Semua.</h1>
+                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
                                                     data-ani-delay="0.6s">
                                                     <div class="size-item-wrap box-social">
                                                         <div class="box-btn">
@@ -563,16 +563,16 @@ Hero Area
                                                     data-ani-delay="0.8s">
                                                     <div class="price"> <span class="small-txt">Only</span> $65</div>
                                                     <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="hero-2-content-slider">
                                                 <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">welcome to Kebab Yasmin food</span>
+                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
                                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Where Pizza Dreams Come True</h1>
-                                                <div class="size-top-wrap style-2 " data-ani="slideinup"
+                                                    Full Daging, Anti Angin. Puas Sejak Gigitan Pertama</h1>
+                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
                                                     data-ani-delay="0.6s">
                                                     <div class="size-item-wrap box-social">
                                                         <div class="box-btn">
@@ -587,16 +587,16 @@ Hero Area
                                                     data-ani-delay="0.8s">
                                                     <div class="price"> <span class="small-txt">Only</span> $50</div>
                                                     <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="hero-2-content-slider">
                                                 <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">welcome to Kebab Yasmin food</span>
+                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
                                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    City’s Favorite Pizza Destination</h1>
-                                                <div class="size-top-wrap style-2 " data-ani="slideinup"
+                                                    Daging Melimpah, Kenyangnya Nggak Setengah-Setengah!</h1>
+                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
                                                     data-ani-delay="0.6s">
                                                     <div class="size-item-wrap box-social">
                                                         <div class="box-btn">
@@ -611,16 +611,16 @@ Hero Area
                                                     data-ani-delay="0.8s">
                                                     <div class="price"> <span class="small-txt">Only</span> $40</div>
                                                     <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="hero-2-content-slider">
                                                 <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">welcome to Kebab Yasmin food</span>
+                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
                                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Flavors That Melt in Your Mouth</h1>
-                                                <div class="size-top-wrap style-2 " data-ani="slideinup"
+                                                    Sensasi Crunchy & Juicy dalam Satu Gulungan</h1>
+                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
                                                     data-ani-delay="0.6s">
                                                     <div class="size-item-wrap box-social">
                                                         <div class="box-btn">
@@ -635,16 +635,16 @@ Hero Area
                                                     data-ani-delay="0.8s">
                                                     <div class="price"> <span class="small-txt">Only</span> $60</div>
                                                     <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="hero-2-content-slider">
                                                 <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">welcome to Kebab Yasmin food</span>
+                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
                                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Indulge in Cheesy Goodness</h1>
-                                                <div class="size-top-wrap style-2 " data-ani="slideinup"
+                                                    Isian Padat, Nikmatnya Dahsyat</h1>
+                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
                                                     data-ani-delay="0.6s">
                                                     <div class="size-item-wrap box-social">
                                                         <div class="box-btn">
@@ -659,7 +659,7 @@ Hero Area
                                                     data-ani-delay="0.8s">
                                                     <div class="price"> <span class="small-txt">Only</span> $55</div>
                                                     <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
 
@@ -679,32 +679,32 @@ Hero Area
 
                                 <div class="swiper-slide">
                                     <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('kebab') }}/img/hero/hero-2-1.png" alt="img">
+                                        <img src="{{ asset('awal') }}/1.jpg" alt="img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('kebab') }}/img/hero/hero-2-2.png" alt="img">
+                                        <img src="{{ asset('awal') }}/2.jpg" alt="img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('kebab') }}/img/hero/hero-2-3.png" alt="img">
+                                        <img src="{{ asset('awal') }}/3.jpg" alt="img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('kebab') }}/img/hero/hero-2-1.png" alt="img">
+                                        <img src="{{ asset('awal') }}/4.jpg" alt="img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('kebab') }}/img/hero/hero-2-2.png" alt="img">
+                                        <img src="{{ asset('awal') }}/5.jpg" alt="img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('kebab') }}/img/hero/hero-2-3.png" alt="img">
+                                        <img src="{{ asset('awal') }}/6.jpg" alt="img">
                                     </div>
                                 </div>
                             </div>
@@ -724,7 +724,7 @@ Hero Area
     <!--==============================
 Category Area
 ==============================-->
-    <section class="category-features space space-extra-bottom space-extra-top overflow-hidden" id="category-sec">
+    {{-- <section class="category-features space space-extra-bottom space-extra-top overflow-hidden" id="category-sec">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xxl-10">
@@ -755,12 +755,13 @@ Category Area
                 </div>
             </div>
         </div>
-    </section><!--==============================
+    </section> --}}
+    <!--==============================
 Process Area
 ==============================-->
     <section class="space-bottom overflow-hidden">
         <div class="shape-mockup movingX d-xl-block d-none" data-top="0%" data-left="7%">
-            <img src="{{ asset('kebab') }}/img/icon/blog-1-1.png" alt="img">
+            <img src="{{ asset('img') }}/ilustrasi-kebab.png" alt="img" width="110px;">
         </div>
         <div class="shape-mockup movingX d-xl-block d-none" data-top="0%" data-right="5%">
             <img src="{{ asset('kebab') }}/img/icon/progress-2-1.png" alt="img">
@@ -775,8 +776,8 @@ Process Area
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="title-area text-center mb-60">
-                        <span class="sub-title style-2 text-anime-style-1">Working Process</span>
-                        <h2 class="sec-title text-anime-style-2"> About Our Pizza-Making Process</h2>
+                        <span class="sub-title style-2 text-anime-style-1">Cerita Kami</span>
+                        <h2 class="sec-title text-anime-style-2"> Tentang Kebab Yasmin</h2>
                         <p class="box-text pe-xl-5 ps-xl-5 text-anime-style-3">The concept of “quick food” actually
                             dates back to ancient civilizations, where street vendors and food stalls offered simple,
                         </p>
@@ -786,7 +787,7 @@ Process Area
             <div class="row gy-40 justify-content-center">
                 <div class="col-xl-7">
                     <div class="process-thumb-wrap me-xl-4">
-                        <div class="process-2-icon" data-bg-src="">
+                        {{-- <div class="process-2-icon" data-bg-src="">
                             <img class="prog-2-circle" src="{{ asset('kebab') }}/img/icon/prog-2-circle.png"
                                 alt="img">
                             <div class="logo-icon-wrap">
@@ -800,37 +801,31 @@ Process Area
                                     <span class="logo-animation">BOOK PRIVATE DINING & BANQUET ROOMS*</span>
                                 </div>
                             </div>
+                        </div> --}}
+                        <div class="thumb global-img">
+                            <img src="{{ asset('awal') }}/history1.png" alt="img">
                         </div>
                         <div class="thumb global-img">
-                            <img src="{{ asset('kebab') }}/img/process/process-2-1.jpg" alt="img">
-                        </div>
-                        <div class="thumb global-img">
-                            <img src="{{ asset('kebab') }}/img/process/process-2-2.jpg" alt="img">
+                            <img src="{{ asset('awal') }}/history2.png" alt="img">
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-5">
                     <div class="progress-content-wrap">
                         <div class="progress-item wow fadeinup" data-wow-delay=".2s">
-                            <h4 class="count">Step - 01</h4>
-                            <h4 class="box-title">Fresh Dough, Hand-Stretched</h4>
-                            <p class="box-text">We start with our house-made dough, prepared daily using premium flour
-                                and allowed to rise for the perfect crust. Each pizza base is hand-stretched to order no
-                                machines, just skill and care.</p>
+                            <h4 class="count">The Origin Story (Cerita Awal Mula)</h4>
+                            <h4 class="box-title">Berawal dari Gerobak Sederhana di Kampung Melayu.</h4>
+                            <p class="box-text">Awal Sederhana (2012) Semuanya bermula pada tahun 2012, dari sebuah gerobak sederhana di pinggir Jalan Kampung Melayu Darat, Banjarmasin. Nama "Yasmin" sendiri diambil dari nama putri pertamanya, sebuah simbol cinta dan harapan besar.</p>
                         </div>
                         <div class="progress-item wow fadeinup" data-wow-delay=".4s">
-                            <h4 class="count">Step - 02</h4>
-                            <h4 class="box-title">Sauced & Topped to Perfection</h4>
-                            <p class="box-text">Next comes our signature pizza sauce, crafted from ripe tomatoes and
-                                savory herbs. Then we add your favorite toppings — from melty mozzarella to pepperoni,
-                                veggies, or gourmet extras — all fresh and full of flavor.</p>
+                            <h4 class="count">Visi & Nilai (Our Values)</h4>
+                            <h4 class="box-title">The Real Premium Kebab Experience.</h4>
+                            <p class="box-text">Sang pendiri memulai Kebab Yasmin dengan satu visi sederhana: menyajikan kebab dengan porsi yang "jujur"—daging yang melimpah dan rasa yang tidak setengah-setengah.</p>
                         </div>
                         <div class="progress-item wow fadeinup" data-wow-delay=".6s">
-                            <h4 class="count">Step - 03</h4>
-                            <h4 class="box-title">Fired Up & Ready to Serve</h4>
-                            <p class="box-text">Finally, we bake your pizza in a high-temperature oven until the crust
-                                is golden, the cheese is bubbling, and the toppings are perfectly cooked. It’s sliced
-                                hot and served fresh — ready to satisfy your cravings!</p>
+                            <h4 class="count">Asli Banua</h4>
+                            <h4 class="box-title">10+ Tahun Melayani</h4>
+                            <p class="box-text">Menjadi Favorit Lokal Kini, lebih dari satu dekade kemudian, Kebab Yasmin telah tumbuh menjadi ikon kuliner lokal dengan puluhan outlet yang tersebar di Banjarmasin hingga Palangkaraya.</p>
                         </div>
                     </div>
                 </div>
