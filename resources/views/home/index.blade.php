@@ -498,7 +498,7 @@ Hero Area
     <div class="th-hero-wrapper hero-2" id="hero">
         <img class="round-shape-bottom" src="{{ asset('kebab') }}/img/shape/shape-bottom.png" alt="img">
         <div class="shape-mockup movingX hero-shape-2-1" data-top="4%" data-left="5%">
-            <img src="{{ asset('img') }}/ilustrasi-kebab.png" alt="img">
+            <img src="{{ asset('img') }}/ilustrasi-kebab.png" alt="img" width="130px;">
         </div>
         <div class="shape-mockup jump hero-shape-2-2" data-top="8%" data-right="5%">
             <img src="{{ asset('kebab') }}/img/icon/hero-2-2.png" alt="img">
@@ -815,17 +815,23 @@ Process Area
                         <div class="progress-item wow fadeinup" data-wow-delay=".2s">
                             <h4 class="count">The Origin Story (Cerita Awal Mula)</h4>
                             <h4 class="box-title">Berawal dari Gerobak Sederhana di Kampung Melayu.</h4>
-                            <p class="box-text">Awal Sederhana (2012) Semuanya bermula pada tahun 2012, dari sebuah gerobak sederhana di pinggir Jalan Kampung Melayu Darat, Banjarmasin. Nama "Yasmin" sendiri diambil dari nama putri pertamanya, sebuah simbol cinta dan harapan besar.</p>
+                            <p class="box-text">Awal Sederhana (2012) Semuanya bermula pada tahun 2012, dari sebuah
+                                gerobak sederhana di pinggir Jalan Kampung Melayu Darat, Banjarmasin. Nama "Yasmin"
+                                sendiri diambil dari nama putri pertamanya, sebuah simbol cinta dan harapan besar.</p>
                         </div>
                         <div class="progress-item wow fadeinup" data-wow-delay=".4s">
                             <h4 class="count">Visi & Nilai (Our Values)</h4>
-                            <h4 class="box-title">The Real Premium Kebab Experience.</h4>
-                            <p class="box-text">Sang pendiri memulai Kebab Yasmin dengan satu visi sederhana: menyajikan kebab dengan porsi yang "jujur"—daging yang melimpah dan rasa yang tidak setengah-setengah.</p>
+                            <h4 class="box-title">Kualitas Terjaga, Rasa Tak Pernah Berubah.</h4>
+                            <p class="box-text">Sang pendiri memulai Kebab Yasmin dengan satu visi sederhana:
+                                menyajikan kebab dengan porsi yang "jujur"—daging yang melimpah dan rasa yang tidak
+                                setengah-setengah.</p>
                         </div>
                         <div class="progress-item wow fadeinup" data-wow-delay=".6s">
                             <h4 class="count">Asli Banua</h4>
                             <h4 class="box-title">10+ Tahun Melayani</h4>
-                            <p class="box-text">Menjadi Favorit Lokal Kini, lebih dari satu dekade kemudian, Kebab Yasmin telah tumbuh menjadi ikon kuliner lokal dengan puluhan outlet yang tersebar di Banjarmasin hingga Palangkaraya.</p>
+                            <p class="box-text">Menjadi Favorit Lokal Kini, lebih dari satu dekade kemudian, Kebab
+                                Yasmin telah tumbuh menjadi ikon kuliner lokal dengan puluhan outlet yang tersebar di
+                                Banjarmasin hingga Palangkaraya.</p>
                         </div>
                     </div>
                 </div>
@@ -840,8 +846,10 @@ Category Area
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-8">
                     <div class="title-area ">
-                        <span class="sub-title style-2 before-none text-anime-style-1">Our Delicious Pizzas</span>
-                        <h2 class="sec-title text-anime-style-2">Our Signature <span class="text-theme">Pizza's</span>
+                        <span class="sub-title style-2 before-none text-anime-style-1">The Real Premium Kebab
+                            Experience</span>
+                        <h2 class="sec-title text-anime-style-2">Menu Terbaik <span class="text-theme">Kebab
+                                Yasmin</span>
                         </h2>
                     </div>
                 </div>
@@ -862,173 +870,30 @@ Category Area
                 <div class="swiper th-slider" id="catSlider3"
                     data-slider-options='{"autoplay":true,"loop":true,"breakpoints":{"0":{"slidesPerView":1},"400":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"},"1400":{"slidesPerView":"4"}}}'>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="category-card style-2">
-                                <div class="box-icon">
-                                    <img src="{{ asset('kebab') }}/img/category/category_2-1.png" alt="Image">
-                                    <div class="actions">
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="th-social">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <h3 class="box-title"><a href="shop.html">Tofu Sicilian Pizza</a></h3>
-                                <p class="box-subtitle">$16.00</p>
-                            </div>
-                        </div>
 
-                        <div class="swiper-slide">
-                            <div class="category-card style-2">
-                                <div class="box-icon">
-                                    <img src="{{ asset('kebab') }}/img/category/category_2-2.png" alt="Image">
-                                    <div class="actions">
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
+                        @foreach ($terlaris as $t)
+                            <div class="swiper-slide">
+                                <div class="category-card style-2">
+                                    <div class="box-icon">
+                                        <img src="https://admin.kebabyasmin.id/{{ $t->foto }}" alt="Image"
+                                            height="286px;">
+                                        {{-- <div class="actions">
+                                            <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
+                                            <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
+                                        </div> --}}
                                     </div>
-                                </div>
-                                <div class="th-social">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <h3 class="box-title"><a href="shop.html">Italiano Pizza</a></h3>
-                                <p class="box-subtitle">$22.00</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="category-card style-2">
-                                <div class="box-icon">
-                                    <img src="{{ asset('kebab') }}/img/category/category_2-3.png" alt="Image">
-                                    <div class="actions">
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
+                                    <div class="th-social">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
                                     </div>
+                                    <h3 class="box-title"><a href="shop.html">{{ $t->nm_produk }}</a></h3>
+                                    <p class="box-subtitle">Rp.{{ $t->harga_normal }}</p>
                                 </div>
-                                <div class="th-social">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <h3 class="box-title"><a href="shop.html">pepperoni pizza</a></h3>
-                                <p class="box-subtitle">$26.00</p>
                             </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="category-card style-2">
-                                <div class="box-icon">
-                                    <img src="{{ asset('kebab') }}/img/category/category_2-4.png" alt="Image">
-                                    <div class="actions">
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="th-social">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <h3 class="box-title"><a href="shop.html">Bacon Italian Pizza</a></h3>
-                                <p class="box-subtitle">$29.00</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="category-card style-2">
-                                <div class="box-icon">
-                                    <img src="{{ asset('kebab') }}/img/category/category_2-1.png" alt="Image">
-                                    <div class="actions">
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="th-social">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <h3 class="box-title"><a href="shop.html">Tofu Sicilian Pizza</a></h3>
-                                <p class="box-subtitle">$16.00</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="category-card style-2">
-                                <div class="box-icon">
-                                    <img src="{{ asset('kebab') }}/img/category/category_2-2.png" alt="Image">
-                                    <div class="actions">
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="th-social">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <h3 class="box-title"><a href="shop.html">Italiano Pizza</a></h3>
-                                <p class="box-subtitle">$22.00</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="category-card style-2">
-                                <div class="box-icon">
-                                    <img src="{{ asset('kebab') }}/img/category/category_2-3.png" alt="Image">
-                                    <div class="actions">
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="th-social">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <h3 class="box-title"><a href="shop.html">pepperoni pizza</a></h3>
-                                <p class="box-subtitle">$26.00</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="category-card style-2">
-                                <div class="box-icon">
-                                    <img src="{{ asset('kebab') }}/img/category/category_2-4.png" alt="Image">
-                                    <div class="actions">
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="th-social">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <h3 class="box-title"><a href="shop.html">Bacon Italian Pizza</a></h3>
-                                <p class="box-subtitle">$29.00</p>
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>
@@ -1231,8 +1096,8 @@ Cta Area
                             <div class="title-area mb-40">
                                 <span class="sub-title before-none style-2 text-anime-style-1"> Reservation
                                     table</span>
-                                <h2 class="sec-title text-anime-style-2">Book a <span
-                                        class="text-theme">Table</span></h2>
+                                <h2 class="sec-title text-anime-style-2">Book a <span class="text-theme">Table</span>
+                                </h2>
                                 <p class="box-text text-anime-style-3">*reservations recommended</p>
                             </div>
                             <form>
@@ -1243,8 +1108,7 @@ Cta Area
                                         <i class="fal fa-user"></i>
                                     </div>
                                     <div class="form-group">
-                                        <input type="date" class="form-control" name="email"
-                                            id="email">
+                                        <input type="date" class="form-control" name="email" id="email">
                                     </div>
                                     <div class="form-group">
                                         <input type="time" class="form-control" name="number" id="number"
@@ -1464,8 +1328,8 @@ Blog Area
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <a class="author text-white" href="blog.html"><i
-                                                class="fal fa-user"></i>By Jonson</a>
+                                        <a class="author text-white" href="blog.html"><i class="fal fa-user"></i>By
+                                            Jonson</a>
                                         <a class="text-white" href="blog.html"><i class="fal fa-calendar"></i>12
                                             April, 2025</a>
                                     </div>
@@ -1485,8 +1349,8 @@ Blog Area
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <a class="author text-white" href="blog.html"><i
-                                                class="fal fa-user"></i>By Jonson</a>
+                                        <a class="author text-white" href="blog.html"><i class="fal fa-user"></i>By
+                                            Jonson</a>
                                         <a class="text-white" href="blog.html"><i class="fal fa-calendar"></i>16
                                             March, 2025</a>
                                     </div>
@@ -1506,8 +1370,8 @@ Blog Area
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <a class="author text-white" href="blog.html"><i
-                                                class="fal fa-user"></i>By Jonson</a>
+                                        <a class="author text-white" href="blog.html"><i class="fal fa-user"></i>By
+                                            Jonson</a>
                                         <a class="text-white" href="blog.html"><i class="fal fa-calendar"></i>17
                                             June, 2025</a>
                                     </div>
@@ -1527,8 +1391,8 @@ Blog Area
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <a class="author text-white" href="blog.html"><i
-                                                class="fal fa-user"></i>By Jonson</a>
+                                        <a class="author text-white" href="blog.html"><i class="fal fa-user"></i>By
+                                            Jonson</a>
                                         <a class="text-white" href="blog.html"><i class="fal fa-calendar"></i>12
                                             April, 2025</a>
                                     </div>
