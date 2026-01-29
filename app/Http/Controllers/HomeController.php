@@ -12,7 +12,8 @@ class HomeController extends Controller
 
         return view('home.index', [
             'title' => 'Home',
-            'terlaris' => Produk::where('status', 'ON')->where('hapus', 0)->where('terlaris', 1)->orderBy('possition', 'ASC')->get(),
+            'terlaris' => Produk::select('produk.*', 'harga.harga')->leftJoin('harga', 'produk.id', '=', 'harga.produk_id')->where('harga.delivery_id', 1)->where('status', 'ON')->where('hapus', 0)->where('terlaris', 1)->groupBy('produk.id')->orderBy('possition', 'ASC')->get(),
+            'kombo' => Produk::select('produk.*', 'harga.harga')->leftJoin('harga', 'produk.id', '=', 'harga.produk_id')->where('harga.delivery_id', 1)->where('status', 'ON')->where('hapus', 0)->where('kategori_id', 5)->where('harga.harga', '>=', 1)->groupBy('produk.id')->orderBy('possition', 'ASC')->get(),
         ]);
     }
 }

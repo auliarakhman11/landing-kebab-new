@@ -77,7 +77,7 @@
         <button class="th-btn preloaderCls">Cancel Preloader </button>
         <div id="preloader" class="preloader-inner">
             <div class="header-logo pb-2">
-                <a href="index.html"><img class="jump" src="{{ asset('img') }}//kebab-yasmin-putih.png"
+                <a href=""><img class="jump" src="{{ asset('img') }}//kebab-yasmin-putih.png"
                         alt="Kebab Yasmin"></a>
             </div>
             <div class="txt-loading">
@@ -183,14 +183,14 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="{{ asset('kebab') }}/img/logo.svg" alt="Kebab Yasmin"></a>
+                <a href=""><img src="{{ asset('kebab') }}/img/logo.svg" alt="Kebab Yasmin"></a>
             </div>
-            <div class="th-mobile-menu">
+            {{-- <div class="th-mobile-menu">
                 <ul>
                     <li class="menu-item-has-children">
-                        <a href="index.html">HOME</a>
+                        <a href="">HOME</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">01. Home (Fast Food Restaurant)</a></li>
+                            <li><a href="">01. Home (Fast Food Restaurant)</a></li>
                             <li><a href="home-2.html">02. Home (Pizza Restaurant)</a></li>
                             <li><a href="home-3.html">03. Home (Fine Dining)</a></li>
                             <li><a href="home-4.html">04. Home (Food Restaurant)</a></li>
@@ -224,7 +224,7 @@
                                     <li><a href="wishlist.html">Wishlist</a></li>
                                 </ul>
                             </li>
-                            <li><a href="reservation.html">Reservation</a></li>
+                            <li><a href="">Reservation</a></li>
                             <li><a href="team.html">Our Chef</a></li>
                             <li><a href="team-details.html">Chef Details</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
@@ -244,7 +244,7 @@
                         <a href="contact.html">CONTACT</a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
     </div><!-- <div class="color-scheme-wrap active">
     <button class="switchIcon"><i class="fa-solid fa-palette"></i></button>
@@ -267,15 +267,15 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html"><img src="{{ asset('img') }}/kebab-yasmin.png"
-                                        alt="Kebab Yasmin" width="140px;"></a>
+                                <a href=""><img src="{{ asset('img') }}/kebab-yasmin.png" alt="Kebab Yasmin"
+                                        width="140px;"></a>
                             </div>
                         </div>
                         <div class="col-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
-                                <ul>
+                                {{-- <ul>
                                     <li class="menu-item-has-children">
-                                        <a href="index.html">HOME</a>
+                                        <a href="">HOME</a>
                                         <ul class="mega-menu mega-menu-content allow-natural-scroll">
                                             <li>
                                                 <div class="container">
@@ -286,11 +286,11 @@
                                                                     <img src="{{ asset('kebab') }}/img/pages/index.jpg"
                                                                         alt="Home One">
                                                                     <div class="btn-wrap">
-                                                                        <a href="index.html"
-                                                                            class="th-btn style3">View Demo</a>
+                                                                        <a href="" class="th-btn style3">View
+                                                                            Demo</a>
                                                                     </div>
                                                                 </div>
-                                                                <h3 class="mega-menu-title"><a href="index.html">01.
+                                                                <h3 class="mega-menu-title"><a href="">01.
                                                                         Home (Fast Food Restaurant)</a></h3>
                                                             </div>
                                                         </div>
@@ -446,7 +446,7 @@
                                                     <li><a href="wishlist.html">Wishlist</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="reservation.html">Reservation</a></li>
+                                            <li><a href="">Reservation</a></li>
 
                                             <li><a href="team.html">Our Chef</a></li>
                                             <li><a href="team-details.html">Chef Details</a></li>
@@ -466,26 +466,26 @@
                                     <li>
                                         <a href="contact.html">CONTACT</a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </nav>
-                            <div class="header-button d-flex d-lg-none">
+                            {{-- <div class="header-button d-flex d-lg-none">
                                 <button type="button" class="icon-btn sideMenuToggler">
                                     <span class="badge">5</span>
                                     <i class="fa-regular fa-cart-shopping"></i>
                                 </button>
                                 <button type="button" class="icon-btn th-menu-toggle"><i
                                         class="far fa-bars"></i></button>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-auto d-none d-xl-block">
                             <div class="header-button">
-                                <button type="button" class="icon-btn searchBoxToggler"><i
+                                {{-- <button type="button" class="icon-btn searchBoxToggler"><i
                                         class="far fa-search"></i></button>
                                 <button type="button" class="icon-btn sideMenuToggler">
                                     <span class="badge">5</span>
                                     <i class="fa-regular fa-cart-shopping"></i>
-                                </button>
-                                <a href="reservation.html" class="th-btn btn-mask">RESERVE A TABLE</a>
+                                </button> --}}
+                                <a href="" class="th-btn btn-mask">ORDER ONLINE</a>
                             </div>
                         </div>
                     </div>
@@ -876,7 +876,7 @@ Category Area
                                 <div class="category-card style-2">
                                     <div class="box-icon">
                                         <img src="https://admin.kebabyasmin.id/{{ $t->foto }}" alt="Image"
-                                            height="286px;">
+                                            style="max-height: 286px;">
                                         {{-- <div class="actions">
                                             <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
                                             <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
@@ -890,7 +890,7 @@ Category Area
                                         <i class="fa-solid fa-star"></i>
                                     </div>
                                     <h3 class="box-title"><a href="shop.html">{{ $t->nm_produk }}</a></h3>
-                                    <p class="box-subtitle">Rp.{{ $t->harga_normal }}</p>
+                                    <p class="box-subtitle">Rp.{{ number_format($t->harga, 0) }}</p>
                                 </div>
                             </div>
                         @endforeach
@@ -913,10 +913,11 @@ History Area
                 <div class="col-xl-6 col-lg-6">
                     <div class="title-area text-center mb-40">
                         <span class="sub-title style-2 text-anime-style-1">Best Deals</span>
-                        <h2 class="sec-title text-anime-style-2">Best Pizza <span class="text-theme">Deals &
+                        <h2 class="sec-title text-anime-style-2">Best Kebab <span class="text-theme">Deals &
                                 Combos</span></h2>
-                        <p class="box-text pe-xl-5 ps-xl-5 text-anime-style-3">The concept of “quick food” actually
-                            dates back to ancient civilizations, where street vendors and food stalls offered simple,
+                        <p class="box-text pe-xl-5 ps-xl-5 text-anime-style-3">Konsep "makanan cepat saji" sebenarnya
+                            sudah ada sejak peradaban kuno, di mana pedagang kaki lima dan warung makan menawarkan
+                            makanan sederhana,
                         </p>
                     </div>
                 </div>
@@ -924,70 +925,42 @@ History Area
             <div class="row gy-4 justify-content-center">
                 <div class="col-lg-3">
                     <div class="best-deal-img-1-1 global-img">
-                        <img src="{{ asset('kebab') }}/img/menu/menu-big-1-1.jpg" alt="img">
+                        {{-- <img src="{{ asset('kebab') }}/img/menu/menu-big-1-1.jpg" alt="img"> --}}
+                        <img src="{{ asset('awal') }}/ilustrasi-kebab.png" alt="img">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="menu-1-content-wrap style-2 ms-xl-5">
-                        <div class="menu-item-1  wow fadeinup" data-wow-delay=".2s">
 
-                            <div class="thumb global-img"
-                                data-mask-src="{{ asset('kebab') }}/img/bg/menu-1-msk-bg.jpg">
-                                <img src="{{ asset('kebab') }}/img/menu/menu-1-item-1-1.jpg" alt="img">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="box-title"><a href="shop-details.html">Combo 1: Classic Duo Deal</a>
-                                    </h3>
-                                    <p class="box-text">2 Large Pizza + Garlic Bread + 4 Soft Drinks</p>
+                        @foreach ($kombo as $km)
+                            <div class="menu-item-1  wow fadeinup" data-wow-delay=".2s">
+                                <div class="thumb global-img"
+                                    data-mask-src="https://admin.kebabyasmin.id/{{ $km->foto }}">
+                                    <img src="https://admin.kebabyasmin.id/{{ $km->foto }}" alt="img"
+                                        width="84px;">
                                 </div>
-                                <div class="right">
-                                    <h4 class="price"> <span>$</span> 40</h4>
+                                <div class="content">
+                                    <div class="left">
+                                        <h3 class="box-title"><a href="shop-details.html">{{ $km->nm_produk }}</a>
+                                        </h3>
+                                        {{-- <p class="box-text">2 Large Pizza + Garlic Bread + 4 Soft Drinks</p> --}}
+                                    </div>
+                                    <div class="right">
+                                        <h4 class="price"> <span>Rp.</span> {{ number_format($km->harga, 0) }}</h4>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="menu-item-1  wow fadeinup" data-wow-delay=".4s">
+                        @endforeach
 
-                            <div class="thumb global-img"
-                                data-mask-src="{{ asset('kebab') }}/img/bg/menu-1-msk-bg.jpg">
-                                <img src="{{ asset('kebab') }}/img/menu/menu-1-item-1-2.jpg" alt="img">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="box-title"><a href="shop-details.html">Combo 2: Family Feast</a></h3>
-                                    <p class="box-text">2 Medium Pizza + 2 Side + 1 Dessert + 4 Soft Drinks</p>
-                                </div>
-                                <div class="right">
-                                    <h4 class="price"> <span>$</span> 60</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-item-1  wow fadeinup" data-wow-delay=".6s">
-
-                            <div class="thumb global-img"
-                                data-mask-src="{{ asset('kebab') }}/img/bg/menu-1-msk-bg.jpg">
-                                <img src="{{ asset('kebab') }}/img/menu/menu-1-item-1-3.jpg" alt="img">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="box-title"><a href="shop-details.html">Combo 3: Solo Snack Pack</a>
-                                    </h3>
-                                    <p class="box-text">1 Personal Pizza + Fries + 1 Drinks</p>
-                                </div>
-                                <div class="right">
-                                    <h4 class="price"> <span>$</span> 30</h4>
-                                </div>
-                            </div>
-                        </div>
                         <div class="text-center mt-5 pt-xl-3">
-                            <a href="reservation.html" class="th-btn btn-mask">Order Now</a>
+                            <a href="" class="th-btn btn-mask">Order Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="best-deal-img-1-2 gsap-scroll-float-up">
-                        <img src="{{ asset('kebab') }}/img/menu/menu-big-1-2.jpg" alt="img">
+                        <img src="{{ asset('awal') }}/ilustrasi-kebab2.png" alt="img">
                     </div>
                 </div>
             </div>
@@ -1008,35 +981,38 @@ Error Area
                             <div class="title-area mb-40">
                                 <span class="sub-title before-none style-2 text-anime-style-1"> Order Online – Fast
                                     Delivery</span>
-                                <h2 class="sec-title text-white text-anime-style-2">We have good <span
-                                        class="text-theme">food and fast</span> delivery here.</h2>
-                                <p class="box-text text-white text-anime-style-3">Indulge in a gourmet journey with a
-                                    menu that showcases a fusion of flavors. Our chefs use the finest ingredients to
-                                    create dishes that are not just meals but unforgettable experiences. Next comes our
-                                    signature pizza sauce,</p>
+                                <h2 class="sec-title text-white text-anime-style-2">Kami punya <span
+                                        class="text-theme">makanan enak</span> & <span class="text-theme">pembuatan
+                                        cepat</span> disini.</h2>
+                                <p class="box-text text-white text-anime-style-3">Manjakan lidah Anda dalam petualangan
+                                    rasa istimewa lewat menu kebab premium kami. Setiap gulungan dibuat dari daging sapi
+                                    panggang pilihan dan sayuran segar berkualitas, menciptakan hidangan yang bukan
+                                    sekadar pengganjal lapar, tapi sebuah pengalaman kuliner tak terlupakan. Semua
+                                    disajikan dengan layanan cepat tanpa mengurangi kualitas, disempurnakan dengan
+                                    signature sauce kami yang kaya rasa,</p>
                             </div>
                             <div class="delivery-item-wrap pe-xl-5">
                                 <div class="item wow fadeinup" data-wow-delay=".2s">
-                                    <h4 class="box-title">Delivery In 30 Minutes</h4>
-                                    <p class="box-text">We start with our house-made.</p>
+                                    <h4 class="box-title">Order Online</h4>
+                                    <p class="box-text">Bisa diorder dari rumah.</p>
                                 </div>
                                 <div class="item wow fadeinup" data-wow-delay=".4s">
-                                    <h4 class="box-title">Free Shipping $00.00</h4>
-                                    <p class="box-text">We start with our house-made.</p>
+                                    <h4 class="box-title">Pembuatan cepat</h4>
+                                    <p class="box-text">Kamu OTW kami Selesai Masak.</p>
                                 </div>
                                 <div class="item wow fadeinup" data-wow-delay=".6s">
-                                    <h4 class="box-title">On the Way Tracing</h4>
-                                    <p class="box-text">We start with our house-made.</p>
+                                    <h4 class="box-title">Premium & Instan</h4>
+                                    <p class="box-text">Perpaduan sempurna antara kecepatan dan kemewahan rasa.</p>
                                 </div>
                                 <div class="item order wow fadeinup" data-wow-delay=".8s">
-                                    <a href="reservation.html" class="th-btn btn-mask">Order Now</a>
+                                    <a href="" class="th-btn btn-mask">Order Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6">
                         <div class="order-right wow fadeinright">
-                            <img src="{{ asset('kebab') }}/img/order/order-online-1.png" alt="img">
+                            <img src="{{ asset('awal') }}/ilustrasi-kebab3.png" alt="img">
                         </div>
                     </div>
                 </div>
@@ -1046,7 +1022,7 @@ Error Area
     <!--==============================
 Cta Area
 ==============================-->
-    <div class="space">
+    {{-- <div class="space">
         <div class="container z-index-common">
             <div class="row gy-40">
                 <div class="col-xl-6 col-lg-12">
@@ -1054,7 +1030,7 @@ Cta Area
                         data-bg-src="{{ asset('kebab') }}/img/cta/cta-bg-2-1.png">
                         <div class="card-content">
                             <img src="{{ asset('kebab') }}/img/cta/card-content-2-1.png" alt="img">
-                            <a href="reservation.html" class="th-btn btn-mask style5">ORDER NOW</a>
+                            <a href="" class="th-btn btn-mask style5">ORDER NOW</a>
                         </div>
                         <div class="card-thumb tilt-active">
                             <img src="{{ asset('kebab') }}/img/cta/card-thumb-2-1.png" alt="img">
@@ -1066,7 +1042,7 @@ Cta Area
                         data-bg-src="{{ asset('kebab') }}/img/cta/cta-bg-2-2.png">
                         <div class="card-content">
                             <img src="{{ asset('kebab') }}/img/cta/card-content-2-1.png" alt="img">
-                            <a href="reservation.html" class="th-btn btn-mask style5">ORDER NOW</a>
+                            <a href="" class="th-btn btn-mask style5">ORDER NOW</a>
                         </div>
                         <div class="card-thumb tilt-active">
                             <img src="{{ asset('kebab') }}/img/cta/card-thumb-2-2.png" alt="img">
@@ -1075,10 +1051,11 @@ Cta Area
                 </div>
             </div>
         </div>
-    </div><!--==============================
+    </div> --}}
+    <!--==============================
     
     ==============================-->
-    <section class="reservation-table-area space bg-smoke4 overflow-hidden">
+    {{-- <section class="reservation-table-area space bg-smoke4 overflow-hidden">
         <div class="res-2-shape  d-lg-block d-none"></div>
         <div class="shape-mockup jump-reverse d-xl-block d-none" data-bottom="7%" data-right="2%">
             <img src="{{ asset('kebab') }}/img/shape/res-pizz-shape.png" alt="img">
@@ -1126,11 +1103,11 @@ Cta Area
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--==============================
 Testimonial Area
 ==============================-->
-    <section class="testi-sec-2 overflow-hidden space overflow-hidden">
+    {{-- <section class="testi-sec-2 overflow-hidden space overflow-hidden">
         <div class="shape-mockup jump d-none d-xxl-block" data-top="10%" data-left="5%">
             <img src="{{ asset('kebab') }}/img/shape/about-shape-1.2.png" alt="img">
         </div>
@@ -1290,11 +1267,11 @@ Testimonial Area
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--==============================
 Blog Area
 ==============================-->
-    <section class="blog-sec-2 space bg-theme2 overflow-hidden" id="blog-sec">
+    {{-- <section class="blog-sec-2 space bg-theme2 overflow-hidden" id="blog-sec">
         <img class="round-shape-bottom" src="{{ asset('kebab') }}/img/shape/shape-bottom.png" alt="img">
         <div class="shape-mockup d-none d-xxl-block jump-reverse blog2-shape-left" data-top="3%" data-left="0">
             <img src="{{ asset('kebab') }}/img/icon/blog-2-1.png" alt="img">
@@ -1411,11 +1388,11 @@ Blog Area
                         src="{{ asset('kebab') }}/img/icon/right-arrow.svg" alt=""></button>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--==============================
 Instragram Area
 ==============================-->
-    <section class="instragram-sec-1 space overflow-hidden" id="instragram-sec-1"
+    {{-- <section class="instragram-sec-1 space overflow-hidden" id="instragram-sec-1"
         data-bg-src="{{ asset('kebab') }}/img/bg/insta-bg-shape.png">
         <div class="container">
             <div class="row justify-content-center">
@@ -1439,8 +1416,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-1.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-1.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-1.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1449,8 +1426,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-2.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-2.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-2.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1459,8 +1436,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-3.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-3.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-3.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1469,8 +1446,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-4.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-4.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-4.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1479,8 +1456,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-5.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-5.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-5.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1489,8 +1466,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-1.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-1.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-1.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1499,8 +1476,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-2.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-2.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-2.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1509,8 +1486,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-3.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-3.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-3.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1519,8 +1496,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-4.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-4.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-4.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1529,8 +1506,8 @@ Instragram Area
                             <div class="insta-item">
                                 <div class="thumb">
                                     <img src="{{ asset('kebab') }}/img/insta/insta1-5.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-5.jpg"
-                                        class="icon popup-image"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ asset('kebab') }}/img/insta/insta1-5.jpg" class="icon popup-image"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1539,7 +1516,7 @@ Instragram Area
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!--==============================
 Restaurant location Area
@@ -1555,28 +1532,28 @@ Restaurant location Area
             <div class="row gy-4 justify-content-center">
                 <div class="col-xl-6">
                     <div class="title-area location-content">
-                        <span class="sub-title style-2 text-anime-style-1">Restaurant Location</span>
-                        <h2 class="sec-title text-anime-style-2">Visit Our restaurant</h2>
-                        <p class="box-text pe-xxl-5 ps-xxl-5 text-anime-style-3">213 W Tomichi Ave, Gunnison, CO
-                            81230, United States</p>
+                        <span class="sub-title style-2 text-anime-style-1">Kebab Yasmin Office Location</span>
+                        <h2 class="sec-title text-anime-style-2">Visit Our Office</h2>
+                        <p class="box-text pe-xxl-5 ps-xxl-5 text-anime-style-3">Jl. Kampung Melayu Darat (Samping Gang
+                            Kenari), Banjarmasin Tengah, Banjarmasin</p>
                         <div class="line"></div>
                         <div class="opening ow fadeinup" data-wow-delay=".3s">
-                            <p>Monday -Saturdy: 6:00pm – 10:00pm</p>
-                            <p>Sunday: is the holyday</p>
+                            <p>Buka Jam 08:00 – 21:00</p>
                         </div>
                         <div class="th-social ow fadeinup" data-wow-delay=".5s">
-                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            {{-- <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> --}}
+                            <a href=""><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="map-location">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sAngfuztheme!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd"
-                            allowfullscreen="" loading="lazy"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3983.1315525073182!2d114.59925107374414!3d-3.317644641218036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMTknMDMuNSJTIDExNMKwMzYnMDYuNiJF!5e0!3m2!1sen!2sid!4v1769695999795!5m2!1sen!2sid"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -1599,14 +1576,14 @@ Restaurant location Area
                 <div class="row gy-40 align-items-center justify-content-center">
                     <div class="col-xl-12">
                         <div class="subscribe-box">
-                            <h2 class="footer-top_title">Let’s Talk With Us</h2>
+                            <h2 class="footer-top_title">Surganya Ngebab</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="widget-area">
-            <div class="container">
+            {{-- <div class="container">
                 <div class="row gy-4 justify-content-center">
                     <div class="col-md-12 col-lg-6 col-xl-4">
                         <div class="widget footer-widget">
@@ -1640,7 +1617,7 @@ Restaurant location Area
                             </div>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="">Home</a></li>
                                     <li><a href="about.html">About Us</a></li>
                                     <li><a href="service.html">Our Services</a></li>
                                     <li><a href="blog.html">News</a></li>
@@ -1667,24 +1644,25 @@ Restaurant location Area
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="copyright-wrap">
             <div class="container">
                 <div class="copy-right-content">
                     <div class="copyright-text-wrap">
                         <p class="copyright-text">
-                            <i class="fal fa-copyright"></i> Copyright 2025 <a href="index.html">Kebab Yasmin</a>.
+                            <i class="fal fa-copyright"></i> Copyright 2026 <a href="">Kebab Yasmin</a>.
                             All Rights Reserved.
                         </p>
                     </div>
                     <div class="footer-bottom-logo">
-                        <a href="index.html">
-                            <img src="{{ asset('kebab') }}/img/logo.svg" alt="img">
+                        <a href="">
+                            <img src="{{ asset('img') }}/kebab-yasmin.png" style="max-height: 100px;"
+                                alt="img">
                         </a>
                     </div>
                     <div class="footer-card">
-                        <img src="{{ asset('kebab') }}/img/icon/f-card.png" alt="img ">
+                        {{-- <img src="{{ asset('kebab') }}/img/icon/f-card.png" alt="img "> --}}
                     </div>
                 </div>
             </div>
