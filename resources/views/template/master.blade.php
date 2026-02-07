@@ -10,7 +10,7 @@
     <meta name="author" content="modinatheme">
     <meta name="description" content="Kebab Yasmin - {{ $title }}">
     <!-- ======== Page title ============ -->
-    <title>Kebab Yasmin - {{ $title }}</title>
+    <title>Yasmin Kebab - {{ $title }}</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="{{ asset('img') }}/kebab-yasmin-new-2025.png">
     <!--<< Bootstrap min.css >>-->
@@ -40,24 +40,6 @@
             <div class="spinner">
             </div>
             <div class="txt-loading">
-                <span data-text-preloader="K" class="letters-loading">
-                    K
-                </span>
-                <span data-text-preloader="E" class="letters-loading">
-                    E
-                </span>
-                <span data-text-preloader="B" class="letters-loading">
-                    B
-                </span>
-                <span data-text-preloader="A" class="letters-loading">
-                    A
-                </span>
-                <span data-text-preloader="B" class="letters-loading">
-                    B
-                </span>
-                <span data-text-preloader="-" class="letters-loading">
-                    -
-                </span>
                 <span data-text-preloader="Y" class="letters-loading">
                     Y
                 </span>
@@ -75,6 +57,24 @@
                 </span>
                 <span data-text-preloader="N" class="letters-loading">
                     N
+                </span>
+                <span data-text-preloader="-" class="letters-loading">
+                    -
+                </span>
+                <span data-text-preloader="K" class="letters-loading">
+                    K
+                </span>
+                <span data-text-preloader="E" class="letters-loading">
+                    E
+                </span>
+                <span data-text-preloader="B" class="letters-loading">
+                    B
+                </span>
+                <span data-text-preloader="A" class="letters-loading">
+                    A
+                </span>
+                <span data-text-preloader="B" class="letters-loading">
+                    B
                 </span>
             </div>
             <p class="text-center">Loading</p>

@@ -1,3 +1,110 @@
+<div class="fix-area">
+    <div class="offcanvas__info">
+        <div class="offcanvas__wrapper">
+            <div class="offcanvas__content">
+                <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                    <div class="offcanvas__logo">
+                        <a href="index.html">
+                            <img src="{{ asset('img') }}/kebab-yasmin-new-2025.png" width="170px;" alt="logo-img">
+                        </a>
+                    </div>
+                    <div class="offcanvas__close">
+                        <button>
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                {{-- <p class="text d-none d-lg-block">
+                    This involves interactions between a business and its customers. It's about meeting customers'
+                    needs and resolving their problems. Effective customer service is crucial.
+                </p>
+                <div class="offcanvas-gallery-area d-none d-lg-block">
+                    <div class="offcanvas-gallery-items">
+                        <a href="{{ asset('kebab') }}/img/header/01.jpg" class="offcanvas-image img-popup">
+                            <img src="{{ asset('kebab') }}/img/header/01.jpg" alt="gallery-img">
+                        </a>
+                        <a href="{{ asset('kebab') }}/img/header/02.jpg" class="offcanvas-image img-popup">
+                            <img src="{{ asset('kebab') }}/img/header/02.jpg" alt="gallery-img">
+                        </a>
+                        <a href="{{ asset('kebab') }}/img/header/03.jpg" class="offcanvas-image img-popup">
+                            <img src="{{ asset('kebab') }}/img/header/03.jpg" alt="gallery-img">
+                        </a>
+                    </div>
+                    <div class="offcanvas-gallery-items">
+                        <a href="{{ asset('kebab') }}/img/header/04.jpg" class="offcanvas-image img-popup">
+                            <img src="{{ asset('kebab') }}/img/header/04.jpg" alt="gallery-img">
+                        </a>
+                        <a href="{{ asset('kebab') }}/img/header/05.jpg" class="offcanvas-image img-popup">
+                            <img src="{{ asset('kebab') }}/img/header/05.jpg" alt="gallery-img">
+                        </a>
+                        <a href="{{ asset('kebab') }}/img/header/06.jpg" class="offcanvas-image img-popup">
+                            <img src="{{ asset('kebab') }}/img/header/06.jpg" alt="gallery-img">
+                        </a>
+                    </div>
+                </div> --}}
+                <div class="mobile-menu fix mb-3"></div>
+                <div class="offcanvas__contact">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li class="d-flex align-items-center">
+                            <div class="offcanvas__contact-icon">
+                                <i class="fal fa-map-marker-alt"></i>
+                            </div>
+                            <div class="offcanvas__contact-text">
+                                <a target="_blank" href="https://maps.app.goo.gl/NagW1n4NmpuVfSNW8">Jl. Kampung Melayu
+                                    Darat (Samping Gang
+                                    Kenari)<br>Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan</a>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <div class="offcanvas__contact-icon mr-15">
+                                <i class="fal fa-envelope"></i>
+                            </div>
+                            <div class="offcanvas__contact-text">
+                                <a target="_blank" href="mailto:kebabyasminofficial@gmail.com"><span
+                                        class="mailto:kebabyasminofficial@gmail.com">kebabyasminofficial@gmail.com</span></a>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <div class="offcanvas__contact-icon mr-15">
+                                <i class="fal fa-clock"></i>
+                            </div>
+                            <div class="offcanvas__contact-text">
+                                <a target="_blank" href="#">Setiap Hari, 08:00 - 20:00</a>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <div class="offcanvas__contact-icon mr-15">
+                                <i class="far fa-phone"></i>
+                            </div>
+                            <div class="offcanvas__contact-text">
+                                <a href="https://wa.me/6285651077183">0856 5107 7183</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="header-button mt-4">
+                        <a href="shop-single.html" class="theme-btn">
+                            <span class="button-content-wrapper d-flex align-items-center justify-content-center">
+                                <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                <span class="button-text">Order Online</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="social-icon d-flex align-items-center">
+                        <a target="_blank" href="https://www.instagram.com/kebabyasmin.id/"><i
+                                class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.tiktok.com/@kebabyasmin?_r=1&_t=ZS-93iiAB5Qru3"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a target="_blank" href="http://www.youtube.com/@kebabyasmin.id12"><i
+                                class="fab fa-youtube"></i></a>
+                        {{-- <a href="#"><i class="fab fa-linkedin-in"></i></a> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas__overlay"></div>
 <header class="section-bg">
     {{-- <div class="header-top">
             <div class="container">
@@ -35,8 +142,8 @@
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        {{-- <li class="has-dropdown active">
-                                                <a href="index.html">
+                                        <li class="has-dropdown active">
+                                            {{-- <a href="index.html">
                                                     Home Page
                                                     <i class="fas fa-angle-down"></i>
                                                 </a>
@@ -198,7 +305,8 @@
                                                 </ul>
                                             </li>
                                             <li> --}}
-                                        <a href="{{ route('home') }}">Beranda</a>
+                                            <a href="{{ route('home') }}">Beranda</a>
+                                            <a href="{{ route('menu') }}">Menu</a>
                                         </li>
                                     </ul>
                                 </nav>

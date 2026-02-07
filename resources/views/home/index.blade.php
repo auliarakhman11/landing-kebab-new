@@ -218,8 +218,8 @@
             <div class="row">
                 <div class="col-md-7 col-9">
                     <div class="section-title">
-                        <span class="wow fadeInUp">crispy, every bite taste</span>
-                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Popular Food Items</h2>
+                        <span class="wow fadeInUp">Surganya Ngebab!</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Menu Terbaik Kami</h2>
                     </div>
                 </div>
                 <div class="col-md-5 ps-0 col-3 text-end wow fadeInUp" data-wow-delay=".5s">
@@ -231,38 +231,41 @@
             </div>
             <div class="swiper food-catagory-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="catagory-product-card bg-cover"
-                            style="background-image: url('kebab/img/shape/catagory-card-shape.jpg');">
-                            <h5>5 products</h5>
-                            <div class="catagory-product-image text-center">
-                                <a href="shop.html">
-                                    <img src="{{ asset('kebab') }}/img/food/pizza.png" alt="product-img">
-                                    <div class="decor-leaf">
-                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf.svg" alt="shape-img">
-                                    </div>
-                                    <div class="decor-leaf-2">
-                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf-2.svg" alt="shape-img">
-                                    </div>
-                                    <div class="burger-shape">
-                                        <img src="{{ asset('kebab') }}/img/shape/burger-shape.png" alt="shape-img">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="catagory-product-content text-center">
-                                <div class="catagory-product-icon">
-                                    <img src="{{ asset('kebab') }}/img/shape/food-shape.svg" alt="shape-text">
-                                </div>
-                                <h3>
-                                    <a href="shop-single.html">
-                                        pro pizza
+                    @foreach ($terlaris as $tr)
+                        <div class="swiper-slide">
+                            <div class="catagory-product-card bg-cover"
+                                style="background-image: url('kebab/img/shape/catagory-card-shape.jpg');">
+                                <h5>{{ $tr->nm_produk }}</h5>
+                                <div class="catagory-product-image text-center">
+                                    <a href="shop.html">
+                                        <img src="https://admin.kebabyasmin.id/{{ $tr->foto }}" alt="product-img"
+                                            style="max-height: 277px;">
+                                        <div class="decor-leaf">
+                                            <img src="{{ asset('kebab') }}/img/shape/decor-leaf.svg" alt="shape-img">
+                                        </div>
+                                        <div class="decor-leaf-2">
+                                            <img src="{{ asset('kebab') }}/img/shape/decor-leaf-2.svg" alt="shape-img">
+                                        </div>
+                                        <div class="burger-shape">
+                                            <img src="{{ asset('kebab') }}/img/shape/burger-shape.png" alt="shape-img">
+                                        </div>
                                     </a>
-                                </h3>
-                                <p>5 products</p>
+                                </div>
+                                <div class="catagory-product-content text-center">
+                                    <div class="catagory-product-icon">
+                                        <img src="{{ asset('img') }}/yasmin-kebab.svg" alt="shape-text">
+                                    </div>
+                                    <h3>
+                                        <a href="">
+                                            {{ $tr->nm_produk }}
+                                        </a>
+                                    </h3>
+                                    <p>Rp.{{ number_format($tr->harga, 0) }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
+                    @endforeach
+                    {{-- <div class="swiper-slide">
                         <div class="catagory-product-card bg-cover"
                             style="background-image: url('kebab/img/shape/catagory-card-shape.jpg');">
                             <h5>5 products</h5>
@@ -354,14 +357,85 @@
                                 <p>5 products</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
     </section>
 
+    {{-- promo --}}
+    <section class="food-banner-section fix section-padding section-bg pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Promo dari kami</h2>
+                    </div>
+                </div>
+
+                @foreach ($promo as $pr)
+                    <div class="col-md-6 col-12 mt-3 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="burger-banner-items bg-cover"
+                            style="background-image: url('https://admin.kebabyasmin.id/img-promo/{{ $pr->foto }}');">
+                            <div class="burger-content text-center">
+                                {{-- <h3>today</h3>
+                            <h2>special</h2> --}}
+                                {{-- <h2><a href="shop.html" class="text-white">beef <span>burger</span></a></h2> --}}
+                                <a href="" class="theme-btn mt-4">
+                                    <span class="button-content-wrapper d-flex align-items-center">
+                                        <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                        <span class="button-text">Order Sekarang</span>
+                                    </span>
+                                </a>
+                            </div>
+                            {{-- <div class="burger-image">
+                            <img src="{{ asset('kebab') }}/img/food/big-burger.png" alt="food-img">
+                        </div>
+                        <div class="text-shape">
+                            <img src="{{ asset('kebab') }}/img/shape/pizza-text-2.png" alt="shape-img">
+                        </div>
+                        <div class="burger-text">
+                            <img src="{{ asset('kebab') }}/img/shape/burger-text.png" alt="shape-img">
+                        </div> --}}
+                        </div>
+                    </div>
+                @endforeach
+
+                {{-- <div class="col-xl-5 col-lg-9 mt-5 mt-xl-0 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="single-offer-items style-2 bg-cover"
+                        style="background-image: url('kebab/img/banner/pepsi-bg.png');">
+                        <div class="offer-content">
+                            <h5>crispy, every bite taste</h5>
+                            <h3>
+                                FASH FOOD <br>
+                                MEAL
+                            </h3>
+                            <p>
+                                The mouth-watering aroma of <br>
+                                sizzling burgers
+                            </p>
+                            <a href="shop-single.html" class="theme-btn mt-4">
+                                <span class="button-content-wrapper d-flex align-items-center">
+                                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                    <span class="button-text">order now</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="offer-img">
+                            <img src="{{ asset('kebab') }}/img/offer/50percent-off-3.png" alt="shape-img">
+                        </div>
+                        <div class="roller-box">
+                            <img src="{{ asset('kebab') }}/img/food/roller-box.png" alt="food-img">
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+    </section>
+    {{-- end promo --}}
+
     <!-- Food Banner Section Start -->
-    <section class="food-banner-section section-padding fix section-bg pt-0">
+    {{-- <section class="food-banner-section section-padding fix section-bg pt-0">
         <div class="chili-shape">
             <img src="{{ asset('kebab') }}/img/shape/chili-shape.png" alt="shape-img">
         </div>
@@ -370,6 +444,11 @@
         </div>
         <div class="container">
             <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Promo dari kami</h2>
+                    </div>
+                </div>
                 <div class="col-xl-5 wow fadeInUp" data-wow-delay=".3s">
                     <div class="single-offer-items bg-cover"
                         style="background-image: url('kebab/img/banner/offer-bg.png');">
@@ -391,7 +470,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-7 mt-5 mt-xl-0 wow fadeInUp" data-wow-delay=".5s">
+                <div class="col-md-6 col-12 mt-5 mt-xl-0 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="pizza-banner-items bg-cover"
+                        style="background-image: url('kebab/img/banner/pizza-bg.png');">
+                        <div class="pizza-text">
+                            <img src="{{ asset('kebab') }}/img/shape/pizza-text.png" alt="shape-img">
+                        </div>
+                        <div class="pizza-text-2">
+                            <img src="{{ asset('kebab') }}/img/shape/pizza-text-2.png" alt="shape-img">
+                        </div>
+                        <div class="pizza-image">
+                            <img src="{{ asset('kebab') }}/img/food/pizza-2.png" alt="pizza-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mt-5 mt-xl-0 wow fadeInUp" data-wow-delay=".5s">
                     <div class="pizza-banner-items bg-cover"
                         style="background-image: url('kebab/img/banner/pizza-bg.png');">
                         <div class="pizza-text">
@@ -407,10 +500,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Brand Section Start -->
-    <section class="brand-shape section-padding fix section-bg pt-0">
+    {{-- <section class="brand-shape section-padding fix section-bg pt-0">
         <div class="container">
             <div class="brand-wrapper">
                 <div class="brand-title">
@@ -454,10 +547,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Grilled Banner Section Start -->
-    <section class="grilled-banner fix section-padding bg-cover"
+    {{-- <section class="grilled-banner fix section-padding bg-cover"
         style="background-image: url('kebab/img/banner/main-bg.jpg');">
         <div class="patato-shape">
             <img src="{{ asset('kebab') }}/img/shape/patato-shape.png" alt="shape-img">
@@ -509,48 +602,50 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Food Catagory Section Start -->
     <section class="food-category-section fix section-padding section-bg">
         <div class="container">
             <div class="section-title text-center">
-                <span class="wow fadeInUp">crispy, every bite taste</span>
-                <h2 class="wow fadeInUp" data-wow-delay=".3s">Popular Food Items</h2>
+                <span class="wow fadeInUp">Surganya Ngebab!</span>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">Menu Produk Kami</h2>
             </div>
             <div class="row">
-                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="catagory-product-card-2 text-center">
-                        <div class="icon">
-                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                        </div>
-                        <div class="catagory-product-image">
-                            <img src="{{ asset('kebab') }}/img/food/beef-ruti.png" alt="product-img">
-                        </div>
-                        <div class="catagory-product-content">
-                            <div class="catagory-button">
-                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
-                                    Cart</a>
+                @foreach ($menu as $mn)
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="catagory-product-card-2 text-center">
+                            {{-- <div class="icon">
+                                <a href=""><i class="far fa-heart"></i></a>
+                            </div> --}}
+                            <div class="catagory-product-image">
+                                <img src="https://admin.kebabyasmin.id/{{ $mn->foto }}" height="200px;"
+                                    alt="product-img">
                             </div>
-                            <div class="info-price d-flex align-items-center justify-content-center">
-                                <p>-5%</p>
-                                <h6>$30.52</h6>
-                                <span>$28.52</span>
-                            </div>
-                            <h4>
-                                <a href="shop-single.html">ruti with beef slice</a>
-                            </h4>
-                            <div class="star">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star text-white"></span>
+                            <div class="catagory-product-content">
+                                <div class="catagory-button">
+                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Order</a>
+                                </div>
+                                <div class="info-price d-flex align-items-center justify-content-center">
+                                    {{-- <p>-5%</p> --}}
+                                    <h6>Rp. {{ number_format($mn->harga, 0) }}</h6>
+                                    {{-- <span>$28.52</span> --}}
+                                </div>
+                                <h4>
+                                    <a href="">{{ $mn->nm_produk }}</a>
+                                </h4>
+                                <div class="star">
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                @endforeach
+                {{-- <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                     <div class="catagory-product-card-2 active text-center">
                         <div class="icon">
                             <a href="shop-cart.html"><i class="far fa-heart"></i></a>
@@ -766,10 +861,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="catagory-button text-center pt-4 wow fadeInUp" data-wow-delay=".3s">
-                <a href="shop.html" class="theme-btn">
+                <a href="" class="theme-btn">
                     <span class="button-content-wrapper d-flex align-items-center">
                         <span class="button-icon"><i class="flaticon-delivery"></i></span>
                         <span class="button-text">view more</span>
@@ -780,7 +875,7 @@
     </section>
 
     <!-- Food Comboo Section Start -->
-    <section class="food-comboo-section fix bg-cover section-padding"
+    {{-- <section class="food-comboo-section fix bg-cover section-padding"
         style="background-image: url('kebab/img/bg-image/bg.jpg');">
         <div class="drinks-shape">
             <img src="{{ asset('kebab') }}/img/shape/drinks.png" alt="shape-img">
@@ -901,7 +996,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Marque Section Start -->
     <div class="marque-section fix section-padding pt-0 section-bg">
@@ -944,31 +1039,31 @@
         <div class="container">
             <div class="food-icon-wrapper bg-cover" style="background-image: url('kebab/img/shape/food-shape-2.png');">
                 <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-3 wow fadeInUp" data-wow-delay=".3s">
                         <div class="single-food-icon">
                             <div class="icon">
                                 <i class="flaticon-quality"></i>
                             </div>
                             <div class="content">
                                 <h4>super quality food</h4>
-                                <p>
+                                {{-- <p>
                                     A team of dreamers and doers building
                                     unique interactive music and art
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="col-3 wow fadeInUp" data-wow-delay=".5s">
                         <div class="single-food-icon">
                             <div class="icon">
                                 <i class="flaticon-cooking"></i>
                             </div>
                             <div class="content">
                                 <h4>original recipes</h4>
-                                <p>
+                                {{-- <p>
                                     A team of dreamers and doers building
                                     unique interactive music and art
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                     </div>
@@ -979,24 +1074,24 @@
                             </div>
                             <div class="content">
                                 <h4>quick fast delivery</h4>
-                                <p>
+                                {{-- <p>
                                     A team of dreamers and doers building
                                     unique interactive music and art
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".9s">
+                    <div class="col-3 wow fadeInUp" data-wow-delay=".9s">
                         <div class="single-food-icon">
                             <div class="icon">
                                 <i class="flaticon-quality"></i>
                             </div>
                             <div class="content">
                                 <h4>100% fresh foods</h4>
-                                <p>
+                                {{-- <p>
                                     A team of dreamers and doers building
                                     unique interactive music and art
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                     </div>
@@ -1006,7 +1101,7 @@
     </section>
 
     <!-- About Section Start -->
-    <section class="about-section fix section-padding pt-0 section-bg">
+    {{-- <section class="about-section fix section-padding pt-0 section-bg">
         <div class="container">
             <div class="about-wrapper">
                 <div class="row align-items-center">
@@ -1078,10 +1173,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Food Banner Section Start -->
-    <section class="food-banner-section fix section-padding section-bg pt-0">
+    {{-- <section class="food-banner-section fix section-padding section-bg pt-0">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-9 wow fadeInUp" data-wow-delay=".3s">
@@ -1139,10 +1234,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- KFC Banner Section Start -->
-    <section class="kfc-banner fix bg-cover section-padding" style="background-image: url('kebab/img/bg-image/bg.jpg');">
+    {{-- <section class="kfc-banner fix bg-cover section-padding" style="background-image: url('kebab/img/bg-image/bg.jpg');">
         <div class="kfc-wrapper">
             <div class="container-fluid">
                 <div class="row justify-content-between">
@@ -1199,10 +1294,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Testimonial Section Start -->
-    <section class="testimonial-section fix section-padding section-bg">
+    {{-- <section class="testimonial-section fix section-padding section-bg">
         <div class="burger-shape">
             <img src="{{ asset('kebab') }}/img/shape/burger-shape-3.png" alt="burger-shape">
         </div>
@@ -1304,7 +1399,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Main Cta Banner Section Start -->
     <section class="main-cta-banner section-padding pt-0">
@@ -1312,23 +1407,23 @@
             <div class="main-cta-banner-wrapper bg-cover mt-10"
                 style="background-image: url('kebab/img/banner/main-cta-bg.jpg');">
                 <div class="section-title">
-                    <span class="theme-color-3 wow fadeInUp">crispy, every bite taste</span>
+                    <span class="theme-color-3 wow fadeInUp">Surganya Ngebab!</span>
                     <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
-                        30 minutes fast <br>
-                        <span class="theme-color-3">delivery</span> challage
+                        Program <br>
+                        <span class="theme-color-3">Order Online</span><br>Ambil Ditempat
                     </h2>
                 </div>
                 <a href="shop-single.html" class="theme-btn bg-white mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
                     <span class="button-content-wrapper d-flex align-items-center">
                         <span class="button-icon"><i class="flaticon-delivery"></i></span>
-                        <span class="button-text">order now</span>
+                        <span class="button-text">Order</span>
                     </span>
                 </a>
                 <div class="arrow-shape">
                     <img src="{{ asset('kebab') }}/img/shape/arrow-shape.png" alt="shape-img">
                 </div>
                 <div class="delivery-man">
-                    <img src="{{ asset('kebab') }}/img/delivery-man.png" alt="img">
+                    <img src="{{ asset('img') }}/cooking.png" alt="img">
                 </div>
                 <div class="frame-shape">
                     <img src="{{ asset('kebab') }}/img/shape/frame.png" alt="shape-img">
@@ -1343,13 +1438,13 @@
         <div class="container">
             <div class="booking-wrapper style-responsive section-padding pb-0">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-12">
                         <div class="booking-content">
                             <div class="section-title">
-                                <span class="wow fadeInUp">crispy, every bite taste</span>
+                                <span class="wow fadeInUp">Surganya Ngebab!</span>
                                 <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
-                                    need booking? <br>
-                                    reserve your table?
+                                    Punya pertanyaan? <br>
+                                    Masukan, Kritik dan Saran?
                                 </h2>
                             </div>
                             <div class="icon-items d-flex align-items-center wow fadeInUp" data-wow-delay=".5s">
@@ -1358,12 +1453,12 @@
                                 </div>
                                 <div class="content">
                                     <h5>24/7 Support center</h5>
-                                    <h3><a href="tel:+1718-904-4450">+1718-904-4450</a></h3>
+                                    <h3><a href="https://wa.me/6285651077183">0856 5107 7183</a></h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 mt-5 mt-lg-0 wow fadeInUp" data-wow-delay=".4s">
+                    {{-- <div class="col-lg-5 mt-5 mt-lg-0 wow fadeInUp" data-wow-delay=".4s">
                         <div class="booking-contact bg-cover"
                             style="background-image: url('kebab/img/shape/booking-shape.png');">
                             <h4 class="text-center text-white">create an reservation</h4>
@@ -1402,7 +1497,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

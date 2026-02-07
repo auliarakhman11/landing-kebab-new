@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Hero;
 use App\Models\Produk;
+use App\Models\Promo;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,6 +17,8 @@ class HomeController extends Controller
             'hero' => Hero::all(),
             'terlaris' => Produk::select('produk.*', 'harga.harga')->leftJoin('harga', 'produk.id', '=', 'harga.produk_id')->where('harga.delivery_id', 1)->where('status', 'ON')->where('hapus', 0)->where('terlaris', 1)->groupBy('produk.id')->orderBy('possition', 'ASC')->get(),
             'kombo' => Produk::select('produk.*', 'harga.harga')->leftJoin('harga', 'produk.id', '=', 'harga.produk_id')->where('harga.delivery_id', 1)->where('status', 'ON')->where('hapus', 0)->where('kategori_id', 5)->where('harga.harga', '>=', 1)->groupBy('produk.id')->orderBy('possition', 'ASC')->get(),
+            'promo' => Promo::all(),
+            'menu' => Produk::select('produk.*', 'harga.harga')->leftJoin('harga', 'produk.id', '=', 'harga.produk_id')->where('harga.delivery_id', 1)->where('status', 'ON')->where('hapus', 0)->groupBy('produk.id')->orderBy('possition', 'ASC')->take(8)->get(),
         ]);
     }
 
@@ -23,6 +26,14 @@ class HomeController extends Controller
     {
         return view('home.cotactUs', [
             'title' => 'Hubungi Kami',
+        ]);
+    }
+
+    public function menu()
+    {
+        return view('home.menu', [
+            'title' => 'Menu',
+            'menu' => Produk::select('produk.*', 'harga.harga')->leftJoin('harga', 'produk.id', '=', 'harga.produk_id')->where('harga.delivery_id', 1)->where('harga.harga', '>', 0)->where('status', 'ON')->where('hapus', 0)->groupBy('produk.id')->orderBy('possition', 'ASC')->get(),
         ]);
     }
 }

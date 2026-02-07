@@ -25,3 +25,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 //contact us
 Route::get('cotactUs', [HomeController::class, 'cotactUs'])->name('cotactUs');
 //end contact us
+
+//menu
+Route::get('menu', [HomeController::class, 'menu'])->name('menu');
+//end menu

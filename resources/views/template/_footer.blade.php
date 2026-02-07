@@ -5,7 +5,7 @@
     <div class="fry-shape">
         <img src="{{ asset('kebab') }}/img/shape/fry-shape-2.png" alt="burger-shape">
     </div>
-    <div class="container">
+    {{-- <div class="container">
         <div class="footer-widgets-wrapper">
             <div class="row">
                 <div class="col-xl-3 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".2s">
@@ -168,16 +168,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="footer-bottom">
         <div class="container">
             <div class="footer-bottom-wrapper d-flex align-items-center justify-content-between">
                 <p class="wow fadeInLeft" data-wow-delay=".3s">
-                    © Copyright <span class="theme-color-3">2024</span> <a href="index.html">Foodking </a>. All
+                    © Copyright <span class="theme-color-3">2026</span> <a href="index.html">Yasmin Kebab </a>. All
                     Rights Reserved.
                 </p>
                 <div class="card-image wow fadeInRight" data-wow-delay=".5s">
-                    <img src="{{ asset('kebab') }}/img/card.png" alt="card-img">
+                    {{-- <img src="{{ asset('kebab') }}/img/card.png" alt="card-img"> --}}
                 </div>
             </div>
         </div>
