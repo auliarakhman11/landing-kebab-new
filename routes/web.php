@@ -21,3 +21,7 @@ use Illuminate\Support\Facades\Route;
 //home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 //end home
+
+//contact us
+Route::get('cotactUs', [HomeController::class, 'cotactUs'])->name('cotactUs');
+//end contact us

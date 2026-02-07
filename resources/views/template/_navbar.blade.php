@@ -1,181 +1,264 @@
-<header class="main-header header-style-two">
-    <!-- header-top -->
+<header class="section-bg">
     {{-- <div class="header-top">
-        <div class="outer-container">
-            <div class="top-inner">
-                <ul class="info">
-                    <li>
-                        <img src="{{ asset('jobaway') }}/images/icons/icon-6.png" alt="">
-                        Call: <a href="tel:912345432">+91 (234) 5432</a>
-                    </li>
-                    <li>
-                        <img src="{{ asset('jobaway') }}/images/icons/icon-7.png" alt="">
-                        Mail: <a href="mailto:jobinfo@example.com">jobinfo@example.com</a>
-                    </li>
-                </ul>
-                <p><span>Latest News:</span> Fusce neque CEO egestas cursu magna sapien</p>
-                <div class="right-column">
-                    <div class="language-picker js-language-picker mr_30" data-trigger-class="btn btn--subtle">
-                        <form action="index-2.html" class="language-picker__form">
-                            <label for="language-picker-select">Select your language</label>
-                            <select name="language-picker-select" id="language-picker-select">
-                                <option lang="de" value="deutsch">DE</option>
-                                <option lang="en" value="english" selected>EN</option>
-                                <option lang="fr" value="francais">FR</option>
-                                <option lang="it" value="italiano">IT</option>
-                            </select>
-                        </form>
-                    </div>
-                    <ul class="social-links">
-                        <li><span>Share:</span></li>
-                        <li><a href="index-2.html"><i class="icon-22"></i></a></li>
-                        <li><a href="index-2.html"><i class="icon-23"></i></a></li>
-                        <li><a href="index-2.html"><i class="icon-24"></i></a></li>
-                        <li><a href="index-2.html"><i class="icon-25"></i></a></li>
+            <div class="container">
+                <div class="header-top-wrapper">
+                    <ul>
+                        <li><span>100%</span> Secure delivery without contacting the courier</li>
+                        <li><i class="fas fa-truck"></i>Track Your Order</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- header-lower -->
-    <div class="header-lower">
-        <div class="outer-container">
-            <div class="outer-box">
-                <figure class="logo-box"><a href=""><img style="max-height: 70px;"
-                            src="{{ asset('img/Logo_BPN-KemenATR.png') }}" alt=""></a></figure>
-                <div class="menu-area">
-                    <!--Mobile Navigation Toggler-->
-                    <div class="mobile-nav-toggler">
-                        <i class="icon-bar"></i>
-                        <i class="icon-bar"></i>
-                        <i class="icon-bar"></i>
-                    </div>
-                    <nav class="main-menu navbar-expand-md navbar-light clearfix">
-                        <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                            <ul class="navigation clearfix">
-                                {{-- <li class="current dropdown"><a href="index.html">Home</a>
-                                    <ul>
-                                        <li><a href="index.html">Home One</a></li>
-                                        <li><a href="index-2.html">Home Two</a></li>
-                                        <li><a href="index-3.html">Home Three</a></li>
-                                        <li><a href="index-4.html">Home Four</a></li>
-                                        <li><a href="index-5.html">Home Five</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li class="dropdown"><a href="index.html">Solutions</a>
-                                    <ul>
-                                        <li><a href="service.html">Our Solutions</a></li>
-                                        <li><a href="service-details.html">Executive Search</a></li>
-                                        <li><a href="service-details-2.html">Training Session</a></li>
-                                        <li><a href="service-details-3.html">Career Growth</a></li>
-                                        <li><a href="service-details-4.html">Payroll Services</a></li>
-                                        <li><a href="service-details-5.html">Workforce System</a></li>
-                                        <li><a href="service-details-6.html">Temporary Jobs</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="index.html">Pages</a>
-                                    <ul>
-                                        <li class="dropdown"><a href="index.html">Job</a>
-                                            <ul>
-                                                <li><a href="job.html">Place Job</a></li>
-                                                <li><a href="job-2.html">Job Seekers</a></li>
-                                                <li><a href="job-3.html">Job Openings</a></li>
-                                                <li><a href="job-4.html">Job Apply</a></li>
-                                                <li><a href="job-details.html">Job Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown"><a href="index.html">Portfolio</a>
-                                            <ul>
-                                                <li><a href="portfolio.html">Portfolio 3 column</a></li>
-                                                <li><a href="portfolio-2.html">Portfolio 2 column</a></li>
-                                                <li><a href="portfolio-3.html">Portfolio Masonry</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="team.html">Our Team</a></li>
-                                        <li><a href="faq.html">FAQ's</a></li>
-                                        <li><a href="testimonial.html">Testimonials</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="signup.html">Sing Up</a></li>
-                                        <li><a href="error.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="index.html">Blog</a>
-                                    <ul>
-                                        <li><a href="blog.html">Blog Grid</a></li>
-                                        <li><a href="blog-2.html">Blog Standard</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li> --}}
-                                <li><a href="{{ route('home') }}"><u>Beranda</u></a></li>
-                                <li><a href="{{ route('dashboard') }}"><u>Dashboard</u></a></li>
-                                {{-- <li><a href="{{ route('riwayatPengisian') }}"><u>Riwayat Pengisian Blanko</u></a></li> --}}
-                            </ul>
+                    <div class="top-right">
+                        <div class="search-wrp">
+                            <button><i class="far fa-search"></i></button>
+                            <input placeholder="Search" aria-label="Search">
                         </div>
-                    </nav>
-                </div>
-                <div class="menu-right-content">
-                    {{-- <div class="search-btn mr_20"><button class="search-toggler"><i class="icon-1"></i></button></div>
-                    <div class="link-box mr_20"><a href="login.html">Log In</a></div>
-                    <div class="btn-box"><a href="index.html" class="theme-btn btn-one">Get Started</a></div> --}}
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!--sticky Header-->
-    <div class="sticky-header">
-        <div class="outer-container">
-            <div class="outer-box">
-                <figure class="logo-box"><a href="index.html"><img style="max-height: 70px;"
-                            src="{{ asset('img/Logo_BPN-KemenATR.png') }}" alt=""></a></figure>
-                <div class="menu-area">
-                    <nav class="main-menu clearfix">
-                        <!--Keep This Empty / Menu will come through Javascript-->
-                    </nav>
-                </div>
-                <div class="menu-right-content">
-                    {{-- <div class="search-btn mr_20"><button class="search-toggler"><i class="icon-1"></i></button>
+        </div> --}}
+    <div id="header-sticky" class="header-1">
+        <div class="container">
+            <div class="mega-menu-wrapper">
+                <div class="header-main">
+                    <div class="logo">
+                        <a href="index.html" class="header-logo">
+                            <img src="{{ asset('img') }}/kebab-yasmin-new-2025.png" width="170px;" alt="logo-img">
+                        </a>
                     </div>
-                    <div class="link-box mr_20"><a href="login.html">Log In</a></div>
-                    <div class="btn-box"><a href="index.html" class="theme-btn btn-one">Get Started</a></div> --}}
+                    <div class="header-left">
+                        <div class="mean__menu-wrapper d-none d-lg-block">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        {{-- <li class="has-dropdown active">
+                                                <a href="index.html">
+                                                    Home Page
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu has-homemenu">
+                                                    <li class="border-none">
+                                                        <div class="row g-4">
+                                                            <div class="col-lg-4 homemenu">
+                                                                <div class="homemenu-thumb">
+                                                                    <img src="{{ asset('kebab') }}/img/header/home-1.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="index.html" class="theme-btn">View
+                                                                            Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="homemenu-content text-center">
+                                                                    <h4 class="homemenu-title">
+                                                                        <a href="index.html">Home 01</a>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4  homemenu">
+                                                                <div class="homemenu-thumb mb-15">
+                                                                    <img src="{{ asset('kebab') }}/img/header/home-2.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="index-2.html" class="theme-btn">View
+                                                                            Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="homemenu-content text-center">
+                                                                    <h4 class="homemenu-title">
+                                                                        <a href="index-2.html">Home 02</a>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 homemenu">
+                                                                <div class="homemenu-thumb mb-15">
+                                                                    <img src="{{ asset('kebab') }}/img/header/home-3.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="index-3.html" class="theme-btn">View
+                                                                            Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="homemenu-content text-center">
+                                                                    <h4 class="homemenu-title">
+                                                                        <a href="index-3.html">Home 03</a>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 homemenu">
+                                                                <div class="homemenu-thumb">
+                                                                    <img src="{{ asset('kebab') }}/img/header/home-4.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="index-4.html" class="theme-btn">View
+                                                                            Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="homemenu-content text-center">
+                                                                    <h4 class="homemenu-title">
+                                                                        <a href="index-4.html">Home 04</a>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4  homemenu">
+                                                                <div class="homemenu-thumb mb-15">
+                                                                    <img src="{{ asset('kebab') }}/img/header/home-5.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="index-5.html" class="theme-btn">View
+                                                                            Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="homemenu-content text-center">
+                                                                    <h4 class="homemenu-title">
+                                                                        <a href="index-5.html">Home 05</a>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 homemenu">
+                                                                <div class="homemenu-thumb mb-15">
+                                                                    <img src="{{ asset('kebab') }}/img/header/home-6.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="index-6.html" class="theme-btn">View
+                                                                            Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="homemenu-content text-center">
+                                                                    <h4 class="homemenu-title">
+                                                                        <a href="index-6.html">Home 06</a>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-dropdown">
+                                                <a href="shop.html">
+                                                    Shop
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="shop.html">Shop Grid</a></li>
+                                                    <li><a href="shop-list.html">Shop List</a></li>
+                                                    <li><a href="shop-left-sidebar.html">Shop Left SideBar</a></li>
+                                                    <li><a href="shop-right-sidebar.html">Shop Right SideBar</a></li>
+                                                    <li><a href="shop-single.html">Shop Single</a></li>
+                                                    <li><a href="shop-single-2.html">Shop Single 2</a></li>
+                                                    <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                    <li><a href="checkout.html">checkout</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="news.html">
+                                                    Blog
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="news.html">Blog</a></li>
+                                                    <li><a href="news-details.html">Blog Details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-dropdown">
+                                                <a href="news.html">
+                                                    Pages
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="about.html">About Us</a></li>
+                                                    <li class="has-dropdown">
+                                                        <a href="team.html">
+                                                            Chef Page
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="team.html">Chef</a></li>
+                                                            <li><a href="team-details.html">Chef Details</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-dropdown">
+                                                        <a href="food-menu.html">
+                                                            Food Menu
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="food-menu.html"> Food Menu 01</a></li>
+                                                            <li><a href="food-menu-2.html"> Food Menu 02</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="gallery.html">Gallery</a></li>
+                                                    <li><a href="testimonial.html">testimonial</a></li>
+                                                    <li><a href="reservation.html">Reservation</a></li>
+                                                    <li><a href="faq.html">Faq's</a></li>
+                                                    <li><a href="404.html">404 Page</a></li>
+                                                </ul>
+                                            </li>
+                                            <li> --}}
+                                        <a href="{{ route('home') }}">Beranda</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- for wp -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-right d-flex justify-content-end align-items-center">
+                        {{-- <div class="menu-cart">
+                                <div class="cart-box">
+                                    <ul>
+                                        <li>
+                                            <img src="{{ asset('kebab') }}/img/shop-food/s2.png" alt="image">
+                                            <div class="cart-product">
+                                                <a href="#0">grilled chiken</a>
+                                                <span>168$</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="border-none">
+                                            <img src="{{ asset('kebab') }}/img/shop-food/s3.png" alt="image">
+                                            <div class="cart-product">
+                                                <a href="#0">grilled chiken</a>
+                                                <span>168$</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="shopping-items d-flex align-items-center justify-content-between">
+                                        <span>Shopping : $20.00</span>
+                                        <span>Total : $168.00</span>
+                                    </div>
+                                    <div class="cart-button d-flex justify-content-between mb-4">
+                                        <a href="shop-cart.html" class="theme-btn">
+                                            View Cart
+                                        </a>
+                                        <a href="checkout.html" class="theme-btn bg-red-2">
+                                            Checkout
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="shop-cart.html" class="cart-icon">
+                                    <i class="far fa-shopping-basket"></i>
+                                </a>
+                            </div> --}}
+                        <div class="header-button">
+                            <a href="{{ route('cotactUs') }}" class="theme-btn bg-red-2">Hubungi Kami</a>
+                        </div>
+                        <div class="header__hamburger d-xl-block my-auto">
+                            <div class="sidebar__toggle">
+                                <div class="header-bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
-<!-- Mobile Menu  -->
-<div class="mobile-menu">
-    <div class="menu-backdrop"></div>
-    <div class="close-btn"><i class="fas fa-times"></i></div>
-    <nav class="menu-box">
-        <div class="nav-logo"><a href="index.html"><img src="{{ asset('img/Logo_BPN-KemenATR.png') }}"
-                    style="max-height: 50px;" alt="" title=""></a></div>
-        <div class="menu-outer">
-            <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-        </div>
-        <div class="contact-info">
-            <h4>Informasi kontak</h4>
-            {{-- <ul>
-                <li>Chicago 12, Melborne City, USA</li>
-                <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                <li><a href="mailto:info@example.com">info@example.com</a></li>
-            </ul> --}}
-        </div>
-        <div class="social-links">
-            <ul class="clearfix">
-                <li><a href="https://wa.me/+6281944233016"><span class="fab fa-whatsapp"></span></a></li>
-                <li><a href="https://x.com/kantahkabbanjar?t=b6KIf6X3-oNZc57nlp0ZxA&s=08"><span
-                            class="fab fa-twitter"></span></a></li>
-                <li><a href="https://www.facebook.com/share/1AYAAPcs8s/"><span
-                            class="fab fa-facebook-square"></span></a></li>
-                <li><a href="https://www.instagram.com/kantahkabupatenbanjar?igsh=eDRyeDdxNXZxcnB6"><span
-                            class="fab fa-instagram"></span></a></li>
-                <li><a href="https://youtube.com/@kantahkabbanjar?si=dIn1mizCt6F3chjd"><span
-                            class="fab fa-youtube"></span></a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
-<!-- End Mobile Menu -->

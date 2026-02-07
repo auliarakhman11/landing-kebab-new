@@ -1,1822 +1,975 @@
-(function ($) {
+/* ===================================================================
+    Author          : Modina Theme
+    Version         : 1.0
+* ================================================================= */
+
+(function($) {
     "use strict";
-    /*=================================
-        JS Index Here
-    ==================================*/
-    /*
-    01. On Load Function
-    02. Preloader
-    03. Mobile Menu
-    04. Sticky fix
-    05. Scroll To Top
-    06. Set Background Image Color & Mask
-    07. Global Slider
-    08. Ajax Contact Form
-    09. Search Box Popup
-    10. Popup Sidemenu
-    11. Magnific Popup
-    12. Section Position
-    13. Filter
-    14. Counter Up
-    15. Shape Mockup
-    16. Progress Bar Animation
-    17. Countdown
-    18. Image to SVG Code
-    00. Woocommerce Toggle
-    00. Color Scheme
-    00. Right Click Disable
-    */
-    /*=================================
-        JS Index End
-    ==================================*/
-    /*
 
-  /*---------- 01. On Load Function ----------*/
-    $(window).on("load", function () {
-        $(".preloader").fadeOut();
-        wowAnimation();
-    });
+    $(document).ready( function() {
 
-    /*---------- 02. Preloader ----------*/
-    if ($(".preloader").length > 0) {
-        $(".preloaderCls").each(function () {
-            $(this).on("click", function (e) {
-                e.preventDefault();
-                $(".preloader").css("display", "none");
-            });
+        //>> Mobile Menu Js Start <<//
+        $('#mobile-menu').meanmenu({
+            meanMenuContainer: '.mobile-menu',
+            meanScreenWidth: "991",
+            meanExpand: ['<i class="far fa-plus"></i>'],
         });
-    }
 
-    /*---------- 03. Mobile Menu ----------*/
-    $.fn.thmobilemenu = function (options) {
-        var opt = $.extend(
-            {
-                menuToggleBtn: ".th-menu-toggle",
-                bodyToggleClass: "th-body-visible",
-                subMenuClass: "th-submenu",
-                subMenuParent: "menu-item-has-children",
-                thSubMenuParent: "th-item-has-children",
-                subMenuParentToggle: "th-active",
-                meanExpandClass: "th-mean-expand",
-                appendElement: '<span class="th-mean-expand"></span>',
-                subMenuToggleClass: "th-open",
-                toggleSpeed: 400,
-            },
-            options
-        );
-
-        return this.each(function () {
-            var menu = $(this); // Select menu
-
-            // Menu Show & Hide
-            function menuToggle() {
-                menu.toggleClass(opt.bodyToggleClass);
-
-                // collapse submenu on menu hide or show
-                var subMenu = "." + opt.subMenuClass;
-                $(subMenu).each(function () {
-                    if ($(this).hasClass(opt.subMenuToggleClass)) {
-                        $(this).removeClass(opt.subMenuToggleClass);
-                        $(this).css("display", "none");
-                        $(this).parent().removeClass(opt.subMenuParentToggle);
-                    }
-                });
-            }
-
-            // Class Set Up for every submenu
-            menu.find("." + opt.subMenuParent).each(function () {
-                var submenu = $(this).find("ul");
-                submenu.addClass(opt.subMenuClass);
-                submenu.css("display", "none");
-                $(this).addClass(opt.subMenuParent);
-                $(this).addClass(opt.thSubMenuParent); // Add th-item-has-children class
-                $(this).children("a").append(opt.appendElement);
-            });
-
-            // Toggle Submenu
-            function toggleDropDown($element) {
-                var submenu = $element.children("ul");
-                if (submenu.length > 0) {
-                    $element.toggleClass(opt.subMenuParentToggle);
-                    submenu.slideToggle(opt.toggleSpeed);
-                    submenu.toggleClass(opt.subMenuToggleClass);
-                }
-            }
-
-            // Submenu toggle Button
-            var itemHasChildren = "." + opt.thSubMenuParent + " > a";
-            $(itemHasChildren).each(function () {
-                $(this).on("click", function (e) {
-                    e.preventDefault();
-                    toggleDropDown($(this).parent());
-                });
-            });
-
-            // Menu Show & Hide On Toggle Btn click
-            $(opt.menuToggleBtn).each(function () {
-                $(this).on("click", function () {
-                    menuToggle();
-                });
-            });
-
-            // Hide Menu On outside click
-            menu.on("click", function (e) {
-                e.stopPropagation();
-                menuToggle();
-            });
-
-            // Stop Hide full menu on menu click
-            menu.find("div").on("click", function (e) {
-                e.stopPropagation();
-            });
+        //>> Sidebar Toggle Js Start <<//
+        $(".offcanvas__close,.offcanvas__overlay").on("click", function() {
+            $(".offcanvas__info").removeClass("info-open");
+            $(".offcanvas__overlay").removeClass("overlay-open");
         });
-    };
-
-    $(".th-menu-wrapper").thmobilemenu();
-
-    /*---------- 04. Sticky fix ----------*/
-    $(window).scroll(function () {
-        var topPos = $(this).scrollTop();
-        if (topPos > 500) {
-            $(".sticky-wrapper").addClass("sticky");
-            $(".category-menu").addClass("close-category");
-        } else {
-            $(".sticky-wrapper").removeClass("sticky");
-            $(".category-menu").removeClass("close-category");
-        }
-    });
-
-    $(".menu-expand").each(function () {
-        $(this).on("click", function (e) {
-            e.preventDefault();
-            $(".category-menu").toggleClass("open-category");
+        $(".sidebar__toggle").on("click", function() {
+            $(".offcanvas__info").addClass("info-open");
+            $(".offcanvas__overlay").addClass("overlay-open");
         });
-    });
 
-    /*----------- One Page Nav ----------*/
-    function onePageNav(element) {
-        if ($(element).length > 0) {
-            $(element).each(function () {
-                var link = $(this).find("a");
-                $(this)
-                    .find(link)
-                    .each(function () {
-                        $(this).on("click", function () {
-                            var target = $(this.getAttribute("href"));
-                            if (target.length) {
-                                event.preventDefault();
-                                $("html, body")
-                                    .stop()
-                                    .animate(
-                                        {
-                                            scrollTop: target.offset().top - 10,
-                                        },
-                                        1000
-                                    );
-                            }
-                        });
-                    });
-            });
-        }
-    }
-    onePageNav(".onepage-nav");
-    onePageNav(".scroll-down");
+        //>> Body Overlay Js Start <<//
+        $(".body-overlay").on("click", function() {
+            $(".offcanvas__area").removeClass("offcanvas-opened");
+            $(".df-search-area").removeClass("opened");;
+            $(".body-overlay").removeClass("opened");
+        });
 
-    /*---------- 05. Scroll To Top ----------*/
-    if ($(".scroll-top").length > 0) {
-        var scrollTopbtn = document.querySelector(".scroll-top");
-        var progressPath = document.querySelector(".scroll-top path");
-        var pathLength = progressPath.getTotalLength();
-        progressPath.style.transition = progressPath.style.WebkitTransition =
-            "none";
-        progressPath.style.strokeDasharray = pathLength + " " + pathLength;
-        progressPath.style.strokeDashoffset = pathLength;
-        progressPath.getBoundingClientRect();
-        progressPath.style.transition = progressPath.style.WebkitTransition =
-            "stroke-dashoffset 10ms linear";
-        var updateProgress = function () {
-            var scroll = $(window).scrollTop();
-            var height = $(document).height() - $(window).height();
-            var progress = pathLength - (scroll * pathLength) / height;
-            progressPath.style.strokeDashoffset = progress;
-        };
-        updateProgress();
-        $(window).scroll(updateProgress);
-        var offset = 50;
-        var duration = 750;
-        jQuery(window).on("scroll", function () {
-            if (jQuery(this).scrollTop() > offset) {
-                jQuery(scrollTopbtn).addClass("show");
+        //>> Sticky Header Js Start <<//
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                $("#header-sticky").addClass("sticky");
             } else {
-                jQuery(scrollTopbtn).removeClass("show");
+                $("#header-sticky").removeClass("sticky");
             }
         });
-        jQuery(scrollTopbtn).on("click", function (event) {
-            event.preventDefault();
-            jQuery("html, body").animate({ scrollTop: 0 }, duration);
-            return false;
-        });
-    }
 
-    /*---------- 06. Set Background Image Color & Mask ----------*/
-    if ($("[data-bg-src]").length > 0) {
-        $("[data-bg-src]").each(function () {
-            var src = $(this).attr("data-bg-src");
-            $(this).css("background-image", "url(" + src + ")");
-            $(this).removeAttr("data-bg-src").addClass("background-image");
-        });
-    }
+         //>> Hero Slider Start <<//
+         const sliderActive1 = ".hero-slider";
+         const sliderInit1 = new Swiper(sliderActive1, {
+             loop: true,
+             slidesPerView: 1,
+             effect: "fade",
+             speed: 2000,
+             autoplay: {
+             delay: 5000,
+             disableOnInteraction: false,
+             },
+             pagination: {
+                el: ".dot",
+                clickable: true,
+            },
+             
+         });
+         // content animation when active start here
+         function animated_swiper(selector, init) {
+             let animated = function animated() {
+                 $(selector + " [data-animation]").each(function () {
+                     let anim = $(this).data("animation");
+                     let delay = $(this).data("delay");
+                     let duration = $(this).data("duration");
+                     $(this)
+                         .removeClass("anim" + anim)
+                         .addClass(anim + " animated")
+                         .css({
+                             webkitAnimationDelay: delay,
+                             animationDelay: delay,
+                             webkitAnimationDuration: duration,
+                             animationDuration: duration,
+                         })
+                         .one("animationend", function () {
+                             $(this).removeClass(anim + " animated");
+                         });
+                 });
+             };
+             animated();
+             init.on("slideChange", function () {
+                 $(sliderActive1 + " [data-animation]").removeClass("animated");
+             });
+             init.on("slideChange", animated);
+         }
+         animated_swiper(sliderActive1, sliderInit1);
+         //>> Hero Slider End <<//
 
-    if ($("[data-bg-color]").length > 0) {
-        $("[data-bg-color]").each(function () {
-            var color = $(this).attr("data-bg-color");
-            $(this).css("background-color", color);
-            $(this).removeAttr("data-bg-color");
-        });
-    }
+         //>> Hero Slider Start <<//
+        const sliderActive2 = ".hero-slider-2";
+        const sliderInit2 = new Swiper(sliderActive2, {
+              loop: true,
+              slidesPerView: 1,
+              effect: "fade",
+              speed: 2000,
+              autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+              },
+              pagination: {
+                el: ".pegi-number",
+                type: "fraction",
+            },
 
-    if ($("[data-theme-color]").length > 0) {
-        $("[data-theme-color]").each(function () {
-            var $color = $(this).attr("data-theme-color");
-            $(this).get(0).style.setProperty("--theme-color", $color);
-            $(this).removeAttr("data-theme-color");
-        });
-    }
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+              
+         });
+         // content animation when active start here
+         function animated_swiper(selector, init) {
+             let animated = function animated() {
+                 $(selector + " [data-animation]").each(function () {
+                     let anim = $(this).data("animation");
+                     let delay = $(this).data("delay");
+                     let duration = $(this).data("duration");
+                     $(this)
+                         .removeClass("anim" + anim)
+                         .addClass(anim + " animated")
+                         .css({
+                             webkitAnimationDelay: delay,
+                             animationDelay: delay,
+                             webkitAnimationDuration: duration,
+                             animationDuration: duration,
+                         })
+                         .one("animationend", function () {
+                             $(this).removeClass(anim + " animated");
+                         });
+                 });
+             };
+             animated();
+             init.on("slideChange", function () {
+                 $(sliderActive1 + " [data-animation]").removeClass("animated");
+             });
+             init.on("slideChange", animated);
+         }
+         animated_swiper(sliderActive2, sliderInit2);
+         //>> Hero Slider End <<//
 
-    $("[data-border]").each(function () {
-        var borderColor = $(this).data("border");
-        $(this).css("--th-border-color", borderColor);
-    });
-
-    if ($("[data-mask-src]").length > 0) {
-        $("[data-mask-src]").each(function () {
-            var mask = $(this).attr("data-mask-src");
-            $(this).css({
-                "mask-image": "url(" + mask + ")",
-                "-webkit-mask-image": "url(" + mask + ")",
-            });
-            $(this).addClass("bg-mask");
-            $(this).removeAttr("data-mask-src");
-        });
-    }
-
-    /*----------- 07. Global Slider ----------*/
-    $(".th-slider").each(function () {
-        var thSlider = $(this);
-        var settings = $(this).data("slider-options");
-
-        // Store references to navigation and pagination elements
-        var prevArrow = thSlider.find(".slider-prev");
-        var nextArrow = thSlider.find(".slider-next");
-        var paginationEl1 = thSlider.find(".slider-pagination").get(0);
-        var paginationEl2 = thSlider.find(".slider-pagination2").get(0); // Second pagination element
-
-        var paginationType = settings["paginationType"] || "bullets";
-        var autoplayCondition = settings["autoplay"];
-
-        var sliderDefault = {
+         //>> Hero Slider 5 Start <<//
+        const sliderActive3 = ".hero-slider-5";
+        const sliderInit3 = new Swiper(sliderActive3, {
+            loop: true,
             slidesPerView: 1,
-            spaceBetween: settings["spaceBetween"] || 24,
-            loop: settings["loop"] !== false,
-            speed: settings["speed"] || 1000,
-            autoplay: autoplayCondition || {
+            effect: "fade",
+            speed: 3000,
+            autoplay: {
                 delay: 6000,
                 disableOnInteraction: false,
             },
             navigation: {
-                nextEl: nextArrow.get(0),
-                prevEl: prevArrow.get(0),
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+        });
+
+        function animated_swiper(selector, init) {
+            const animated = function animated() {
+                $(selector + " [data-animation]").each(function () {
+                    let anim = $(this).data("animation");
+                    let delay = $(this).data("delay");
+                    let duration = $(this).data("duration");
+                    $(this)
+                        .removeClass("anim" + anim)
+                        .addClass(anim + " animated")
+                        .css({
+                            webkitAnimationDelay: delay,
+                            animationDelay: delay,
+                            webkitAnimationDuration: duration,
+                            animationDuration: duration,
+                        })
+                        .one("animationend", function () {
+                            $(this).removeClass(anim + " animated");
+                        });
+                });
+            };
+            animated();
+            init.on("slideChange", function () {
+                $(sliderActive3 + " [data-animation]").removeClass("animated");
+            });
+            init.on("slideChange", animated);
+        }
+        animated_swiper(sliderActive3, sliderInit3);
+
+        //>> Scroll Js Start <<//
+        const scrollPath = document.querySelector(".scroll-up path");
+        const pathLength = scrollPath.getTotalLength();
+        scrollPath.style.transition = scrollPath.style.WebkitTransition = "none";
+        scrollPath.style.strokeDasharray = pathLength + " " + pathLength;
+        scrollPath.style.strokeDashoffset = pathLength;
+        scrollPath.getBoundingClientRect();
+        scrollPath.style.transition = scrollPath.style.WebkitTransition = "stroke-dashoffset 10ms linear";
+
+        const updatescroll = function() {
+            let scrolltotal = $(window).scrollTop();
+            let height = $(document).height() - $(window).height();
+            let scrolltotalheight = pathLength - (scrolltotal * pathLength) / height;
+            scrollPath.style.strokeDashoffset = scrolltotalheight;
+        };
+        updatescroll();
+
+        $(window).scroll(updatescroll);
+        const offset = 50;
+        const duration = 950;
+
+        $(window).on("scroll", function() {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery(".scroll-up").addClass("active-scroll");
+            } else {
+                jQuery(".scroll-up").removeClass("active-scroll");
+            }
+        });
+
+        $(".scroll-up").on("click", function(event) {
+            event.preventDefault();
+            jQuery("html, body").animate({
+                    scrollTop: 0,
+                },
+                duration
+            );
+            return false;
+        });
+
+         //>> Search Popup Start <<//
+         const $searchWrap = $(".search-wrap");
+         const $navSearch = $(".nav-search");
+         const $searchClose = $("#search-close");
+ 
+         $(".search-trigger").on("click", function (e) {
+             e.preventDefault();
+             $searchWrap.animate({ opacity: "toggle" }, 500);
+             $navSearch.add($searchClose).addClass("open");
+         });
+ 
+         $(".search-close").on("click", function (e) {
+             e.preventDefault();
+             $searchWrap.animate({ opacity: "toggle" }, 500);
+             $navSearch.add($searchClose).removeClass("open");
+         });
+ 
+         function closeSearch() {
+             $searchWrap.fadeOut(200);
+             $navSearch.add($searchClose).removeClass("open");
+         }
+ 
+         $(document.body).on("click", function (e) {
+             closeSearch();
+         });
+ 
+         $(".search-trigger, .main-search-input").on("click", function (e) {
+             e.stopPropagation();
+         });
+  
+        //>> Video Popup Start <<//
+        $(".img-popup").magnificPopup({
+            type: "image",
+            gallery: {
+                enabled: true,
+            },
+        });
+
+        $('.video-popup').magnificPopup({
+            type: 'iframe',
+            callbacks: {
+            }
+        });
+        
+        //>> Counterup Start <<//
+        $(".count").counterUp({
+            delay: 15,
+            time: 4000,
+        });
+
+        //>> Wow Animation Start <<//
+        new WOW().init();
+
+        //>> Nice Select Start <<//
+        $('select').niceSelect();
+
+         //>> Active Js Start <<//
+         $(".contact-info-items").hover(
+            function() {
+                $(".contact-info-items").removeClass("active");
+                $(this).addClass("active");
+            }
+        );
+
+        //>> Food Catagory Slider Start <<//
+        const foodCatagorySlider = new Swiper(".food-catagory-slider", {
+            spaceBetween: 30,
+            speed: 800,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+            breakpoints: {
+                1399: {
+                    slidesPerView: 4,
+                },
+                1199: {
+                    slidesPerView: 3,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+                575: {
+                    slidesPerView: 1,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+
+        //>> Food Catagory Slider Start <<//
+         const brandSlider = new Swiper(".brand-slider", {
+            spaceBetween: 30,
+            speed: 1000,
+            loop: "true",
+            speed: 1000,
+            //centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+            breakpoints: {
+                1399: {
+                    slidesPerView: 6,
+                },
+                991: {
+                    slidesPerView: 5,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                500: {
+                    slidesPerView: 3,
+                },
+                400: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+
+
+        const testimonialImageSlider = new Swiper(".testimonial-image-slider", {
+            speed: 1000,
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+            autoplay:true,
+            grabCursor: true,
+            centeredSlides: true,
+        });
+
+        const testimonialContentSlider = new Swiper(".testimonial-content-slider", {
+            speed: 1000,
+            loop: "true",
+            autoplay:true,
+            centeredSlides: true,
+        });
+
+        testimonialContentSlider.controller.control = testimonialImageSlider;
+        testimonialImageSlider.controller.control = testimonialContentSlider;
+
+
+        const testimonialContentSlider2 = new Swiper(".testimonial-content-slider-2", {
+            spaceBetween: 30,
+            speed: 1000,
+            loop: "true",
+            slidesPerView: 1,
+            speed: 2000,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
             },
             pagination: {
-                el: paginationEl1,
-                type: paginationType,
+                el: ".dot-2",
                 clickable: true,
-                renderBullet: function (index, className) {
-                    var number = index + 1;
-                    var formattedNumber = number < 10 ? "0" + number : number;
-                    return (
-                        '<span class="' +
-                        className +
-                        '" aria-label="Go to Slide ' +
-                        formattedNumber +
-                        '"></span>'
-                    );
+            },
+           
+        });
+
+        const testimonialContentSlider3 = new Swiper(".testimonial-content-slider-3", {
+            spaceBetween: 30,
+            speed: 1000,
+            loop: "true",
+            slidesPerView: 1,
+            speed: 2000,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".dot-2",
+                clickable: true,
+            },
+           
+        });
+
+        //>> Update Page 4 Start <<//
+        const testimonialSlider4 = new Swiper(".testimonial-slider-4", {
+            spaceBetween: 30,
+            speed: 1000,
+            loop: "true",
+            slidesPerView: 1,
+            speed: 1000,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".dot",
+                clickable: true,
+            },
+           
+        });
+
+        //>> Food Catagory Slider Start <<//
+        const gallerySlider = new Swiper(".gallery-slider", {
+            spaceBetween: 30,
+            loop: "true",
+            speed: 2000,
+            //centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 3,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                485: {
+                    slidesPerView: 2,
+                },
+                0: {
+                    slidesPerView: 1,
                 },
             },
-            on: {
-                init: function () {
-                    // ✅ Animation trigger on first load
-                    triggerSpinAnimation(this);
+        });
 
-                    // Set total slides for pagination
-                    var totalSlides = this.el.querySelectorAll(
-                        ".swiper-slide:not(.swiper-slide-duplicate)"
-                    ).length;
-                    if (paginationEl2) {
-                        $(paginationEl2).html(
-                            '<span class="current-slide">01</span> <span class="total-slides">' +
-                                (totalSlides < 10
-                                    ? "0" + totalSlides
-                                    : totalSlides) +
-                                "</span>"
-                        );
-                    }
-                },
-                slideChange: function () {
-                    // ✅ Animation trigger on slide change
-                    triggerSpinAnimation(this);
-
-                    var realIndex = this.realIndex + 1;
-                    var totalSlides = this.el.querySelectorAll(
-                        ".swiper-slide:not(.swiper-slide-duplicate)"
-                    ).length;
-
-                    if (paginationEl2) {
-                        $(paginationEl2).html(
-                            '<span class="current-slide">' +
-                                (realIndex < 10 ? "0" + realIndex : realIndex) +
-                                '</span> <span class="total-slides">' +
-                                (totalSlides < 10
-                                    ? "0" + totalSlides
-                                    : totalSlides) +
-                                "</span>"
-                        );
-                    }
+        //>> Food Catagory Slider Start <<//
+        const todayBestSaleImageSlider = new Swiper(".today-best-sale-image-slider", {
+            loop: "true",
+            speed: 3000,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+            breakpoints: {
+                991: {
+                    slidesPerView: 1,
                 },
             },
-        };
-
-        // Merge default settings with custom options
-        var options = $.extend({}, sliderDefault, settings);
-        var swiper = new Swiper(thSlider.get(0), options); // Initialize Swiper
-
-        // Add a custom class for the arrow wrapper
-        if ($(".slider-area").length > 0) {
-            $(".slider-area")
-                .closest(".container")
-                .parent()
-                .addClass("arrow-wrap");
-        }
-
-        // team slider specific wheel effect
-        if (thSlider.hasClass("translateSlider")) {
-            const multiplier = {
-                translate: 0.1,
-                rotate: 0.01,
-            };
-
-            function calculateWheel() {
-                const slides = document.querySelectorAll(".single");
-                slides.forEach((slide) => {
-                    const rect = slide.getBoundingClientRect();
-                    const r =
-                        window.innerWidth * 0.5 - (rect.x + rect.width * 0.5);
-                    let ty =
-                        Math.abs(r) * multiplier.translate -
-                        rect.width * multiplier.translate;
-
-                    if (ty < 0) {
-                        ty = 0;
-                    }
-                    const transformOrigin = r < 0 ? "left top" : "right top";
-                    slide.style.transform = `translate(0, ${ty}px) rotate(${
-                        -r * multiplier.rotate
-                    }deg)`;
-                    slide.style.transformOrigin = transformOrigin;
-                });
-            }
-
-            function raf() {
-                requestAnimationFrame(raf);
-                calculateWheel();
-            }
-
-            raf();
-        }
-    });
-
-    /*----------- External Navigation for Sliders ----------*/
-    $("[data-slider-prev], [data-slider-next]").on("click", function () {
-        var sliderSelector =
-            $(this).data("slider-prev") || $(this).data("slider-next");
-        var targetSlider = $(sliderSelector);
-
-        if (targetSlider.length) {
-            var swiper = targetSlider[0].swiper;
-
-            if (swiper) {
-                if ($(this).data("slider-prev")) {
-                    swiper.slidePrev();
-                } else {
-                    swiper.slideNext();
-                }
-            }
-        }
-    });
-
-    /*----------- Ensure Swipers Work Inside Tabs ----------*/
-    $("[data-bs-toggle='tab']").on("shown.bs.tab", function (e) {
-        var targetTabContent = $($(e.target).attr("href"));
-        var swiperContainer = targetTabContent.find(".swiper-container");
-
-        swiperContainer.each(function () {
-            var swiperInstance = this.swiper;
-            if (swiperInstance) {
-                swiperInstance.update(); // Update Swiper dimensions
-            }
-        });
-    });
-
-    // Function to add animation classes
-    function animationProperties() {
-        $("[data-ani]").each(function () {
-            var animationName = $(this).data("ani");
-            $(this).addClass(animationName);
         });
 
-        $("[data-ani-delay]").each(function () {
-            var delayTime = $(this).data("ani-delay");
-            $(this).css("animation-delay", delayTime);
-        });
-    }
-    animationProperties();
-
-    /*--------------. Slider Tab -------------*/
-    $.fn.activateSliderThumbs = function (options) {
-        var opt = $.extend(
-            {
-                sliderTab: false,
-                tabButton: ".tab-btn",
+        //>> Food Catagory Slider Start <<//
+        const instagramBannerSlider = new Swiper(".instagram-banner-slider", {
+            spaceBetween: 0,
+            loop: "true",
+            speed: 2000,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
             },
-            options
-        );
-
-        return this.each(function () {
-            var $container = $(this);
-            var $thumbs = $container.find(opt.tabButton);
-            var $line = $('<span class="indicator"></span>').appendTo(
-                $container
-            );
-
-            var sliderSelector = $container.data("slider-tab");
-            var $slider = $(sliderSelector);
-
-            var swiper = $slider[0].swiper;
-
-            $thumbs.on("click", function (e) {
-                e.preventDefault();
-                var clickedThumb = $(this);
-
-                clickedThumb
-                    .addClass("active")
-                    .siblings()
-                    .removeClass("active");
-                linePos(clickedThumb, $container);
-
-                if (opt.sliderTab) {
-                    var slideIndex = clickedThumb.index();
-                    swiper.slideTo(slideIndex);
-                }
-            });
-
-            if (opt.sliderTab) {
-                swiper.on("slideChange", function () {
-                    var activeIndex = swiper.realIndex;
-                    var $activeThumb = $thumbs.eq(activeIndex);
-
-                    $activeThumb
-                        .addClass("active")
-                        .siblings()
-                        .removeClass("active");
-                    linePos($activeThumb, $container);
-                });
-
-                var initialSlideIndex = swiper.activeIndex;
-                var $initialThumb = $thumbs.eq(initialSlideIndex);
-                $initialThumb
-                    .addClass("active")
-                    .siblings()
-                    .removeClass("active");
-                linePos($initialThumb, $container);
-            }
-
-            function linePos($activeThumb) {
-                var thumbOffset = $activeThumb.position();
-
-                var marginTop = parseInt($activeThumb.css("margin-top")) || 0;
-                var marginLeft = parseInt($activeThumb.css("margin-left")) || 0;
-
-                $line.css("--height-set", $activeThumb.outerHeight() + "px");
-                $line.css("--width-set", $activeThumb.outerWidth() + "px");
-                $line.css("--pos-y", thumbOffset.top + marginTop + "px");
-                $line.css("--pos-x", thumbOffset.left + marginLeft + "px");
-            }
-        });
-    };
-
-    if ($(".testi-grid-dots").length) {
-        $(".testi-grid-dots").activateSliderThumbs({
-            sliderTab: true,
-            tabButton: ".tab-btn",
-        });
-    }
-
-    /* Menu text slider start ---------------------*/
-    $(document).ready(function () {
-        $(".menuTextSlider").each(function () {
-            const multiplier = {
-                translate: 0.1,
-
-                rotate: 0.2,
-            };
-
-            new Swiper(".menuTextSlider", {
-                slidesPerView: 3,
-                spaceBetween: 60,
-                centeredSlides: true,
-                loop: true,
-                grabCursor: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+            breakpoints: {
+                1299: {
+                    slidesPerView: 5,
                 },
-                breakpoints: {
-                    300: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    600: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                    },
-                    1280: {
-                        slidesPerView: 3,
-                        spaceBetween: 60,
-                    },
+                1199: {
+                    slidesPerView: 4,
                 },
-            });
-
-            function calculateWheel() {
-                const slides = document.querySelectorAll(".single");
-                slides.forEach((slide, i) => {
-                    const rect = slide.getBoundingClientRect();
-                    const r =
-                        window.innerWidth * 0.5 - (rect.x + rect.width * 0.5);
-                    let ty =
-                        Math.abs(r) * multiplier.translate -
-                        rect.width * multiplier.translate;
-
-                    if (ty < 0) {
-                        ty = 0;
-                    }
-                    const transformOrigin = r < 0 ? "left top" : "right top";
-                    slide.style.transform = `translate(0, ${ty}px) rotate(${
-                        -r * multiplier.rotate
-                    }deg)`;
-                    slide.style.transformOrigin = transformOrigin;
-                });
-            }
-
-            function raf() {
-                requestAnimationFrame(raf);
-                calculateWheel();
-            }
-
-            raf();
-        });
-    });
-
-    /* Team slide 2 slider start ---------------------*/
-    $(document).ready(function () {
-        $(".team2SliderAAAA").each(function () {
-            const $slider = $(this);
-            const multiplier = {
-                translate: 0.2, // translate power
-                rotate: 0.02, // rotate power
-            };
-
-            const swiper = new Swiper(this, {
-                slidesPerView: 3,
-                spaceBetween: 60,
-                centeredSlides: true,
-                loop: true,
-                grabCursor: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+                991: {
+                    slidesPerView: 3,
                 },
-                breakpoints: {
-                    300: { slidesPerView: 1, spaceBetween: 20 },
-                    600: { slidesPerView: 2, spaceBetween: 30 },
-                    768: { slidesPerView: 2, spaceBetween: 40 },
-                    1024: { slidesPerView: 3, spaceBetween: 60 },
-                    1280: { slidesPerView: 3, spaceBetween: 60 },
+                768: {
+                    slidesPerView: 2,
                 },
-            });
-
-            function calculateWheel() {
-                const slides = $slider.find(".swiper-slide");
-                const activeIndex = swiper.activeIndex;
-
-                slides.each(function (i, slide) {
-                    const rect = slide.getBoundingClientRect();
-                    const r =
-                        window.innerWidth * 0.3 - (rect.x + rect.width * 0.3);
-                    let ty =
-                        Math.abs(r) * multiplier.translate -
-                        rect.width * multiplier.translate;
-
-                    if (ty < 0) ty = 0;
-
-                    if (i === activeIndex) {
-                        // center slide normal
-                        slide.style.transform = "translate(0, 0) rotate(0deg)";
-                        slide.style.transformOrigin = "center bottom";
-                    } else {
-                        // 🔄 reverse rotation direction
-                        const rotateDeg = Math.abs(r * multiplier.rotate);
-                        const finalRotate = r < 0 ? rotateDeg : -rotateDeg;
-
-                        slide.style.transform = `translate(0, ${ty}px) rotate(${finalRotate}deg)`;
-                        slide.style.transformOrigin =
-                            r < 0 ? "left bottom" : "right bottom";
-                    }
-                });
-            }
-
-            function raf() {
-                requestAnimationFrame(raf);
-                calculateWheel();
-            }
-            raf();
-        });
-    });
-
-    /*  menu 2 hover active and removed ---------------------*/
-    $(".menu-item-2").hover(
-        function () {
-            // hover in -> age sob theke remove kore, pore current e add
-            $(".menu-item-2").removeClass("active");
-            $(this).addClass("active");
-        },
-        function () {
-            // hover out -> jodi chao hover chere dile remove hoye jabe
-            $(this).removeClass("active");
-        }
-    );
-
-    /*  Menu text slider end ---------------------*/
-
-    $(".th-social .size-item").on("click", function () {
-        $(".th-social .size-item").removeClass("active");
-        $(this).addClass("active");
-    });
-
-    function triggerSpinAnimation(swiperInstance) {
-        // Get all real (non-duplicate) active slides
-        const realSlides = swiperInstance.slides;
-        const activeIndex = swiperInstance.activeIndex;
-        const activeSlide = realSlides[activeIndex];
-
-        // Skip if it's a duplicate slide
-        if (
-            !activeSlide ||
-            activeSlide.classList.contains("swiper-slide-duplicate")
-        ) {
-            return;
-        }
-
-        // Now animate elements inside the active slide only
-        const animatedEls = activeSlide.querySelectorAll(
-            '[data-ani="spinCenter"]'
-        );
-
-        animatedEls.forEach((el) => {
-            el.classList.remove("animate-active");
-            void el.offsetWidth; // force reflow to restart animation
-            setTimeout(() => {
-                el.classList.add("animate-active");
-            }, 10);
-        });
-    }
-
-    /*----------- 08. Ajax Contact Form ----------*/
-    var form = ".ajax-contact";
-    var invalidCls = "is-invalid";
-    var $email = '[name="email"]';
-    var $validation =
-        '[name="name"],[name="email"],[name="subject"],[name="number"],[name="message"]'; // Must be use (,) without any space
-    var formMessages = $(".form-messages");
-
-    function sendContact() {
-        var formData = $(form).serialize();
-        var valid;
-        valid = validateContact();
-        if (valid) {
-            jQuery
-                .ajax({
-                    url: $(form).attr("action"),
-                    data: formData,
-                    type: "POST",
-                })
-                .done(function (response) {
-                    // Make sure that the formMessages div has the 'success' class.
-                    formMessages.removeClass("error");
-                    formMessages.addClass("success");
-                    // Set the message text.
-                    formMessages.text(response);
-                    // Clear the form.
-                    $(
-                        form +
-                            ' input:not([type="submit"]),' +
-                            form +
-                            " textarea"
-                    ).val("");
-                })
-                .fail(function (data) {
-                    // Make sure that the formMessages div has the 'error' class.
-                    formMessages.removeClass("success");
-                    formMessages.addClass("error");
-                    // Set the message text.
-                    if (data.responseText !== "") {
-                        formMessages.html(data.responseText);
-                    } else {
-                        formMessages.html(
-                            "Oops! An error occured and your message could not be sent."
-                        );
-                    }
-                });
-        }
-    }
-
-    function validateContact() {
-        var valid = true;
-        var formInput;
-
-        function unvalid($validation) {
-            $validation = $validation.split(",");
-            for (var i = 0; i < $validation.length; i++) {
-                formInput = form + " " + $validation[i];
-                if (!$(formInput).val()) {
-                    $(formInput).addClass(invalidCls);
-                    valid = false;
-                } else {
-                    $(formInput).removeClass(invalidCls);
-                    valid = true;
-                }
-            }
-        }
-        unvalid($validation);
-
-        if (
-            !$($email).val() ||
-            !$($email)
-                .val()
-                .match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)
-        ) {
-            $($email).addClass(invalidCls);
-            valid = false;
-        } else {
-            $($email).removeClass(invalidCls);
-            valid = true;
-        }
-        return valid;
-    }
-
-    $(form).on("submit", function (element) {
-        element.preventDefault();
-        sendContact();
-    });
-
-    /*---------- 09. Search Box Popup ----------*/
-    function popupSarchBox($searchBox, $searchOpen, $searchCls, $toggleCls) {
-        $($searchOpen).on("click", function (e) {
-            e.preventDefault();
-            $($searchBox).addClass($toggleCls);
-        });
-        $($searchBox).on("click", function (e) {
-            e.stopPropagation();
-            $($searchBox).removeClass($toggleCls);
-        });
-        $($searchBox)
-            .find("form")
-            .on("click", function (e) {
-                e.stopPropagation();
-                $($searchBox).addClass($toggleCls);
-            });
-        $($searchCls).on("click", function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $($searchBox).removeClass($toggleCls);
-        });
-    }
-    popupSarchBox(
-        ".popup-search-box",
-        ".searchBoxToggler",
-        ".searchClose",
-        "show"
-    );
-
-    /*---------- 10. Popup Sidemenu ----------*/
-    function popupSideMenu($sideMenu, $sideMunuOpen, $sideMenuCls, $toggleCls) {
-        // Sidebar Popup
-        $($sideMunuOpen).on("click", function (e) {
-            e.preventDefault();
-            $($sideMenu).addClass($toggleCls);
-        });
-        $($sideMenu).on("click", function (e) {
-            e.stopPropagation();
-            $($sideMenu).removeClass($toggleCls);
-        });
-        var sideMenuChild = $sideMenu + " > div";
-        $(sideMenuChild).on("click", function (e) {
-            e.stopPropagation();
-            $($sideMenu).addClass($toggleCls);
-        });
-        $($sideMenuCls).on("click", function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $($sideMenu).removeClass($toggleCls);
-        });
-    }
-    popupSideMenu(".sidemenu-cart", ".sideMenuToggler", ".sideMenuCls", "show");
-    popupSideMenu(".sidemenu-info", ".sideMenuInfo", ".sideMenuCls", "show");
-
-    /*----------- 11. Magnific Popup ----------*/
-    /* magnificPopup img view */
-    $(".popup-image").magnificPopup({
-        type: "image",
-        mainClass: "mfp-zoom-in",
-        removalDelay: 260,
-        gallery: {
-            enabled: true,
-        },
-    });
-
-    /* magnificPopup video view */
-    $(".popup-video").magnificPopup({
-        type: "iframe",
-        mainClass: "mfp-zoom-in",
-    });
-
-    /* magnificPopup video view */
-    $(".popup-content").magnificPopup({
-        type: "inline",
-        midClick: true,
-    });
-
-    /*---------- 12. Section Position ----------*/
-    // Interger Converter
-    function convertInteger(str) {
-        return parseInt(str, 10);
-    }
-
-    $.fn.sectionPosition = function (mainAttr, posAttr) {
-        $(this).each(function () {
-            var section = $(this);
-
-            function setPosition() {
-                var sectionHeight = Math.floor(section.height() / 2), // Main Height of section
-                    posData = section.attr(mainAttr), // where to position
-                    posFor = section.attr(posAttr), // On Which section is for positioning
-                    topMark = "top-half", // Pos top
-                    bottomMark = "bottom-half", // Pos Bottom
-                    parentPT = convertInteger($(posFor).css("padding-top")), // Default Padding of  parent
-                    parentPB = convertInteger($(posFor).css("padding-bottom")); // Default Padding of  parent
-
-                if (posData === topMark) {
-                    $(posFor).css(
-                        "padding-bottom",
-                        parentPB + sectionHeight + "px"
-                    );
-                    section.css("margin-top", "-" + sectionHeight + "px");
-                } else if (posData === bottomMark) {
-                    $(posFor).css(
-                        "padding-top",
-                        parentPT + sectionHeight + "px"
-                    );
-                    section.css("margin-bottom", "-" + sectionHeight + "px");
-                }
-            }
-            setPosition(); // Set Padding On Load
-        });
-    };
-
-    var postionHandler = "[data-sec-pos]";
-    if ($(postionHandler).length) {
-        $(postionHandler).imagesLoaded(function () {
-            $(postionHandler).sectionPosition("data-sec-pos", "data-pos-for");
-        });
-    }
-
-    /*----------- 14. Filter ----------*/
-    $(".filter-active").imagesLoaded(function () {
-        var $filter = ".filter-active",
-            $filterItem = ".filter-item",
-            $filterMenu = ".filter-menu-active";
-
-        if ($($filter).length > 0) {
-            var $grid = $($filter).isotope({
-                itemSelector: $filterItem,
-                filter: "*",
-                masonry: {
-                    // use outer width of grid-sizer for columnWidth
-                    // columnWidth: 1,
+                575: {
+                    slidesPerView: 1,
                 },
-            });
-
-            // filter items on button click
-            $($filterMenu).on("click", "button", function () {
-                var filterValue = $(this).attr("data-filter");
-                $grid.isotope({
-                    filter: filterValue,
-                });
-            });
-
-            // Menu Active Class
-            $($filterMenu).on("click", "button", function (event) {
-                event.preventDefault();
-                $(this).addClass("active");
-                $(this).siblings(".active").removeClass("active");
-            });
-        }
-    });
-
-    $(".masonary-active, .woocommerce-Reviews .comment-list").imagesLoaded(
-        function () {
-            var $filter =
-                    ".masonary-active, .woocommerce-Reviews .comment-list",
-                $filterItem =
-                    ".filter-item, .woocommerce-Reviews .comment-list li";
-
-            if ($($filter).length > 0) {
-                $($filter).isotope({
-                    itemSelector: $filterItem,
-                    filter: "*",
-                    masonry: {
-                        // use outer width of grid-sizer for columnWidth
-                        columnWidth: 1,
-                    },
-                });
-            }
-            $('[data-bs-toggle="tab"]').on("shown.bs.tab", function (e) {
-                $($filter).isotope({
-                    filter: "*",
-                });
-            });
-        }
-    );
-
-    /*----------- 14. Counter Up ----------*/
-    $(".counter-number").counterUp({
-        delay: 10,
-        time: 1000,
-    });
-
-    /*----------- 15. Shape Mockup ----------*/
-    $.fn.shapeMockup = function () {
-        var $shape = $(this);
-        $shape.each(function () {
-            var $currentShape = $(this),
-                shapeTop = $currentShape.data("top"),
-                shapeRight = $currentShape.data("right"),
-                shapeBottom = $currentShape.data("bottom"),
-                shapeLeft = $currentShape.data("left");
-            $currentShape
-                .css({
-                    top: shapeTop,
-                    right: shapeRight,
-                    bottom: shapeBottom,
-                    left: shapeLeft,
-                })
-                .removeAttr("data-top")
-                .removeAttr("data-right")
-                .removeAttr("data-bottom")
-                .removeAttr("data-left")
-                .parent()
-                .addClass("shape-mockup-wrap");
+                0: {
+                    slidesPerView: 1,
+                },
+            },
         });
-    };
 
-    if ($(".shape-mockup")) {
-        $(".shape-mockup").shapeMockup();
-    }
+        //>> Food Catagory Slider Start <<//
+        const foodSlider = new Swiper(".food-slider", {
+            spaceBetween: 30,
+            loop: "true",
+            speed: 4000,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+        });
 
-    /*----------- 16. Progress Bar Animation ----------*/
-    $(".progress-bar").waypoint(
-        function () {
-            $(".progress-bar").css({
-                animation: "animate-positive 1.8s",
-                opacity: "1",
-            });
-        },
-        { offset: "75%" }
-    );
-
-    /*----------- 17. Countdown ----------*/
-
-    $.fn.countdown = function () {
-        $(this).each(function () {
-            var $counter = $(this),
-                countDownDate = new Date($counter.data("offer-date")).getTime(), // Set the date we're counting down toz
-                exprireCls = "expired";
-
-            // Finding Function
-            function s$(element) {
-                return $counter.find(element);
-            }
-
-            // Update the count down every 1 second
-            var counter = setInterval(function () {
-                // Get today's date and time
-                var now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor(
-                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-                );
-                var minutes = Math.floor(
-                    (distance % (1000 * 60 * 60)) / (1000 * 60)
-                );
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Check If value is lower than ten, so add zero before number
-                days < 10 ? (days = "0" + days) : null;
-                hours < 10 ? (hours = "0" + hours) : null;
-                minutes < 10 ? (minutes = "0" + minutes) : null;
-                seconds < 10 ? (seconds = "0" + seconds) : null;
-
-                // If the count down is over, write some text
-                if (distance < 0) {
-                    clearInterval(counter);
-                    $counter.addClass(exprireCls);
-                    $counter.find(".message").css("display", "block");
-                } else {
-                    // Output the result in elements
-                    s$(".day").html(days);
-                    s$(".hour").html(hours);
-                    s$(".minute").html(minutes);
-                    s$(".seconds").html(seconds);
-                }
+        //>> Scroll Up Start <<//
+        $("#scrollUp").on("click", function () {
+            setTimeout(function () {
+                $("html, body").animate({ scrollTop: "-=1000000px" }, "slow");
             }, 1000);
         });
-    };
 
-    if ($(".counter-list").length) {
-        $(".counter-list").countdown();
-    }
+        // range sliger
+        function getVals() {
+            let parent = this.parentNode;
+            let slides = parent.getElementsByTagName("input");
+            let slide1 = parseFloat(slides[0].value);
+            let slide2 = parseFloat(slides[1].value);
+            if (slide1 > slide2) {
+                let tmp = slide2;
+                slide2 = slide1;
+                slide1 = tmp;
+            }
 
-    /*---------- 18. Image to SVG Code ----------*/
-    const cache = {};
-
-    $.fn.inlineSvg = function fnInlineSvg() {
-        this.each(imgToSvg);
-
-        return this;
-    };
-
-    function imgToSvg() {
-        const $img = $(this);
-        const src = $img.attr("src");
-
-        // fill cache by src with promise
-        if (!cache[src]) {
-            const d = $.Deferred();
-            $.get(src, (data) => {
-                d.resolve($(data).find("svg"));
-            });
-            cache[src] = d.promise();
+            let displayElement = parent.getElementsByClassName("rangeValues")[0];
+            displayElement.innerHTML = "$" + slide1 + " - $" + slide2;
         }
 
-        // replace img with svg when cached promise resolves
-        cache[src].then((svg) => {
-            const $svg = $(svg).clone();
-
-            if ($img.attr("id")) $svg.attr("id", $img.attr("id"));
-            if ($img.attr("class")) $svg.attr("class", $img.attr("class"));
-            if ($img.attr("style")) $svg.attr("style", $img.attr("style"));
-
-            if ($img.attr("width")) {
-                $svg.attr("width", $img.attr("width"));
-                if (!$img.attr("height")) $svg.removeAttr("height");
+        window.onload = function() {
+            let sliderSections = document.getElementsByClassName("range-slider");
+            for (let x = 0; x < sliderSections.length; x++) {
+                let sliders = sliderSections[x].getElementsByTagName("input");
+                for (let y = 0; y < sliders.length; y++) {
+                    if (sliders[y].type === "range") {
+                        sliders[y].oninput = getVals;
+                        sliders[y].oninput();
+                    }
+                }
             }
-            if ($img.attr("height")) {
-                $svg.attr("height", $img.attr("height"));
-                if (!$img.attr("width")) $svg.removeAttr("width");
-            }
+        }
 
-            $svg.insertAfter($img);
-            $img.trigger("svgInlined", $svg[0]);
-            $img.remove();
-        });
-    }
-
-    $(".svg-img").inlineSvg();
-
-    /*---------- 19. Circle Progress ----------*/
-    function animateElements() {
-        $(".feature-circle .progressbar").each(function () {
-            var elementPos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            var percent = $(this).find(".circle").attr("data-percent");
-            var percentage = parseInt(percent, 10) / parseInt(100, 10);
-            var animate = $(this).data("animate");
-            if (
-                elementPos < topOfWindow + $(window).height() - 30 &&
-                !animate
-            ) {
-                $(this).data("animate", true);
-                $(this)
-                    .find(".circle")
-                    .circleProgress({
-                        startAngle: -Math.PI / 2,
-                        value: percent / 100,
-                        size: 100,
-                        thickness: 5,
-                        emptyFill: "#B7B7B7",
-                        fill: {
-                            color: "#F84923",
+        progressBar: () => {
+            const pline = document.querySelectorAll(".progressbar.line");
+            const pcircle = document.querySelectorAll(".progressbar.semi-circle");
+            pline.forEach(e => {
+                const line = new ProgressBar.Line(e, {
+                    strokeWidth: 6,
+                    trailWidth: 6,
+                    duration: 3000,
+                    easing: 'easeInOut',
+                    text: {
+                        style: {
+                            color: 'inherit',
+                            position: 'absolute',
+                            right: '0',
+                            top: '-30px',
+                            padding: 0,
+                            margin: 0,
+                            transform: null
                         },
+                        autoStyleContainer: false
+                    },
+                    step: (state, line) => {
+                        line.setText(Math.round(line.value() * 100) + ' %');
+                    }
+                });
+                let value = e.getAttribute('data-value') / 100;
+                new Waypoint({
+                    element: e,
+                    handler: function() {
+                        line.animate(value);
+                    },
+                    offset: 'bottom-in-view',
+                })
+            });
+            pcircle.forEach(e => {
+                const circle = new ProgressBar.SemiCircle(e, {
+                    strokeWidth: 6,
+                    trailWidth: 6,
+                    duration: 2000,
+                    easing: 'easeInOut',
+                    step: (state, circle) => {
+                        circle.setText(Math.round(circle.value() * 100));
+                    }
+                });
+                let value = e.getAttribute('data-value') / 100;
+                new Waypoint({
+                    element: e,
+                    handler: function() {
+                        circle.animate(value);
+                    },
+                    offset: 'bottom-in-view',
+                })
+            });
+        }
+
+        const rangeInput = document.querySelectorAll(".range-input input"),
+        priceInput = document.querySelectorAll(".price-input input"),
+        range = document.querySelector(".slider .progress");
+        let priceGap = 1000;
+
+        priceInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minPrice = parseInt(priceInput[0].value),
+                    maxPrice = parseInt(priceInput[1].value);
+
+                if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+                    if (e.target.className === "input-min") {
+                        rangeInput[0].value = minPrice;
+                        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+                    } else {
+                        rangeInput[1].value = maxPrice;
+                        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                    }
+                }
+            });
+        });
+
+        rangeInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minVal = parseInt(rangeInput[0].value),
+                    maxVal = parseInt(rangeInput[1].value);
+
+                if (maxVal - minVal < priceGap) {
+                    if (e.target.className === "range-min") {
+                        rangeInput[0].value = maxVal - priceGap;
+                    } else {
+                        rangeInput[1].value = minVal + priceGap;
+                    }
+                } else {
+                    priceInput[0].value = minVal;
+                    priceInput[1].value = maxVal;
+                    range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                    range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+                }
+            });
+        });
+
+         //>> Quantity Js Start <<//
+         $(".quantity").on("click", ".plus", function (e) {
+            let $input = $(this).prev("input.qty");
+            let val = parseInt($input.val(), 10); // Specify base 10
+            $input.val(val + 1).change();
+        });
+
+        $(".quantity").on("click", ".minus", function (e) {
+            let $input = $(this).next("input.qty");
+            const val = parseInt($input.val(), 10); // Specify base 10
+            if (val > 0) {
+                $input.val(val - 1).change();
+            }
+        });
+
+        //>> Quantity Cart Js Start <<//
+        let quantity = 0;
+        let price = 0;
+        $(".cart-item-quantity-amount, .product-quant").html(quantity);
+        $(".total-price, .product-pri").html(price.toFixed(2));
+        $(".cart-increment, .cart-incre").on("click", function() {
+            if (quantity <= 4) {
+                quantity++;
+                $(".cart-item-quantity-amount, .product-quant").html(quantity);
+                let basePrice = $(".base-price, .base-pri").text();
+                $(".total-price, .product-pri").html((basePrice * quantity).toFixed(2));
+            }
+        });
+
+        $(".cart-decrement, .cart-decre").on("click", function() {
+            if (quantity >= 1) {
+                quantity--;
+                $(".cart-item-quantity-amount, .product-quant").html(quantity);
+                let basePrice = $(".base-price, .base-pri").text();
+                $(".total-price, .product-pri").html((basePrice * quantity).toFixed(2));
+            }
+        });
+
+        $(".cart-item-remove>a").on("click", function() {
+            $(this).closest(".cart-item").hide(300);
+        });
+
+        //>> PaymentMethod Js Start <<//
+        let paymentMethod = $("input[name='pay-method']:checked").val();
+        $(".payment").html(paymentMethod);
+        $(".checkout-radio-single").on("click", function() {
+            let paymentMethod = $("input[name='pay-method']:checked").val();
+            $(".payment").html(paymentMethod);
+        });
+
+        if($('.testimonial-section .fry-shape').length > 0) {
+            const testimonialSection = gsap.timeline({
+                scrollTrigger: {
+                  trigger: ".testimonial-section",
+                  scrub: 1,
+                  start: 'top 70%',
+                  end: 'top 10%',
+                }
+            });
+            testimonialSection.to(".testimonial-section .fry-shape", {yPercent: 100, ease: "none"});
+            testimonialSection.to(".testimonial-section .pizza-shape", {rotation: 360, duration: 3});
+            testimonialSection.to(".testimonial-section .burger-shape", {rotation: 270, duration: 3});
+        }
+
+        if($('.food-category-section .burger-shape-2').length > 0) {
+            const categoryFood = gsap.timeline({
+                scrollTrigger: {
+                  trigger: ".food-category-section",
+                  scrub: 1,
+                  start: 'top 50%',
+                  end: 'top 10%',
+                }
+            });
+            categoryFood.to(".food-category-section .tomato-shape", {yPercent: -40, ease: "none"});
+            categoryFood.to(".food-category-section .burger-shape-2", {xPercent: 100, ease: "none"});
+        }
+
+        if($('.main-cta-banner').length > 0) {
+            const bike = gsap.timeline({
+                scrollTrigger: {
+                  trigger: ".main-cta-banner",
+                  scrub: 1,
+                  end: "+=1000",
+                }
+            });
+            bike.to(".delivery-man", {xPercent: -20, ease: "none",});
+        }
+
+        if($('.main-cta-banner-2').length > 0) {
+            const bike2 = gsap.timeline({
+                scrollTrigger: {
+                  trigger: ".main-cta-banner-2",
+                  scrub: 1,
+                  end: "+=1000",
+                }
+            });
+            bike2.to(".delivery-man", {xPercent: -20, ease: "none",});
+        }
+
+        if($('.news-section .burger-shape').length > 0) {
+            const newsShape = gsap.timeline({
+                scrollTrigger: {
+                  trigger: ".news-section",
+                  scrub: 1,
+                  end: "+=1000",
+                }
+            });
+            newsShape.to(".news-section .burger-shape", {yPercent: 130, ease: "none",})
+            newsShape.to(".news-section .fry-shape", {rotation: 350, ease: "none",});
+        }
+
+        if($('.footer-section .burger-shape').length > 0) {
+            const footerShape = gsap.timeline({
+                scrollTrigger: {
+                  trigger: ".footer-section",
+                  scrub: 1,
+                  end: "+=1000",
+                }
+            });
+    
+            footerShape.to(".burger-shape", {yPercent: -200, ease: "none",})
+            footerShape.to(".fry-shape", {xPercent: 350, ease: "none",});
+        }
+
+        if($('.footer-section .footer-shape').length > 0) {
+            const footerShape = gsap.timeline({
+                scrollTrigger: {
+                  trigger: ".footer-section",
+                  scrub: 1,
+                  end: "+=1000",
+                }
+            });
+    
+            footerShape.to(".footer-shape", {yPercent: -100, ease: "none",})
+            footerShape.to(".footer-shape-2", {rotation: 360, ease: "none",});
+        }
+
+
+        //Update Page Shop Sigle-2
+
+
+        //Quantity 
+        var inputs = document.querySelectorAll('#qty, #qty2, #qty3');
+        var btnminus = document.querySelectorAll('.qtyminus');
+        var btnplus = document.querySelectorAll('.qtyplus');
+
+        if (inputs.length > 0 && btnminus.length > 0 && btnplus.length > 0) {
+
+            inputs.forEach(function(input, index) {
+                var min = Number(input.getAttribute('min'));
+                var max = Number(input.getAttribute('max'));
+                var step = Number(input.getAttribute('step'));
+
+                function qtyminus(e) {
+                    var current = Number(input.value);
+                    var newval = (current - step);
+                    if (newval < min) {
+                        newval = min;
+                    } else if (newval > max) {
+                        newval = max;
+                    }
+                    input.value = Number(newval);
+                    e.preventDefault();
+                }
+
+                function qtyplus(e) {
+                    var current = Number(input.value);
+                    var newval = (current + step);
+                    if (newval > max) newval = max;
+                    input.value = Number(newval);
+                    e.preventDefault();
+                }
+
+                btnminus[index].addEventListener('click', qtyminus);
+                btnplus[index].addEventListener('click', qtyplus);
+            });
+        }
+
+        //Quantity 
+
+        //>> Update Page 06 Start <<//
+
+        //>> Popular Dishes Slider Start <<//
+        const popularDishesSlider = new Swiper(".popular-dishes-slider", {
+            spaceBetween: 30,
+            loop: "true",
+            speed: 2000,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 4,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                575: {
+                    slidesPerView: 1,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+
+        const popularDishesSlider2 = new Swiper(".popular-dishes-slider-2", {
+            spaceBetween: 30,
+            loop: "true",
+            speed: 2000,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+                reverseDirection: true,
+            },
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 4,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                575: {
+                    slidesPerView: 1,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+
+
+        $(function() {
+            // Get the form.
+            const form = $("#contact-form");
+            // Get the messages div.
+            const formMessages = $(".form-message");
+            // Set up an event listener for the contact form.
+            $(form).submit(function(e) {
+                // Stop the browser from submitting the form.
+                e.preventDefault();
+                // Serialize the form data.
+                const formData = $(form).serialize();
+                // Submit the form using AJAX.
+                $.ajax({
+                        type: "POST",
+                        url: $(form).attr("action"),
+                        data: formData,
                     })
-                    .on(
-                        "circle-animation-progress",
-                        function (event, progress, stepValue) {
-                            $(this)
-                                .find(".circle-num")
-                                .text((stepValue * 100).toFixed(0) + "%");
+                    .done(function(response) {
+                        // Make sure that the formMessages div has the 'success' class.
+                        $(formMessages).removeClass("error");
+                        $(formMessages).addClass("success");
+                        // Set the message text.
+                        $(formMessages).text(response);
+                        // Clear the form.
+                        $("#form input, #form textarea").val("");
+                    })
+                    .fail(function(data) {
+                        // Make sure that the formMessages div has the 'error' class.
+                        $(formMessages).removeClass("success");
+                        $(formMessages).addClass("error");
+                        // Set the message text.
+                        if (data.responseText !== "") {
+                            $(formMessages).text(data.responseText);
+                        } else {
+                            $(formMessages).text(
+                                "Oops! An error occured and your message could not be sent."
+                            );
                         }
-                    )
-                    .stop();
-            }
-        });
-    }
-    // Show animated elements
-    animateElements();
-    $(window).scroll(animateElements);
-
-    /*----------- 00. Woocommerce Toggle ----------*/
-    // Ship To Different Address
-    $("#ship-to-different-address-checkbox").on("change", function () {
-        if ($(this).is(":checked")) {
-            $("#ship-to-different-address")
-                .next(".shipping_address")
-                .slideDown();
-        } else {
-            $("#ship-to-different-address").next(".shipping_address").slideUp();
-        }
-    });
-
-    // Login Toggle
-    $(".woocommerce-form-login-toggle a").on("click", function (e) {
-        e.preventDefault();
-        $(".woocommerce-form-login").slideToggle();
-    });
-
-    // Coupon Toggle
-    $(".woocommerce-form-coupon-toggle a").on("click", function (e) {
-        e.preventDefault();
-        $(".woocommerce-form-coupon").slideToggle();
-    });
-
-    // Woocommerce Shipping Method
-    $(".shipping-calculator-button").on("click", function (e) {
-        e.preventDefault();
-        $(this).next(".shipping-calculator-form").slideToggle();
-    });
-
-    // Woocommerce Payment Toggle
-    $('.wc_payment_methods input[type="radio"]:checked')
-        .siblings(".payment_box")
-        .show();
-    $('.wc_payment_methods input[type="radio"]').each(function () {
-        $(this).on("change", function () {
-            $(".payment_box").slideUp();
-            $(this).siblings(".payment_box").slideDown();
-        });
-    });
-
-    // Woocommerce Rating Toggle
-    $(".rating-select .stars a").each(function () {
-        $(this).on("click", function (e) {
-            e.preventDefault();
-            $(this).siblings().removeClass("active");
-            $(this).parent().parent().addClass("selected");
-            $(this).addClass("active");
-        });
-    });
-
-    // Quantity Plus Minus ---------------------------
-
-    $(".quantity-plus").each(function () {
-        $(this).on("click", function (e) {
-            e.preventDefault();
-            var $qty = $(this).siblings(".qty-input");
-            var currentVal = parseInt($qty.val(), 10);
-            if (!isNaN(currentVal)) {
-                $qty.val(currentVal + 1);
-            }
-        });
-    });
-
-    $(".quantity-minus").each(function () {
-        $(this).on("click", function (e) {
-            e.preventDefault();
-            var $qty = $(this).siblings(".qty-input");
-            var currentVal = parseInt($qty.val(), 10);
-            if (!isNaN(currentVal) && currentVal > 1) {
-                $qty.val(currentVal - 1);
-            }
-        });
-    });
-
-    // /*----------- 00.Color Scheme ----------*/
-    $(".color-switch-btns button").each(function () {
-        // Get color for button
-        const button = $(this);
-        const color = button.data("color");
-        button.css("--theme-color", color);
-
-        // Change theme color on click
-        button.on("click", function () {
-            const clickedColor = $(this).data("color");
-            $(":root").css("--theme-color", clickedColor);
-        });
-    });
-
-    $(document).on("click", ".switchIcon", function () {
-        $(".color-scheme-wrap").toggleClass("active");
-    });
-
-    /*----------- 19. Tilt Active ----------*/
-
-    $(".tilt-active").tilt({
-        maxTilt: 7,
-        perspective: 1000,
-    });
-
-    /************lettering js***********/
-    function injector(t, splitter, klass, after) {
-        var a = t.text().split(splitter),
-            inject = "";
-        if (a.length) {
-            $(a).each(function (i, item) {
-                inject +=
-                    '<span class="' +
-                    klass +
-                    (i + 1) +
-                    '">' +
-                    item +
-                    "</span>" +
-                    after;
-            });
-            t.empty().append(inject);
-        }
-    }
-
-    var methods = {
-        init: function () {
-            return this.each(function () {
-                injector($(this), "", "char", "");
-            });
-        },
-
-        words: function () {
-            return this.each(function () {
-                injector($(this), " ", "word", " ");
-            });
-        },
-
-        lines: function () {
-            return this.each(function () {
-                var r = "eefec303079ad17405c889e092e105b0";
-                // Because it's hard to split a <br/> tag consistently across browsers,
-                // (*ahem* IE *ahem*), we replaces all <br/> instances with an md5 hash
-                // (of the word "split").  If you're trying to use this plugin on that
-                // md5 hash string, it will fail because you're being ridiculous.
-                injector(
-                    $(this).children("br").replaceWith(r).end(),
-                    r,
-                    "line",
-                    ""
-                );
-            });
-        },
-    };
-
-    $.fn.lettering = function (method) {
-        // Method calling logic
-        if (method && methods[method]) {
-            return methods[method].apply(this, [].slice.call(arguments, 1));
-        } else if (method === "letters" || !method) {
-            return methods.init.apply(this, [].slice.call(arguments, 0)); // always pass an array
-        }
-        $.error("Method " + method + " does not exist on jQuery.lettering");
-        return this;
-    };
-
-    $(".logo-animation").lettering();
-
-    /*----------- Countdown ----------*/
-    $.fn.countdown = function () {
-        $(this).each(function () {
-            var $counter = $(this),
-                countDownDate = new Date($counter.data("offer-date")).getTime(), // Set the date we're counting down toz
-                exprireCls = "expired";
-
-            // Finding Function
-            function s$(element) {
-                return $counter.find(element);
-            }
-
-            // Update the count down every 1 second
-            var counter = setInterval(function () {
-                // Get today's date and time
-                var now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor(
-                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-                );
-                var minutes = Math.floor(
-                    (distance % (1000 * 60 * 60)) / (1000 * 60)
-                );
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Check If value is lower than ten, so add zero before number
-                days < 10 ? (days = "0" + days) : null;
-                hours < 10 ? (hours = "0" + hours) : null;
-                minutes < 10 ? (minutes = "0" + minutes) : null;
-                seconds < 10 ? (seconds = "0" + seconds) : null;
-
-                // If the count down is over, write some text
-                if (distance < 0) {
-                    clearInterval(counter);
-                    $counter.addClass(exprireCls);
-                    $counter.find(".message").css("display", "block");
-                } else {
-                    // Output the result in elements
-                    s$(".day").html(days);
-                    s$(".hour").html(hours);
-                    s$(".minute").html(minutes);
-                    s$(".seconds").html(seconds);
-                }
-            }, 1000);
-        });
-    };
-
-    if ($(".counter-list").length) {
-        $(".counter-list").countdown();
-    }
-
-    /*----------- image Slider ----------*/
-    $("#slider").on("input change", (e) => {
-        const sliderPos = e.target.value;
-        // Update the width of the foreground image
-        $(".foreground-img").css("width", `${sliderPos}%`);
-        // Update the position of the slider button
-        $(".slider-button").css("left", `calc(${sliderPos}% - 43px)`);
-    });
-
-    /*----------- Date Time Picker ----------*/
-    // Only Date Picker
-    $(".date-pick").datetimepicker({
-        timepicker: false,
-        datepicker: true,
-        format: "d-m-y",
-        step: 10,
-    });
-
-    // Only Time Picker
-    $(".time-pick").datetimepicker({
-        datepicker: false,
-        format: "H:i",
-        step: 30,
-    });
-
-    // Date Time
-    $(".date-time-pick").datetimepicker({});
-
-    /*---------- Wow Active ----------*/
-    function wowAnimation() {
-        var wow = new WOW({
-            boxClass: "wow",
-            animateClass: "animated",
-            offset: 0,
-            mobile: false,
-            live: true,
-        });
-        wow.init();
-    }
-
-    /*---------------------------------------------
-         GSAP Animation Effect Start Here 
-------------------------------------------------*/
-
-    /*------- Smooth Scroll -------*/
-    gsap.registerPlugin(ScrollTrigger);
-
-    let lenis;
-    let tickerId = null;
-
-    const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    function initializeLenis() {
-        lenis = new Lenis({
-            lerp: 0.07, // Smoothing factor
-            smooth: true,
-        });
-
-        lenis.on("scroll", ScrollTrigger.update);
-
-        // Use GSAP's ticker to sync with Lenis
-        tickerId = gsap.ticker.add((time) => {
-            if (lenis) lenis.raf(time * 1000);
-        });
-
-        // Allow native scroll inside certain elements
-        document.querySelectorAll(".allow-natural-scroll").forEach((el) => {
-            el.addEventListener("wheel", (e) => e.stopPropagation(), {
-                passive: true,
-            });
-            el.addEventListener("touchmove", (e) => e.stopPropagation(), {
-                passive: true,
-            });
-        });
-    }
-
-    function enableOrDisableLenis() {
-        if (prefersReducedMotion) return;
-
-        if (window.innerWidth > 991) {
-            if (!lenis) initializeLenis();
-            lenis.start();
-        } else {
-            if (lenis) {
-                lenis.stop();
-                lenis = null;
-            }
-            // Clean up the GSAP ticker if it was added
-            if (tickerId) {
-                gsap.ticker.remove(tickerId);
-                tickerId = null;
-            }
-        }
-    }
-
-    // Call on load
-    enableOrDisableLenis();
-
-    // Optional: Re-check on resize
-    window.addEventListener("resize", () => {
-        enableOrDisableLenis();
-    });
-
-    // Only run animations if screen is more than 575px
-    if (window.innerWidth > 575) {
-        // Animate: .gsap-scroll-float-down
-        gsap.utils.toArray(".gsap-scroll-float-down").forEach((el) => {
-            gsap.to(el, {
-                y: 80,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 20%",
-                    end: "bottom top",
-                    scrub: 2,
-                },
-            });
-        });
-
-        // Animate: .gsap-scroll-float-down2
-        gsap.utils.toArray(".gsap-scroll-float-down2").forEach((el) => {
-            gsap.to(el, {
-                y: 250,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 30%",
-                    end: "bottom top",
-                    scrub: 2,
-                },
-            });
-        });
-
-        // Animate: .gsap-scroll-float-up
-        gsap.utils.toArray(".gsap-scroll-float-up").forEach((el) => {
-            gsap.to(el, {
-                y: -250,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 100%",
-                    end: "bottom top",
-                    scrub: 2,
-                },
-            });
-        });
-
-        // Animate: .gsap-fade-left
-        gsap.utils.toArray(".gsap-fade-left").forEach((el) => {
-            gsap.from(el, {
-                x: -150,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 80%",
-                    end: "bottom top",
-                    toggleActions: "play none none none",
-                },
-            });
-        });
-
-        // Animate: .gsap-scroll-rotate
-        if (document.querySelector(".gsap-scroll-rotate")) {
-            gsap.to(".gsap-scroll-rotate", {
-                rotate: 30,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".gsap-scroll-rotate",
-                    start: "top 30%",
-                    end: "bottom top",
-                    scrub: 2,
-                },
-            });
-        }
-
-        // Banner Timeline
-        let bannerTl = gsap.timeline({
-            defaults: { ease: "power3.out" },
-        });
-
-        // Animate: .gsap-scale-down-fade
-        if (document.querySelector(".gsap-scale-down-fade")) {
-            bannerTl.from(".gsap-scale-down-fade", {
-                y: -500,
-                scale: 0,
-                opacity: 0,
-                duration: 1,
-                delay: 0.5,
-            });
-        }
-
-        // Animate: .gsap-scale-up-fade
-        if (document.querySelector(".gsap-scale-up-fade")) {
-            bannerTl.from(
-                ".gsap-scale-up-fade",
-                {
-                    y: 400,
-                    scale: 0,
-                    opacity: 0,
-                    duration: 1,
-                    delay: 0.3,
-                },
-                "<" // start at the same time as previous animation
-            );
-        }
-
-        // Animate: .gsap-fade-up
-        if (document.querySelector(".gsap-fade-up")) {
-            bannerTl.from(".gsap-fade-up", {
-                y: 100,
-                opacity: 0,
-                duration: 0.3,
-            });
-        }
-
-        // Animate: .gsap-width-up
-        if (document.querySelector(".gsap-width-up")) {
-            bannerTl.from(".gsap-width-up", {
-                width: 0,
-                opacity: 0,
-                duration: 0.4,
-            });
-        }
-
-        // ===== 1. Animate Subtitle (text-anime-style-1)
-        document.querySelectorAll(".text-anime-style-1").forEach((subTitle) => {
-            gsap.from(subTitle, {
-                y: 50,
-                opacity: 0,
-                duration: 0.6,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: subTitle,
-                    start: "top 80%",
-                    toggleActions: "play none none none",
-                },
-            });
-        });
-
-        // ===== 2. Animate Title with split letters (text-anime-style-2)
-        document.querySelectorAll(".text-anime-style-2").forEach((secTitle) => {
-            const childNodes = Array.from(secTitle.childNodes);
-            let finalHTML = "";
-
-            childNodes.forEach((node) => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    // Split letters from plain text
-                    const letters = node.textContent.split("");
-                    letters.forEach((ch) => {
-                        finalHTML += `<span>${
-                            ch === " " ? "&nbsp;" : ch
-                        }</span>`;
                     });
-                } else {
-                    // Preserve existing span or tag
-                    finalHTML += node.outerHTML;
-                }
-            });
-
-            secTitle.innerHTML = finalHTML;
-
-            // Animate only the added spans
-            gsap.from(secTitle.querySelectorAll(":scope > span"), {
-                y: 20,
-                opacity: 0,
-                stagger: 0.03,
-                duration: 0.7,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: secTitle,
-                    start: "top 80%",
-                    toggleActions: "play none none none",
-                },
             });
         });
 
-        // ===== 3. Animate Image (text-anime-style-3)
-        document.querySelectorAll(".text-anime-style-3").forEach((img) => {
-            gsap.from(img, {
-                y: 80,
-                scale: 0.8,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: img,
-                    start: "top 80%",
-                    toggleActions: "play none none none",
-                },
-            });
-        });
 
-        // ===== 4. Animate Image (img-anime-style-1)
-        document.querySelectorAll(".img-anime-style-1").forEach((img) => {
-            gsap.from(img, {
-                y: 80,
-                scale: 0.8,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: img,
-                    start: "top 80%",
-                    toggleActions: "play none none none",
-                },
-            });
-        });
+    }); // End Document Ready Function
 
-        // ===== Example parseInt() Usage =====
-        document.querySelectorAll("[data-delay]").forEach((el) => {
-            const delay = parseInt(el.getAttribute("data-delay"), 10) || 0;
-
-            gsap.from(el, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                delay: delay,
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 85%",
-                    toggleActions: "play none none none",
-                },
-            });
+    function loader() {
+        $(window).on('load', function() {
+            // Animate loader off screen
+            $(".preloader").addClass('loaded');                    
+            $(".preloader").delay(600).fadeOut();                       
         });
     }
+    loader();
+   
 
-    /*---------------------------------------------
-            GSAP Animation Effect  End Here 
-------------------------------------------------*/
+})(jQuery); // End jQuery
 
-    /*----------- Pricing-switch & Tab ----------*/
-    $(document).ready(function () {
-        var e = $("#filt-monthly"),
-            d = $("#filt-yearly"),
-            t = $("#switcher"),
-            m = $("#monthly"),
-            y = $("#yearly");
-
-        if ($(".pricing-tabs").length) {
-            // Using jQuery to bind click events to the elements
-            e.on("click", function () {
-                t.prop("checked", false);
-                e.addClass("toggler--is-active");
-                d.removeClass("toggler--is-active");
-                m.removeClass("hide");
-                y.addClass("hide");
-            });
-
-            d.on("click", function () {
-                t.prop("checked", true);
-                d.addClass("toggler--is-active");
-                e.removeClass("toggler--is-active");
-                m.addClass("hide");
-                y.removeClass("hide");
-            });
-
-            t.on("click", function () {
-                d.toggleClass("toggler--is-active");
-                e.toggleClass("toggler--is-active");
-                m.toggleClass("hide");
-                y.toggleClass("hide");
-            });
-        }
-    });
-
-    /*----------- Pricing-switch & Tab ----------*/
-    $(document).ready(function () {
-        var e = $("#filt-monthly"),
-            d = $("#filt-yearly"),
-            t = $("#switcher"),
-            m = $("#monthly"),
-            y = $("#yearly");
-
-        if ($(".pricing-tabs").length) {
-            // Using jQuery to bind click events to the elements
-            e.on("click", function () {
-                t.prop("checked", false);
-                e.addClass("toggler--is-active");
-                d.removeClass("toggler--is-active");
-                m.removeClass("hide");
-                y.addClass("hide");
-            });
-
-            d.on("click", function () {
-                t.prop("checked", true);
-                d.addClass("toggler--is-active");
-                e.removeClass("toggler--is-active");
-                m.addClass("hide");
-                y.removeClass("hide");
-            });
-
-            t.on("click", function () {
-                d.toggleClass("toggler--is-active");
-                e.toggleClass("toggler--is-active");
-                m.toggleClass("hide");
-                y.toggleClass("hide");
-            });
-        }
-    });
-
-    // Initial call
-    enableOrDisableLenis();
-    window.addEventListener("resize", enableOrDisableLenis);
-
-    /*----------- 00. Right Click Disable ----------*/
-    // window.addEventListener(
-    //   "contextmenu",
-    //   function (e) {
-    //     e.preventDefault();
-    //   },
-    //   false
-    // );
-
-    // /*----------- 00. Inspect Element Disable ----------*/
-    //   document.onkeydown = function (e) {
-    //     if (event.keyCode == 123) {
-    //       return false;
-    //     }
-    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-    //       return false;
-    //     }
-    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-    //       return false;
-    //     }
-    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-    //       return false;
-    //     }
-    //     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-    //       return false;
-    //     }
-    //   }
-})(jQuery);

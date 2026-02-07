@@ -1,1720 +1,1410 @@
-<!doctype html>
-<html class="no-js class=""" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Kebab Yasmin - Surganya Ngebabs</title>
-    <meta name="author" content="Kebab Yasmin">
-    <meta name="description" content="Kebab Yasmin - Surganya Ngebabs">
-    <meta name="keywords" content="Kebab Yasmin - Surganya Ngebabs">
-    <meta name="robots" content="INDEX,FOLLOW">
-
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img') }}/kebab-yasmin.png">
-    <link rel="manifest" href="{{ asset('kebab') }}/img/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('kebab') }}/kebab-yasmin.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <!--==============================
- Google Fonts
- ============================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dynalight&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Bevan:ital@0;1&display=swap"
-        rel="stylesheet">
-
-    <!--==============================
- All CSS File
- ============================== -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ asset('kebab') }}/css/bootstrap.min.css">
-    <!-- Fontawesome Icon -->
-    <link rel="stylesheet" href="{{ asset('kebab') }}/css/fontawesome.min.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="{{ asset('kebab') }}/css/magnific-popup.min.css">
-    <!-- datetimepicker -->
-    <link rel="stylesheet" href="{{ asset('kebab') }}/css/jquery.datetimepicker.min.css">
-    <!-- Swiper Js -->
-    <link rel="stylesheet" href="{{ asset('kebab') }}/css/swiper-bundle.min.css">
-    <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('kebab') }}/css/style.css">
-
-</head>
-
-<body class="class=""">
-
-    <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-
-    <!--********************************
-   Code Start From Here
- ******************************** -->
-
-    <!--==============================
-     Preloader
-  ==============================-->
-    <div class="preloader ">
-        <button class="th-btn preloaderCls">Cancel Preloader </button>
-        <div id="preloader" class="preloader-inner">
-            <div class="header-logo pb-2">
-                <a href=""><img class="jump" src="{{ asset('img') }}//kebab-yasmin-putih.png"
-                        alt="Kebab Yasmin"></a>
-            </div>
-            <div class="txt-loading">
-                <span data-text-preloader="Y" class="letters-loading">
-                    Y </span>
-                <span data-text-preloader="A" class="letters-loading">
-                    A </span>
-                <span data-text-preloader="S" class="letters-loading">
-                    S </span>
-                <span data-text-preloader="M" class="letters-loading">
-                    M </span>
-                <span data-text-preloader="I" class="letters-loading">
-                    I
-                </span>
-                <span data-text-preloader="N" class="letters-loading">
-                    N
-                </span>
-            </div>
-        </div>
-    </div><!--==============================
-    Sidemenu
-============================== -->
-    <div class="sidemenu-wrapper sidemenu-cart ">
-        <div class="sidemenu-content">
-            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-            <div class="widget woocommerce widget_shopping_cart">
-                <h3 class="widget_title">Shopping cart</h3>
-                <div class="widget_shopping_cart_content">
-                    <ul class="woocommerce-mini-cart cart_list product_list_widget ">
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="{{ asset('kebab') }}/img/product/product_1_1.png"
-                                    alt="Cart Image">Dumbbells</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>940.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="{{ asset('kebab') }}/img/product/product_1_2.png"
-                                    alt="Cart Image">Leather
-                                Bag</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>899.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="{{ asset('kebab') }}/img/product/product_1_3.png"
-                                    alt="Cart Image">Protein
-                                Bottle</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>756.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="{{ asset('kebab') }}/img/product/product_1_4.png"
-                                    alt="Cart Image">Gym
-                                Cycle</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>723.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="{{ asset('kebab') }}/img/product/product_1_5.png"
-                                    alt="Cart Image">Sports
-                                Shoes</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>1080.00</span>
-                            </span>
-                        </li>
-                    </ul>
-                    <p class="woocommerce-mini-cart__total total">
-                        <strong>Subtotal:</strong>
-                        <span class="woocommerce-Price-amount amount">
-                            <span class="woocommerce-Price-currencySymbol">$</span>4398.00</span>
-                    </p>
-                    <p class="woocommerce-mini-cart__buttons buttons">
-                        <a href="cart.html" class="th-btn style2 wc-forward">View cart</a>
-                        <a href="checkout.html" class="th-btn style2 checkout wc-forward">Checkout</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup-search-box d-none d-lg-block">
-        <button class="searchClose"><i class="far fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="What are you looking for?">
-            <button type="submit"><i class="fal fa-search"></i></button>
-        </form>
-    </div><!--==============================
-    Mobile Menu
-  ============================== -->
-    <div class="th-menu-wrapper allow-natural-scroll">
-        <div class="th-menu-area text-center">
-            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo">
-                <a href=""><img src="{{ asset('kebab') }}/img/logo.svg" alt="Kebab Yasmin"></a>
-            </div>
-            {{-- <div class="th-mobile-menu">
-                <ul>
-                    <li class="menu-item-has-children">
-                        <a href="">HOME</a>
-                        <ul class="sub-menu">
-                            <li><a href="">01. Home (Fast Food Restaurant)</a></li>
-                            <li><a href="home-2.html">02. Home (Pizza Restaurant)</a></li>
-                            <li><a href="home-3.html">03. Home (Fine Dining)</a></li>
-                            <li><a href="home-4.html">04. Home (Food Restaurant)</a></li>
-                            <li><a href="home-5.html">05. Home (Burger Joint)</a></li>
-                            <li><a href="home-6.html">06. Home (Bakery & Dessert)</a></li>
-                            <li><a href="home-7.html">07. Home (Sushi Bar)</a></li>
-                            <li><a href="home-8.html">08. Home (Coffee Shop)</a></li>
-                            <li><a href="home-9.html">09. Home (Food delivery)</a></li>
-                            <li><a href="home-10.html">10. Home (Vegan & Healthy)</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">MENUS</a>
-                        <ul class="sub-menu">
-                            <li><a href="menu-grid.html">Menu Grid View</a></li>
-                            <li><a href="menu-list.html">Menu List View</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">ABOUT US</a></li>
-
-                    <li class="menu-item-has-children">
-                        <a href="#">PAGES</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                    <li><a href="cart.html">Cart Page</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">Reservation</a></li>
-                            <li><a href="team.html">Our Chef</a></li>
-                            <li><a href="team-details.html">Chef Details</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="faq.html">FAQS</a></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="error.html">Error Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">BLOG</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">CONTACT</a>
-                    </li>
-                </ul>
-            </div> --}}
-        </div>
-    </div><!-- <div class="color-scheme-wrap active">
-    <button class="switchIcon"><i class="fa-solid fa-palette"></i></button>
-    <h4 class="color-scheme-wrap-title"><i class="far fa-palette"></i> Color Switcher</h4>
-    <div class="color-switch-btns">
-        <button data-color="#F41E1E"><i class="fa-solid fa-droplet"></i></button>
-        <button data-color="#f34e3a"><i class="fa-solid fa-droplet"></i></button>
-        <button data-color="#FF4857"><i class="fa-solid fa-droplet"></i></button>
-        <button data-color="#3843C1"><i class="fa-solid fa-droplet"></i></button>
-        <button data-color="#FF7E02"><i class="fa-solid fa-droplet"></i></button>
-    </div>
-</div> --><!--==============================
- Header Area
-==============================-->
-    <header class="th-header header-default style-2">
-        <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
-            <div class="menu-area">
-                <div class="container">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-auto">
-                            <div class="header-logo">
-                                <a href=""><img src="{{ asset('img') }}/kebab-yasmin.png" alt="Kebab Yasmin"
-                                        width="140px;"></a>
+@extends('template.master')
+@section('content')
+    <!-- Hero Section Start -->
+    <section class="hero-section">
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                @foreach ($hero as $hr)
+                    <div class="swiper-slide">
+                        <div class="hero-1 bg-cover" style="background-image: url('kebab/img/hero/hero-bg.jpg');">
+                            <div class="chilii-shape" data-animation="fadeInUp" data-delay="2.1s">
+                                <img src="{{ asset('kebab') }}/img/hero/chilli-shape.png" alt="shape-img">
                             </div>
-                        </div>
-                        <div class="col-auto">
-                            <nav class="main-menu d-none d-lg-inline-block">
-                                {{-- <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="">HOME</a>
-                                        <ul class="mega-menu mega-menu-content allow-natural-scroll">
-                                            <li>
-                                                <div class="container">
-                                                    <div class="row gy-4">
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/index.jpg"
-                                                                        alt="Home One">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="" class="th-btn style3">View
-                                                                            Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="">01.
-                                                                        Home (Fast Food Restaurant)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-2.jpg"
-                                                                        alt="Home Two">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-2.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-2.html">02.
-                                                                        Home (Pizza Restaurant)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box coming">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-3.jpg"
-                                                                        alt="Home Three">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-3.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-3.html">03.
-                                                                        Home (Fine Dining)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box coming">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-4.jpg"
-                                                                        alt="Home Four">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-4.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-4.html">04.
-                                                                        Home (Seafood restaurant)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box coming">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-5.jpg"
-                                                                        alt="Home Five">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-5.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-5.html">05.
-                                                                        Home (Burger Joint)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box coming">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-6.jpg"
-                                                                        alt="Home Five">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-6.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-6.html">06.
-                                                                        Home (Bakery & Dessert)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box coming">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-7.jpg"
-                                                                        alt="Home Five">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-7.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-7.html">07.
-                                                                        Home (Sushi Bar)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box coming">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-8.jpg"
-                                                                        alt="Home Five">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-8.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-8.html">08.
-                                                                        Home (Coffee Shop)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box coming">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-9.jpg"
-                                                                        alt="Home Five">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-9.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-9.html">09.
-                                                                        Home (Food delivery)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="mega-menu-box coming">
-                                                                <div class="mega-menu-img">
-                                                                    <img src="{{ asset('kebab') }}/img/pages/home-10.jpg"
-                                                                        alt="Home Five">
-                                                                    <div class="btn-wrap">
-                                                                        <a href="home-10.html"
-                                                                            class="th-btn style3">View Demo</a>
-                                                                    </div>
-                                                                </div>
-                                                                <h3 class="mega-menu-title"><a href="home-10.html">10.
-                                                                        Home (Vegan & Healthy)</a></h3>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">ABOUT</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">MENU</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="menu-grid.html">Menu grid </a></li>
-                                            <li><a href="menu-list.html">Menu List</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">PAGES</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Shop</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                                    <li><a href="cart.html">Cart Page</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="">Reservation</a></li>
-
-                                            <li><a href="team.html">Our Chef</a></li>
-                                            <li><a href="team-details.html">Chef Details</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                            <li><a href="faq.html">FAQS</a></li>
-                                            <li><a href="error.html">Error Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">BLOG</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">CONTACT</a>
-                                    </li>
-                                </ul> --}}
-                            </nav>
-                            {{-- <div class="header-button d-flex d-lg-none">
-                                <button type="button" class="icon-btn sideMenuToggler">
-                                    <span class="badge">5</span>
-                                    <i class="fa-regular fa-cart-shopping"></i>
-                                </button>
-                                <button type="button" class="icon-btn th-menu-toggle"><i
-                                        class="far fa-bars"></i></button>
-                            </div> --}}
-                        </div>
-                        <div class="col-auto d-none d-xl-block">
-                            <div class="header-button">
-                                {{-- <button type="button" class="icon-btn searchBoxToggler"><i
-                                        class="far fa-search"></i></button>
-                                <button type="button" class="icon-btn sideMenuToggler">
-                                    <span class="badge">5</span>
-                                    <i class="fa-regular fa-cart-shopping"></i>
-                                </button> --}}
-                                <a href="" class="th-btn btn-mask">ORDER ONLINE</a>
+                            <div class="fire-shape" data-animation="fadeInUp" data-delay="2.4s">
+                                <img src="{{ asset('kebab') }}/img/hero/fire-shape.png" alt="shape-img">
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header><!--==============================
-Hero Area
-==============================-->
-    <div class="th-hero-wrapper hero-2" id="hero">
-        <img class="round-shape-bottom" src="{{ asset('kebab') }}/img/shape/shape-bottom.png" alt="img">
-        <div class="shape-mockup movingX hero-shape-2-1" data-top="4%" data-left="5%">
-            <img src="{{ asset('img') }}/ilustrasi-kebab.png" alt="img" width="130px;">
-        </div>
-        <div class="shape-mockup jump hero-shape-2-2" data-top="8%" data-right="5%">
-            <img src="{{ asset('kebab') }}/img/icon/hero-2-2.png" alt="img">
-        </div>
-
-        <div class="shape-mockup jump hero-shape-2-3" data-top="36%" data-left="16%">
-            <img src="{{ asset('kebab') }}/img/icon/hero-2-3.png" alt="img">
-        </div>
-
-        <div class="hero-inner">
-            <div class="hero-style2">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7 col-lg-10">
-                            <div class="hero-2-content-slider">
-                                <div class="swiper th-slider hero2ThumbSlide" id="hero2Content"
-                                    data-slider-options='{"effect":"fade","autoplay": true,"spaceBetween":60,"loop":true, "autoHeight":false,"allowTouchMove": false, "simulateTouch": true}'>
-                                    <div class="swiper-wrapper">
-
-                                        <div class="swiper-slide">
-                                            <div class="hero-2-content-slider">
-                                                <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
-                                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Surganya Ngebab!</h1>
-                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
-                                                    data-ani-delay="0.6s">
-                                                    <div class="size-item-wrap box-social">
-                                                        <div class="box-btn">
-                                                            <a href="shop.html">
-                                                                <i class="far fa-plus"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="slider-bottom" data-ani="slideinup"
-                                                    data-ani-delay="0.8s">
-                                                    <div class="price"> <span class="small-txt">Only</span> $45</div>
-                                                    <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div> --}}
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="hero-2-content-slider">
-                                                <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
-                                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Dari Banua, Untuk Selera Kita Semua.</h1>
-                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
-                                                    data-ani-delay="0.6s">
-                                                    <div class="size-item-wrap box-social">
-                                                        <div class="box-btn">
-                                                            <a href="shop.html">
-                                                                <i class="far fa-plus"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="slider-bottom" data-ani="slideinup"
-                                                    data-ani-delay="0.8s">
-                                                    <div class="price"> <span class="small-txt">Only</span> $65</div>
-                                                    <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div> --}}
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="hero-2-content-slider">
-                                                <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
-                                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Full Daging, Anti Angin. Puas Sejak Gigitan Pertama</h1>
-                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
-                                                    data-ani-delay="0.6s">
-                                                    <div class="size-item-wrap box-social">
-                                                        <div class="box-btn">
-                                                            <a href="shop.html">
-                                                                <i class="far fa-plus"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="slider-bottom" data-ani="slideinup"
-                                                    data-ani-delay="0.8s">
-                                                    <div class="price"> <span class="small-txt">Only</span> $50</div>
-                                                    <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div> --}}
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="hero-2-content-slider">
-                                                <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
-                                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Daging Melimpah, Kenyangnya Nggak Setengah-Setengah!</h1>
-                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
-                                                    data-ani-delay="0.6s">
-                                                    <div class="size-item-wrap box-social">
-                                                        <div class="box-btn">
-                                                            <a href="shop.html">
-                                                                <i class="far fa-plus"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="slider-bottom" data-ani="slideinup"
-                                                    data-ani-delay="0.8s">
-                                                    <div class="price"> <span class="small-txt">Only</span> $40</div>
-                                                    <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div> --}}
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="hero-2-content-slider">
-                                                <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
-                                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Sensasi Crunchy & Juicy dalam Satu Gulungan</h1>
-                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
-                                                    data-ani-delay="0.6s">
-                                                    <div class="size-item-wrap box-social">
-                                                        <div class="box-btn">
-                                                            <a href="shop.html">
-                                                                <i class="far fa-plus"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="slider-bottom" data-ani="slideinup"
-                                                    data-ani-delay="0.8s">
-                                                    <div class="price"> <span class="small-txt">Only</span> $60</div>
-                                                    <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div> --}}
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="hero-2-content-slider">
-                                                <span class="sub-title" data-ani="slideinup"
-                                                    data-ani-delay="0.2s">Selamat Datang di Kebab Yasmin</span>
-                                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
-                                                    Isian Padat, Nikmatnya Dahsyat</h1>
-                                                {{-- <div class="size-top-wrap style-2 " data-ani="slideinup"
-                                                    data-ani-delay="0.6s">
-                                                    <div class="size-item-wrap box-social">
-                                                        <div class="box-btn">
-                                                            <a href="shop.html">
-                                                                <i class="far fa-plus"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="slider-bottom" data-ani="slideinup"
-                                                    data-ani-delay="0.8s">
-                                                    <div class="price"> <span class="small-txt">Only</span> $55</div>
-                                                    <a href="cart.html" class="th-btn btn-mask">ADD TO CART</a>
-                                                </div> --}}
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
+                            <div class="chilii-shape-2" data-animation="fadeInUp" data-delay="2.7s">
+                                <img src="{{ asset('kebab') }}/img/hero/chilli-shape-2.png" alt="shape-img">
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid">
-                    <div class="hero-2-img-slider">
-                        <div class="swiper th-slider "
-                            data-slider-options='{"centeredSlides":true,"spaceBetween":80,"loop":true,"autoplay": true,"autoHeight": "false","allowTouchMove": true, "simulateTouch": true,"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}},"thumbs":{"swiper":".hero2ThumbSlide"}}'>
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('awal') }}/1.jpg" alt="img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('awal') }}/2.jpg" alt="img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('awal') }}/3.jpg" alt="img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('awal') }}/4.jpg" alt="img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('awal') }}/5.jpg" alt="img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="hero-2-thumb-slider">
-                                        <img src="{{ asset('awal') }}/6.jpg" alt="img">
-                                    </div>
-                                </div>
+                            <div class="chilii-shape-3" data-animation="fadeInUp" data-delay="3s">
+                                <img src="{{ asset('kebab') }}/img/hero/chilli-shape-3.png" alt="shape-img">
                             </div>
-                            <button data-slider-prev="#hero2Content" class="slider-arrow slider-prev"><img
-                                    src="{{ asset('kebab') }}/img/icon/left-arrow.svg" alt=""></button>
-                            <button data-slider-next="#hero2Content" class="slider-arrow slider-next"><img
-                                    src="{{ asset('kebab') }}/img/icon/right-arrow.svg" alt=""></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--======== / Hero Section ========-->
-
-
-    <!--==============================
-Category Area
-==============================-->
-    {{-- <section class="category-features space space-extra-bottom space-extra-top overflow-hidden" id="category-sec">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xxl-10">
-                    <div class="cate-2-wrap">
-                        <div class="item">
-                            <h3><a href="shop.html">Authentic</a></h3> <img
-                                src="{{ asset('kebab') }}/img/icon/cate-2-1.png" alt="">
-                        </div>
-                        <div class="item">
-                            <h3><a href="shop.html">Italian</a> </h3> <img
-                                src="{{ asset('kebab') }}/img/icon/cate-2-2.png" alt="">
-                        </div>
-                        <div class="item">
-                            <h3><a href="shop.html">Cuisine</a> </h3>
-                        </div>
-                        <div class="item">
-                            <h3><a href="shop.html">Delicious</a> </h3> <img
-                                src="{{ asset('kebab') }}/img/icon/cate-2-2.png" alt="">
-                        </div>
-                        <div class="item">
-                            <h3><a href="shop.html">Mouthwatering</a> </h3> <img
-                                src="{{ asset('kebab') }}/img/icon/cate-2-1.png" alt="">
-                        </div>
-                        <div class="item">
-                            <h3><a href="shop.html">Flavorful</a> </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!--==============================
-Process Area
-==============================-->
-    <section class="space-bottom overflow-hidden">
-        <div class="shape-mockup movingX d-xl-block d-none" data-top="0%" data-left="7%">
-            <img src="{{ asset('img') }}/ilustrasi-kebab.png" alt="img" width="110px;">
-        </div>
-        <div class="shape-mockup movingX d-xl-block d-none" data-top="0%" data-right="5%">
-            <img src="{{ asset('kebab') }}/img/icon/progress-2-1.png" alt="img">
-        </div>
-        <div class="shape-mockup jump-reverse d-xl-block d-none" data-top="10%" data-right="0%">
-            <img src="{{ asset('kebab') }}/img/icon/progress-2-2.png" alt="img">
-        </div>
-        <div class="shape-mockup jump-reverse d-xl-block d-none" data-bottom="5%" data-right="0%">
-            <img src="{{ asset('kebab') }}/img/icon/progress-2-3.png" alt="img">
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <div class="title-area text-center mb-60">
-                        <span class="sub-title style-2 text-anime-style-1">Cerita Kami</span>
-                        <h2 class="sec-title text-anime-style-2"> Tentang Kebab Yasmin</h2>
-                        <p class="box-text pe-xl-5 ps-xl-5 text-anime-style-3">The concept of “quick food” actually
-                            dates back to ancient civilizations, where street vendors and food stalls offered simple,
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-40 justify-content-center">
-                <div class="col-xl-7">
-                    <div class="process-thumb-wrap me-xl-4">
-                        {{-- <div class="process-2-icon" data-bg-src="">
-                            <img class="prog-2-circle" src="{{ asset('kebab') }}/img/icon/prog-2-circle.png"
-                                alt="img">
-                            <div class="logo-icon-wrap">
-                                <div class="logo-icon">
-                                    <div class="order">
-                                        <img src="{{ asset('kebab') }}/img/icon/process-arrow-icon.png"
-                                            alt="img">
-                                    </div>
-                                </div>
-                                <div class="logo-icon-wrap__text">
-                                    <span class="logo-animation">BOOK PRIVATE DINING & BANQUET ROOMS*</span>
-                                </div>
-                            </div>
+                            {{-- <div class="offer-shape" data-animation="fadeInUp" data-delay="2.1s">
+                            <img src="{{ asset('kebab') }}/img/hero/offer-shape.png" alt="shape-img">
                         </div> --}}
-                        <div class="thumb global-img">
-                            <img src="{{ asset('awal') }}/history1.png" alt="img">
-                        </div>
-                        <div class="thumb global-img">
-                            <img src="{{ asset('awal') }}/history2.png" alt="img">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5">
-                    <div class="progress-content-wrap">
-                        <div class="progress-item wow fadeinup" data-wow-delay=".2s">
-                            <h4 class="count">The Origin Story (Cerita Awal Mula)</h4>
-                            <h4 class="box-title">Berawal dari Gerobak Sederhana di Kampung Melayu.</h4>
-                            <p class="box-text">Awal Sederhana (2012) Semuanya bermula pada tahun 2012, dari sebuah
-                                gerobak sederhana di pinggir Jalan Kampung Melayu Darat, Banjarmasin. Nama "Yasmin"
-                                sendiri diambil dari nama putri pertamanya, sebuah simbol cinta dan harapan besar.</p>
-                        </div>
-                        <div class="progress-item wow fadeinup" data-wow-delay=".4s">
-                            <h4 class="count">Visi & Nilai (Our Values)</h4>
-                            <h4 class="box-title">Kualitas Terjaga, Rasa Tak Pernah Berubah.</h4>
-                            <p class="box-text">Sang pendiri memulai Kebab Yasmin dengan satu visi sederhana:
-                                menyajikan kebab dengan porsi yang "jujur"—daging yang melimpah dan rasa yang tidak
-                                setengah-setengah.</p>
-                        </div>
-                        <div class="progress-item wow fadeinup" data-wow-delay=".6s">
-                            <h4 class="count">Asli Banua</h4>
-                            <h4 class="box-title">10+ Tahun Melayani</h4>
-                            <p class="box-text">Menjadi Favorit Lokal Kini, lebih dari satu dekade kemudian, Kebab
-                                Yasmin telah tumbuh menjadi ikon kuliner lokal dengan puluhan outlet yang tersebar di
-                                Banjarmasin hingga Palangkaraya.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--==============================
-Category Area
-==============================-->
-    <section class="category-sec-3 space overflow-hidden">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-8">
-                    <div class="title-area ">
-                        <span class="sub-title style-2 before-none text-anime-style-1">The Real Premium Kebab
-                            Experience</span>
-                        <h2 class="sec-title text-anime-style-2">Menu Terbaik <span class="text-theme">Kebab
-                                Yasmin</span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="sec-btn">
-                        <div class="icon-box wow fadeinup" data-wow-delay=".4s">
-                            <button data-slider-prev="#catSlider3"
-                                class="slider-arrow style6 default slider-prev"><img
-                                    src="{{ asset('kebab') }}/img/icon/left-arrow.svg" alt=""></button>
-                            <button data-slider-next="#catSlider3"
-                                class="slider-arrow style6 default slider-next"><img
-                                    src="{{ asset('kebab') }}/img/icon/right-arrow.svg" alt=""></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-area">
-                <div class="swiper th-slider" id="catSlider3"
-                    data-slider-options='{"autoplay":true,"loop":true,"breakpoints":{"0":{"slidesPerView":1},"400":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"},"1400":{"slidesPerView":"4"}}}'>
-                    <div class="swiper-wrapper">
-
-                        @foreach ($terlaris as $t)
-                            <div class="swiper-slide">
-                                <div class="category-card style-2">
-                                    <div class="box-icon">
-                                        <img src="https://admin.kebabyasmin.id/{{ $t->foto }}" alt="Image"
-                                            style="max-height: 286px;">
-                                        {{-- <div class="actions">
-                                            <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                            <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
+                            <h2 class="hero-back-title" data-animation="fadeInRight" data-delay="2.5s">Surganya Ngebab!</h2>
+                            <div class="container">
+                                <div class="row justify-content-between">
+                                    <div class="col-xl-5 col-lg-7">
+                                        <div class="hero-content">
+                                            <p data-animation="fadeInUp">{{ $hr->title1 }}</p>
+                                            <h1 data-animation="fadeInUp" data-delay="0.5s">
+                                                {{ $hr->title2 }}
+                                            </h1>
+                                            {{-- <div class="hero-button">
+                                            <a href="shop-single.html" class="theme-btn" data-animation="fadeInUp"
+                                                data-delay="0.9s">
+                                                <span class="button-content-wrapper d-flex align-items-center">
+                                                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                                    <span class="button-text">order now</span>
+                                                </span>
+                                            </a>
                                         </div> --}}
+                                        </div>
                                     </div>
-                                    <div class="th-social">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
+                                    <div class="col-xl-6 col-lg-5 mt-5 mt-lg-0">
+                                        <div class="chiken-image" data-animation="fadeInUp" data-delay="1.4s">
+                                            <img src="https://admin.kebabyasmin.id/img-hero/{{ $hr->foto }}"
+                                                alt="chiken-img">
+                                        </div>
                                     </div>
-                                    <h3 class="box-title"><a href="shop.html">{{ $t->nm_produk }}</a></h3>
-                                    <p class="box-subtitle">Rp.{{ number_format($t->harga, 0) }}</p>
                                 </div>
                             </div>
-                        @endforeach
+                        </div>
+                    </div>
+                @endforeach
 
+
+                {{-- <div class="swiper-slide">
+                    <div class="hero-1 bg-cover" style="background-image: url('kebab/img/hero/hero-bg.jpg');">
+                        <div class="chilii-shape" data-animation="fadeInUp" data-delay="2.1s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape.png" alt="shape-img">
+                        </div>
+                        <div class="fire-shape" data-animation="fadeInUp" data-delay="2.4s">
+                            <img src="{{ asset('kebab') }}/img/hero/fire-shape.png" alt="shape-img">
+                        </div>
+                        <div class="chilii-shape-2" data-animation="fadeInUp" data-delay="2.7s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape-2.png" alt="shape-img">
+                        </div>
+                        <div class="chilii-shape-3" data-animation="fadeInUp" data-delay="3s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape-3.png" alt="shape-img">
+                        </div>
+                        <div class="offer-shape" data-animation="fadeInUp" data-delay="2.1s">
+                            <img src="{{ asset('kebab') }}/img/hero/offer-shape.png" alt="shape-img">
+                        </div>
+                        <h2 class="hero-back-title" data-animation="fadeInRight" data-delay="2.5s">fast food</h2>
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="col-xl-5 col-lg-7">
+                                    <div class="hero-content">
+                                        <p data-animation="fadeInUp">crispy, every bite taste</p>
+                                        <h1 data-animation="fadeInUp" data-delay="0.5s">
+                                            Awesome
+                                            <span>fried</span>
+                                            chiken
+                                        </h1>
+                                        <div class="hero-button">
+                                            <a href="shop-single.html" class="theme-btn" data-animation="fadeInUp"
+                                                data-delay="0.9s">
+                                                <span class="button-content-wrapper d-flex align-items-center">
+                                                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                                    <span class="button-text">order now</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 mt-5 mt-lg-0">
+                                    <div class="chiken-image" data-animation="fadeInUp" data-delay="1.4s">
+                                        <img src="{{ asset('kebab') }}/img/hero/chiken.png" alt="chiken-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-1 bg-cover" style="background-image: url('kebab/img/hero/hero-bg.jpg');">
+                        <div class="chilii-shape" data-animation="fadeInUp" data-delay="2.1s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape.png" alt="shape-img">
+                        </div>
+                        <div class="fire-shape" data-animation="fadeInUp" data-delay="2.4s">
+                            <img src="{{ asset('kebab') }}/img/hero/fire-shape.png" alt="shape-img">
+                        </div>
+                        <div class="chilii-shape-2" data-animation="fadeInUp" data-delay="2.7s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape-2.png" alt="shape-img">
+                        </div>
+                        <div class="chilii-shape-3" data-animation="fadeInUp" data-delay="3s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape-3.png" alt="shape-img">
+                        </div>
+                        <div class="offer-shape" data-animation="fadeInUp" data-delay="2.1s">
+                            <img src="{{ asset('kebab') }}/img/hero/offer-shape.png" alt="shape-img">
+                        </div>
+                        <h2 class="hero-back-title" data-animation="fadeInRight" data-delay="2.5s">fast food</h2>
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="col-xl-5 col-lg-7">
+                                    <div class="hero-content">
+                                        <p data-animation="fadeInUp">crispy, every bite taste</p>
+                                        <h1 data-animation="fadeInUp" data-delay="0.5s">
+                                            Favorite
+                                            <span>fried</span>
+                                            chiken
+                                        </h1>
+                                        <div class="hero-button">
+                                            <a href="shop-single.html" class="theme-btn" data-animation="fadeInUp"
+                                                data-delay="0.9s">
+                                                <span class="button-content-wrapper d-flex align-items-center">
+                                                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                                    <span class="button-text">order now</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 mt-5 mt-lg-0">
+                                    <div class="chiken-image" data-animation="fadeInUp" data-delay="1.4s">
+                                        <img src="{{ asset('kebab') }}/img/hero/chiken.png" alt="chiken-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-1 bg-cover" style="background-image: url('kebab/img/hero/hero-bg.jpg');">
+                        <div class="chilii-shape" data-animation="fadeInUp" data-delay="2.1s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape.png" alt="shape-img">
+                        </div>
+                        <div class="fire-shape" data-animation="fadeInUp" data-delay="2.4s">
+                            <img src="{{ asset('kebab') }}/img/hero/fire-shape.png" alt="shape-img">
+                        </div>
+                        <div class="chilii-shape-2" data-animation="fadeInUp" data-delay="2.7s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape-2.png" alt="shape-img">
+                        </div>
+                        <div class="chilii-shape-3" data-animation="fadeInUp" data-delay="3s">
+                            <img src="{{ asset('kebab') }}/img/hero/chilli-shape-3.png" alt="shape-img">
+                        </div>
+                        <div class="offer-shape" data-animation="fadeInUp" data-delay="2.1s">
+                            <img src="{{ asset('kebab') }}/img/hero/offer-shape.png" alt="shape-img">
+                        </div>
+                        <h2 class="hero-back-title" data-animation="fadeInRight" data-delay="2.5s">fast food</h2>
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="col-xl-5 col-lg-7">
+                                    <div class="hero-content">
+                                        <p data-animation="fadeInUp">crispy, every bite taste</p>
+                                        <h1 data-animation="fadeInUp" data-delay="0.5s">
+                                            delicious
+                                            <span>fried</span>
+                                            chiken
+                                        </h1>
+                                        <div class="hero-button">
+                                            <a href="shop-single.html" class="theme-btn" data-animation="fadeInUp"
+                                                data-delay="0.9s">
+                                                <span class="button-content-wrapper d-flex align-items-center">
+                                                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                                    <span class="button-text">order now</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 mt-5 mt-lg-0">
+                                    <div class="chiken-image" data-animation="fadeInUp" data-delay="1.4s">
+                                        <img src="{{ asset('kebab') }}/img/hero/chiken.png" alt="chiken-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+            <div class="swiper-dot text-center pt-5">
+                <div class="dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Catagory Section Start -->
+    <section class="food-category-section fix section-padding section-bg">
+        <div class="tomato-shape">
+            <img src="{{ asset('kebab') }}/img/shape/tomato-shape.png" alt="shape-img">
+        </div>
+        <div class="burger-shape-2">
+            <img src="{{ asset('kebab') }}/img/shape/burger-shape-2.png" alt="shape-img">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-9">
+                    <div class="section-title">
+                        <span class="wow fadeInUp">crispy, every bite taste</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Popular Food Items</h2>
+                    </div>
+                </div>
+                <div class="col-md-5 ps-0 col-3 text-end wow fadeInUp" data-wow-delay=".5s">
+                    <div class="array-button">
+                        <button class="array-prev"><i class="far fa-long-arrow-left"></i></button>
+                        <button class="array-next"><i class="far fa-long-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper food-catagory-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="catagory-product-card bg-cover"
+                            style="background-image: url('kebab/img/shape/catagory-card-shape.jpg');">
+                            <h5>5 products</h5>
+                            <div class="catagory-product-image text-center">
+                                <a href="shop.html">
+                                    <img src="{{ asset('kebab') }}/img/food/pizza.png" alt="product-img">
+                                    <div class="decor-leaf">
+                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf.svg" alt="shape-img">
+                                    </div>
+                                    <div class="decor-leaf-2">
+                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf-2.svg" alt="shape-img">
+                                    </div>
+                                    <div class="burger-shape">
+                                        <img src="{{ asset('kebab') }}/img/shape/burger-shape.png" alt="shape-img">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="catagory-product-content text-center">
+                                <div class="catagory-product-icon">
+                                    <img src="{{ asset('kebab') }}/img/shape/food-shape.svg" alt="shape-text">
+                                </div>
+                                <h3>
+                                    <a href="shop-single.html">
+                                        pro pizza
+                                    </a>
+                                </h3>
+                                <p>5 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="catagory-product-card bg-cover"
+                            style="background-image: url('kebab/img/shape/catagory-card-shape.jpg');">
+                            <h5>5 products</h5>
+                            <div class="catagory-product-image text-center">
+                                <a href="shop.html">
+                                    <img src="{{ asset('kebab') }}/img/food/pasta.png" alt="product-img">
+                                    <div class="decor-leaf">
+                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf.svg" alt="shape-img">
+                                    </div>
+                                    <div class="decor-leaf-2">
+                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf-2.svg" alt="shape-img">
+                                    </div>
+                                    <div class="burger-shape">
+                                        <img src="{{ asset('kebab') }}/img/shape/burger-shape.png" alt="shape-img">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="catagory-product-content text-center">
+                                <div class="catagory-product-icon">
+                                    <img src="{{ asset('kebab') }}/img/shape/food-shape.svg" alt="shape-text">
+                                </div>
+                                <h3>
+                                    <a href="shop-single.html">
+                                        pro pizza
+                                    </a>
+                                </h3>
+                                <p>5 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="catagory-product-card bg-cover"
+                            style="background-image: url('kebab/img/shape/catagory-card-shape.jpg');">
+                            <h5>5 products</h5>
+                            <div class="catagory-product-image text-center">
+                                <a href="shop.html">
+                                    <img src="{{ asset('kebab') }}/img/food/burger.png" alt="product-img">
+                                    <div class="decor-leaf">
+                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf.svg" alt="shape-img">
+                                    </div>
+                                    <div class="decor-leaf-2">
+                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf-2.svg" alt="shape-img">
+                                    </div>
+                                    <div class="burger-shape">
+                                        <img src="{{ asset('kebab') }}/img/shape/burger-shape.png" alt="shape-img">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="catagory-product-content text-center">
+                                <div class="catagory-product-icon">
+                                    <img src="{{ asset('kebab') }}/img/shape/food-shape.svg" alt="shape-text">
+                                </div>
+                                <h3>
+                                    <a href="shop-single.html">
+                                        pro pizza
+                                    </a>
+                                </h3>
+                                <p>5 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="catagory-product-card bg-cover"
+                            style="background-image: url('kebab/img/shape/catagory-card-shape.jpg');">
+                            <h5>5 products</h5>
+                            <div class="catagory-product-image text-center">
+                                <a href="shop.html">
+                                    <img src="{{ asset('kebab') }}/img/food/french-fry.png" alt="product-img">
+                                    <div class="decor-leaf">
+                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf.svg" alt="shape-img">
+                                    </div>
+                                    <div class="decor-leaf-2">
+                                        <img src="{{ asset('kebab') }}/img/shape/decor-leaf-2.svg" alt="shape-img">
+                                    </div>
+                                    <div class="burger-shape">
+                                        <img src="{{ asset('kebab') }}/img/shape/burger-shape.png" alt="shape-img">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="catagory-product-content text-center">
+                                <div class="catagory-product-icon">
+                                    <img src="{{ asset('kebab') }}/img/shape/food-shape.svg" alt="shape-text">
+                                </div>
+                                <h3>
+                                    <a href="shop-single.html">
+                                        pro pizza
+                                    </a>
+                                </h3>
+                                <p>5 products</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--==============================
-History Area
-==============================-->
-    <div class="best-deal-sec1 space overflow-hidden " id="best-deal-sec">
 
-        <div class="shape-mockup jump-reverse d-xl-block d-none" data-top="5%" data-right="10%">
-            <img src="{{ asset('kebab') }}/img/shape/best-deal-2-top.png" alt="img">
+    <!-- Food Banner Section Start -->
+    <section class="food-banner-section section-padding fix section-bg pt-0">
+        <div class="chili-shape">
+            <img src="{{ asset('kebab') }}/img/shape/chili-shape.png" alt="shape-img">
+        </div>
+        <div class="fry-shape">
+            <img src="{{ asset('kebab') }}/img/shape/fry-shape.png" alt="shape-img">
         </div>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="title-area text-center mb-40">
-                        <span class="sub-title style-2 text-anime-style-1">Best Deals</span>
-                        <h2 class="sec-title text-anime-style-2">Best Kebab <span class="text-theme">Deals &
-                                Combos</span></h2>
-                        <p class="box-text pe-xl-5 ps-xl-5 text-anime-style-3">Konsep "makanan cepat saji" sebenarnya
-                            sudah ada sejak peradaban kuno, di mana pedagang kaki lima dan warung makan menawarkan
-                            makanan sederhana,
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-4 justify-content-center">
-                <div class="col-lg-3">
-                    <div class="best-deal-img-1-1 global-img">
-                        {{-- <img src="{{ asset('kebab') }}/img/menu/menu-big-1-1.jpg" alt="img"> --}}
-                        <img src="{{ asset('awal') }}/ilustrasi-kebab.png" alt="img">
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="menu-1-content-wrap style-2 ms-xl-5">
-
-                        @foreach ($kombo as $km)
-                            <div class="menu-item-1  wow fadeinup" data-wow-delay=".2s">
-                                <div class="thumb global-img"
-                                    data-mask-src="https://admin.kebabyasmin.id/{{ $km->foto }}">
-                                    <img src="https://admin.kebabyasmin.id/{{ $km->foto }}" alt="img"
-                                        width="84px;">
-                                </div>
-                                <div class="content">
-                                    <div class="left">
-                                        <h3 class="box-title"><a href="shop-details.html">{{ $km->nm_produk }}</a>
-                                        </h3>
-                                        {{-- <p class="box-text">2 Large Pizza + Garlic Bread + 4 Soft Drinks</p> --}}
-                                    </div>
-                                    <div class="right">
-                                        <h4 class="price"> <span>Rp.</span> {{ number_format($km->harga, 0) }}</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-
-                        <div class="text-center mt-5 pt-xl-3">
-                            <a href="" class="th-btn btn-mask">Order Now</a>
+            <div class="row">
+                <div class="col-xl-5 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="single-offer-items bg-cover"
+                        style="background-image: url('kebab/img/banner/offer-bg.png');">
+                        <div class="offer-content">
+                            <h5>crispy, every bite taste</h5>
+                            <h3>
+                                SUPER <br>
+                                DELICIOUS
+                            </h3>
+                        </div>
+                        <div class="offer-image">
+                            <img src="{{ asset('kebab') }}/img/offer/50percent-off.png" alt="offer-img">
+                        </div>
+                        <div class="burger-text">
+                            <img src="{{ asset('kebab') }}/img/shape/burger-text.png" alt="shape-img">
+                        </div>
+                        <div class="main-food">
+                            <img src="{{ asset('kebab') }}/img/food/main-food.png" alt="food-img">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="best-deal-img-1-2 gsap-scroll-float-up">
-                        <img src="{{ asset('awal') }}/ilustrasi-kebab2.png" alt="img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!--==============================
-Error Area
-==============================-->
-    <section class="order-online-sec-1 overflow-hidden">
-        <div class="container">
-            <div class="order-online-container-wrap">
-                <div class="order-bg-thumb tilt-active"
-                    data-mask-src="{{ asset('kebab') }}/img/bg/food-delivery-bg.png"></div>
-                <img class="order-shape-long" src="{{ asset('kebab') }}/img/shape/order-shape-long.png"
-                    alt="">
-                <div class="row gy-40 align-items-center">
-                    <div class="col-xl-6">
-                        <div class="order-online-content pe-xl-5 me-xl-4">
-                            <div class="title-area mb-40">
-                                <span class="sub-title before-none style-2 text-anime-style-1"> Order Online – Fast
-                                    Delivery</span>
-                                <h2 class="sec-title text-white text-anime-style-2">Kami punya <span
-                                        class="text-theme">makanan enak</span> & <span class="text-theme">pembuatan
-                                        cepat</span> disini.</h2>
-                                <p class="box-text text-white text-anime-style-3">Manjakan lidah Anda dalam petualangan
-                                    rasa istimewa lewat menu kebab premium kami. Setiap gulungan dibuat dari daging sapi
-                                    panggang pilihan dan sayuran segar berkualitas, menciptakan hidangan yang bukan
-                                    sekadar pengganjal lapar, tapi sebuah pengalaman kuliner tak terlupakan. Semua
-                                    disajikan dengan layanan cepat tanpa mengurangi kualitas, disempurnakan dengan
-                                    signature sauce kami yang kaya rasa,</p>
-                            </div>
-                            <div class="delivery-item-wrap pe-xl-5">
-                                <div class="item wow fadeinup" data-wow-delay=".2s">
-                                    <h4 class="box-title">Order Online</h4>
-                                    <p class="box-text">Bisa diorder dari rumah.</p>
-                                </div>
-                                <div class="item wow fadeinup" data-wow-delay=".4s">
-                                    <h4 class="box-title">Pembuatan cepat</h4>
-                                    <p class="box-text">Kamu OTW kami Selesai Masak.</p>
-                                </div>
-                                <div class="item wow fadeinup" data-wow-delay=".6s">
-                                    <h4 class="box-title">Premium & Instan</h4>
-                                    <p class="box-text">Perpaduan sempurna antara kecepatan dan kemewahan rasa.</p>
-                                </div>
-                                <div class="item order wow fadeinup" data-wow-delay=".8s">
-                                    <a href="" class="th-btn btn-mask">Order Now</a>
-                                </div>
-                            </div>
+                <div class="col-xl-7 mt-5 mt-xl-0 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="pizza-banner-items bg-cover"
+                        style="background-image: url('kebab/img/banner/pizza-bg.png');">
+                        <div class="pizza-text">
+                            <img src="{{ asset('kebab') }}/img/shape/pizza-text.png" alt="shape-img">
                         </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="order-right wow fadeinright">
-                            <img src="{{ asset('awal') }}/ilustrasi-kebab3.png" alt="img">
+                        <div class="pizza-text-2">
+                            <img src="{{ asset('kebab') }}/img/shape/pizza-text-2.png" alt="shape-img">
+                        </div>
+                        <div class="pizza-image">
+                            <img src="{{ asset('kebab') }}/img/food/pizza-2.png" alt="pizza-img">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--==============================
-Cta Area
-==============================-->
-    {{-- <div class="space">
-        <div class="container z-index-common">
-            <div class="row gy-40">
-                <div class="col-xl-6 col-lg-12">
-                    <div class="cta-card-2-wrap wow fadeinleft" data-wow-delay=".4s"
-                        data-bg-src="{{ asset('kebab') }}/img/cta/cta-bg-2-1.png">
-                        <div class="card-content">
-                            <img src="{{ asset('kebab') }}/img/cta/card-content-2-1.png" alt="img">
-                            <a href="" class="th-btn btn-mask style5">ORDER NOW</a>
-                        </div>
-                        <div class="card-thumb tilt-active">
-                            <img src="{{ asset('kebab') }}/img/cta/card-thumb-2-1.png" alt="img">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-12">
-                    <div class="cta-card-2-wrap wow fadeinright" data-wow-delay=".4s"
-                        data-bg-src="{{ asset('kebab') }}/img/cta/cta-bg-2-2.png">
-                        <div class="card-content">
-                            <img src="{{ asset('kebab') }}/img/cta/card-content-2-1.png" alt="img">
-                            <a href="" class="th-btn btn-mask style5">ORDER NOW</a>
-                        </div>
-                        <div class="card-thumb tilt-active">
-                            <img src="{{ asset('kebab') }}/img/cta/card-thumb-2-2.png" alt="img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!--==============================
-    
-    ==============================-->
-    {{-- <section class="reservation-table-area space bg-smoke4 overflow-hidden">
-        <div class="res-2-shape  d-lg-block d-none"></div>
-        <div class="shape-mockup jump-reverse d-xl-block d-none" data-bottom="7%" data-right="2%">
-            <img src="{{ asset('kebab') }}/img/shape/res-pizz-shape.png" alt="img">
-        </div>
+
+    <!-- Brand Section Start -->
+    <section class="brand-shape section-padding fix section-bg pt-0">
         <div class="container">
-            <div class="row gx-80 gy-30 align-items-center">
-                <div class="col-xl-7 col-lg-7">
-                    <div class="reservation-thumb wow fadeinleft">
-                        <img src="{{ asset('kebab') }}/img/reservation/reservation-thumb-1.jpg" alt="img">
-                    </div>
+            <div class="brand-wrapper">
+                <div class="brand-title">
+                    <h4>
+                        Global <span>5K+</span> Happy Sponsors With us
+                    </h4>
                 </div>
-                <div class="col-xl-5 col-lg-5">
-                    <div class="reservation-thumb">
-                        <div class="order-online-content pe-xl-5 me-xl-4">
-                            <div class="title-area mb-40">
-                                <span class="sub-title before-none style-2 text-anime-style-1"> Reservation
-                                    table</span>
-                                <h2 class="sec-title text-anime-style-2">Book a <span class="text-theme">Table</span>
-                                </h2>
-                                <p class="box-text text-anime-style-3">*reservations recommended</p>
+                <div class="swiper brand-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="brand-image">
+                                <img src="{{ asset('kebab') }}/img/brand/01.svg" alt="brand-img">
                             </div>
-                            <form>
-                                <div class="res-form-wrap me-xl-5 pe-xl-5 wow fadeinup" data-wow-delay=".4s">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="name" id="name"
-                                            placeholder="Select Person">
-                                        <i class="fal fa-user"></i>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="date" class="form-control" name="email" id="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="time" class="form-control" name="number" id="number"
-                                            value="14:30">
-                                        <i class="fal fa-clock"></i>
-                                    </div>
-                                    <div class="button-wrap">
-                                        <button class="th-btn style-radius">BOOK NOW</button>
-                                    </div>
-                                    <P class="bottom-text">*Powered by Open Table</P>
-                                </div>
-                            </form>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-image">
+                                <img src="{{ asset('kebab') }}/img/brand/02.svg" alt="brand-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-image">
+                                <img src="{{ asset('kebab') }}/img/brand/03.svg" alt="brand-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-image">
+                                <img src="{{ asset('kebab') }}/img/brand/04.svg" alt="brand-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-image">
+                                <img src="{{ asset('kebab') }}/img/brand/05.svg" alt="brand-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-image">
+                                <img src="{{ asset('kebab') }}/img/brand/06.svg" alt="brand-img">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section> --}}
-    <!--==============================
-Testimonial Area
-==============================-->
-    {{-- <section class="testi-sec-2 overflow-hidden space overflow-hidden">
-        <div class="shape-mockup jump d-none d-xxl-block" data-top="10%" data-left="5%">
-            <img src="{{ asset('kebab') }}/img/shape/about-shape-1.2.png" alt="img">
-        </div>
-        <div class="shape-mockup jump-reverse d-none d-xxl-block" data-top="2%" data-right="5%">
-            <img src="{{ asset('kebab') }}/img/shape/testi-2-right.png" alt="img">
-        </div>
+    </section>
 
-        <div class="shape-mockup jump-reverse d-none d-xxl-block" data-bottom="1%" data-right="1%">
-            <img src="{{ asset('kebab') }}/img/shape/testi-2-bottom.png" alt="img">
+    <!-- Grilled Banner Section Start -->
+    <section class="grilled-banner fix section-padding bg-cover"
+        style="background-image: url('kebab/img/banner/main-bg.jpg');">
+        <div class="patato-shape">
+            <img src="{{ asset('kebab') }}/img/shape/patato-shape.png" alt="shape-img">
         </div>
-
+        <div class="offer-shape float-bob-y">
+            <img src="{{ asset('kebab') }}/img/offer/50percent-off-2.png" alt="shape-img">
+        </div>
+        <div class="text-shape">
+            <img src="{{ asset('kebab') }}/img/shape/pizza-text-2.png" alt="shape-img">
+        </div>
+        <div class="spicy-shape">
+            <img src="{{ asset('kebab') }}/img/shape/spicy.png" alt="shape-img">
+        </div>
+        <div class="tomato-shape">
+            <img src="{{ asset('kebab') }}/img/shape/tomato-shape-2.png" alt="shape-img">
+        </div>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <div class="title-area text-center mb-50">
-                        <span class="sub-title style-2 text-anime-style-1">Testimonials</span>
-                        <h2 class="sec-title text-anime-style-2">Customer Feedback <span class="text-theme">&
-                                Reviews</span></h2>
-                        <p class="box-text pe-xl-5 ps-xl-5 text-anime-style-3">The concept of “quick food” actually
-                            dates back to ancient civilizations, where street vendors and food stalls offered simple.
-                        </p>
+            <div class="grilled-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="grilled-content">
+                            <h4 class="wow fadeInUp">
+                                save 20%
+                            </h4>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                tODAY'S <span>ASTACKIN</span> DAY
+                            </h2>
+                            <h3 class="wow fadeInUp" data-wow-delay=".5s">
+                                <a href="shop.html">
+                                    grilled <span class="text-1">chiken</span>
+                                </a>
+                                <span class="text-2">$59,00</span>
+                            </h3>
+                            <div class="grilled-button wow fadeInUp" data-wow-delay=".7s">
+                                <a href="shop-single.html" class="theme-btn">
+                                    <span class="button-content-wrapper d-flex align-items-center">
+                                        <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                        <span class="button-text">order now</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 mt-5 mt-lg-0 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="grilled-image">
+                            <img src="{{ asset('kebab') }}/img/food/grilled.png" alt="grilled-img">
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Catagory Section Start -->
+    <section class="food-category-section fix section-padding section-bg">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="wow fadeInUp">crispy, every bite taste</span>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">Popular Food Items</h2>
             </div>
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="testi-thumb-wrap-2">
-                        <div class="testi-3-quote">
-                            <img src="{{ asset('kebab') }}/img/icon/testi-3-quote.png" alt="img">
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="catagory-product-card-2 text-center">
+                        <div class="icon">
+                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
                         </div>
-                        <div class="img-thumb-2 wow fadeinleft">
-                            <img src="{{ asset('kebab') }}/img/testimonial/testi-2-left-1.png" alt="img">
+                        <div class="catagory-product-image">
+                            <img src="{{ asset('kebab') }}/img/food/beef-ruti.png" alt="product-img">
                         </div>
-                        <div class="img-thumb-2-1 global-img">
-                            <img src="{{ asset('kebab') }}/img/testimonial/testi-2-left-2.png" alt="img">
+                        <div class="catagory-product-content">
+                            <div class="catagory-button">
+                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
+                                    Cart</a>
+                            </div>
+                            <div class="info-price d-flex align-items-center justify-content-center">
+                                <p>-5%</p>
+                                <h6>$30.52</h6>
+                                <span>$28.52</span>
+                            </div>
+                            <h4>
+                                <a href="shop-single.html">ruti with beef slice</a>
+                            </h4>
+                            <div class="star">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star text-white"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="testi-slider2">
-                        <div class="swiper th-slider testiSlide2" id="testiSlide2"
-                            data-slider-options='{"autoplay":false,"effect":"slide", "autoHeight": "true"}'>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testi-card2">
-                                        <div class="media-body">
-                                            <div class="testi-card_profile">
-                                                <div class="testi-card_content">
-                                                    <div class="reating">
-                                                        <ul>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                    <p class="testi-card_text">“Every pizza starts with our
-                                                        hand-tossed dough, made fresh daily and topped with our
-                                                        signature sauce crafted from ripe tomatoes and secret herbs.
-                                                        Whether you love classic pepperoni, cheesy Margherita, or bold,
-                                                        gourmet creations — we’ve got something to satisfy every
-                                                        craving.”</p>
-                                                    <h3 class="testi-card_name">by Adam Michel,</h3>
-                                                    <span class="testi-card_desig">Customer of Kebab Yasmin</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testi-card2">
-                                        <div class="media-body">
-                                            <div class="testi-card_profile">
-                                                <div class="testi-card_content">
-                                                    <div class="reating">
-                                                        <ul>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                    <p class="testi-card_text">“Brace your tastebuds for a fiery ride
-                                                        with our Firecracker Inferno pizza. Hand dough crafted from
-                                                        forms the foundation for layers of spicy, hot Italian sausage,
-                                                        and freshly sliced jalapeños. Drizzled with our homemade chili
-                                                        oil and finished with crushed flakes, every bite is bold. ”</p>
-                                                    <h3 class="testi-card_name">Micelito Alexan,</h3>
-                                                    <span class="testi-card_desig">Customer of Kebab Yasmin</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testi-card2">
-                                        <div class="media-body">
-                                            <div class="testi-card_profile">
-                                                <div class="testi-card_content">
-                                                    <div class="reating">
-                                                        <ul>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                    <p class="testi-card_text">“Bite into nature’s best with our
-                                                        Garden Harvest Supreme, a celebration of crafted from fresh,
-                                                        colorful vegetables. From crisp bell peppers and juicy to earthy
-                                                        and tender baby spinach, every ingredient is at peak freshness.
-                                                        Nestled on a rich tomato base and covered in mozzarella.”</p>
-                                                    <h3 class="testi-card_name">by Adam Michel,</h3>
-                                                    <span class="testi-card_desig">Customer of Kebab Yasmin</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testi-card2">
-                                        <div class="media-body">
-                                            <div class="testi-card_profile">
-                                                <div class="testi-card_content">
-                                                    <div class="reating">
-                                                        <ul>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                            <li><i class="fa-solid fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                    <p class="testi-card_text">“Discover the perfect fusion of smoky
-                                                        and creamy with our BBQ Ranch crafted from pizza. Juicy chicken
-                                                        is tossed in sweet and tangy chicken sauce, then laid over a
-                                                        ranch-infused cheese base. Topped with red onions, fresh , and
-                                                        sharp cheddar its then baked until golden and slightly crispy ”
-                                                    </p>
-                                                    <h3 class="testi-card_name">Micelito Alexan,</h3>
-                                                    <span class="testi-card_desig">Customer of Kebab Yasmin</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="catagory-product-card-2 active text-center">
+                        <div class="icon">
+                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="catagory-product-image">
+                            <img src="{{ asset('kebab') }}/img/food/burger-2.png" alt="product-img">
+                        </div>
+                        <div class="catagory-product-content">
+                            <div class="catagory-button">
+                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
+                                    Cart</a>
                             </div>
-                            <div class="slider-2-pag-wrap">
-                                <div class="slider-pagination"></div>
-                                <div class="slider-pagination2"></div>
+                            <div class="info-price d-flex align-items-center justify-content-center">
+                                <p>-5%</p>
+                                <h6>$30.52</h6>
+                                <span>$28.52</span>
+                            </div>
+                            <h4>
+                                <a href="shop-single.html">Whopper Burger King</a>
+                            </h4>
+                            <div class="star">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star text-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="catagory-product-card-2 text-center">
+                        <div class="icon">
+                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="catagory-product-image">
+                            <img src="{{ asset('kebab') }}/img/food/pasta-2.png" alt="product-img">
+                        </div>
+                        <div class="catagory-product-content">
+                            <div class="catagory-button">
+                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
+                                    Cart</a>
+                            </div>
+                            <div class="info-price d-flex align-items-center justify-content-center">
+                                <p>-5%</p>
+                                <h6>$30.52</h6>
+                                <span>$28.52</span>
+                            </div>
+                            <h4>
+                                <a href="shop-single.html">Chiness pasta</a>
+                            </h4>
+                            <div class="star">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star text-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                    <div class="catagory-product-card-2 text-center">
+                        <div class="icon">
+                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="catagory-product-image">
+                            <img src="{{ asset('kebab') }}/img/food/pizza-3.png" alt="product-img">
+                        </div>
+                        <div class="catagory-product-content">
+                            <div class="catagory-button">
+                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
+                                    Cart</a>
+                            </div>
+                            <div class="info-price d-flex align-items-center justify-content-center">
+                                <p>-5%</p>
+                                <h6>$30.52</h6>
+                                <span>$28.52</span>
+                            </div>
+                            <h4>
+                                <a href="shop-single.html">delicious burger</a>
+                            </h4>
+                            <div class="star">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star text-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="catagory-product-card-2 text-center">
+                        <div class="icon">
+                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="catagory-product-image">
+                            <img src="{{ asset('kebab') }}/img/food/main-food-2.png" alt="product-img">
+                        </div>
+                        <div class="catagory-product-content">
+                            <div class="catagory-button">
+                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
+                                    Cart</a>
+                            </div>
+                            <div class="info-price d-flex align-items-center justify-content-center">
+                                <p>-5%</p>
+                                <h6>$30.52</h6>
+                                <span>$28.52</span>
+                            </div>
+                            <h4>
+                                <a href="shop-single.html">fast food combo</a>
+                            </h4>
+                            <div class="star">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star text-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="catagory-product-card-2 text-center">
+                        <div class="icon">
+                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="catagory-product-image">
+                            <img src="{{ asset('kebab') }}/img/food/ruti.png" alt="product-img">
+                        </div>
+                        <div class="catagory-product-content">
+                            <div class="catagory-button">
+                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
+                                    Cart</a>
+                            </div>
+                            <div class="info-price d-flex align-items-center justify-content-center">
+                                <p>-5%</p>
+                                <h6>$30.52</h6>
+                                <span>$28.52</span>
+                            </div>
+                            <h4>
+                                <a href="shop-single.html">ruti with chiken</a>
+                            </h4>
+                            <div class="star">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star text-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="catagory-product-card-2 text-center">
+                        <div class="icon">
+                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="catagory-product-image">
+                            <img src="{{ asset('kebab') }}/img/food/grilled-2.png" alt="product-img">
+                        </div>
+                        <div class="catagory-product-content">
+                            <div class="catagory-button">
+                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
+                                    Cart</a>
+                            </div>
+                            <div class="info-price d-flex align-items-center justify-content-center">
+                                <p>-5%</p>
+                                <h6>$30.52</h6>
+                                <span>$28.52</span>
+                            </div>
+                            <h4>
+                                <a href="shop-single.html">grilled chiken</a>
+                            </h4>
+                            <div class="star">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star text-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                    <div class="catagory-product-card-2 text-center">
+                        <div class="icon">
+                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="catagory-product-image">
+                            <img src="{{ asset('kebab') }}/img/food/delicious-burger.png" alt="product-img">
+                        </div>
+                        <div class="catagory-product-content">
+                            <div class="catagory-button">
+                                <a href="shop-cart.html" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Add To
+                                    Cart</a>
+                            </div>
+                            <div class="info-price d-flex align-items-center justify-content-center">
+                                <p>-5%</p>
+                                <h6>$30.52</h6>
+                                <span>$28.52</span>
+                            </div>
+                            <h4>
+                                <a href="shop-single.html">delicious burger</a>
+                            </h4>
+                            <div class="star">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star text-white"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="catagory-button text-center pt-4 wow fadeInUp" data-wow-delay=".3s">
+                <a href="shop.html" class="theme-btn">
+                    <span class="button-content-wrapper d-flex align-items-center">
+                        <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                        <span class="button-text">view more</span>
+                    </span>
+                </a>
+            </div>
         </div>
-    </section> --}}
-    <!--==============================
-Blog Area
-==============================-->
-    {{-- <section class="blog-sec-2 space bg-theme2 overflow-hidden" id="blog-sec">
-        <img class="round-shape-bottom" src="{{ asset('kebab') }}/img/shape/shape-bottom.png" alt="img">
-        <div class="shape-mockup d-none d-xxl-block jump-reverse blog2-shape-left" data-top="3%" data-left="0">
-            <img src="{{ asset('kebab') }}/img/icon/blog-2-1.png" alt="img">
-        </div>
-        <div class="shape-mockup d-none d-xxl-block jump blog2-shape-right" data-bottom="3%" data-right="0">
-            <img src="{{ asset('kebab') }}/img/icon/blog-2-2.png" alt="img">
+    </section>
+
+    <!-- Food Comboo Section Start -->
+    <section class="food-comboo-section fix bg-cover section-padding"
+        style="background-image: url('kebab/img/bg-image/bg.jpg');">
+        <div class="drinks-shape">
+            <img src="{{ asset('kebab') }}/img/shape/drinks.png" alt="shape-img">
         </div>
         <div class="container">
-            <div class="row gy-30 justify-content-lg-between justify-content-center align-items-center mb-50">
-                <div class="col-lg-6">
-                    <div class="title-area text-left mb-0">
-                        <span class="sub-title text-theme4 style-2 before-none text-anime-style-1">News & Blogs</span>
-                        <h2 class="sec-title text-white text-anime-style-2">Our Latest News & <span
-                                class="text-theme4">Blogs</span></h2>
+            <div class="comboo-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-xl-6">
+                        <div class="food-comboo-content">
+                            <div class="section-title">
+                                <span class="wow fadeInUp">crispy, every bite taste</span>
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                    trending Food combo
+                                    offer less <span>20%</span>
+                                </h2>
+                            </div>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">
+                                A team of dreamers and doers building unique interactive music and art festivals.
+                            </p>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link wow fadeInUp" data-wow-delay=".3s" id="nav-home-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab"
+                                    aria-controls="nav-home" aria-selected="true">
+                                    <span class="food-comboo-list">
+                                        <span class="offer-image">
+                                            <img src="{{ asset('kebab') }}/img/offer/chicken.png" alt="img">
+                                        </span>
+                                        <span class="comboo-title">
+                                            30% off 4pcs hot crispy & 8 pcs wing
+                                        </span>
+                                    </span>
+                                </button>
+                                <button class="nav-link active wow fadeInUp" data-wow-delay=".5s" id="nav-profile-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab"
+                                    aria-controls="nav-profile" aria-selected="false">
+                                    <span class="food-comboo-list">
+                                        <span class="offer-image">
+                                            <img src="{{ asset('kebab') }}/img/offer/pizza.png" alt="img">
+                                        </span>
+                                        <span class="comboo-title">
+                                            20% off tasty pizza with drink
+                                        </span>
+                                    </span>
+                                </button>
+                                <button class="nav-link wow fadeInUp" data-wow-delay=".7s" id="nav-contact-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab"
+                                    aria-controls="nav-contact" aria-selected="false">
+                                    <span class="food-comboo-list">
+                                        <span class="offer-image">
+                                            <img src="{{ asset('kebab') }}/img/offer/burger.png" alt="img">
+                                        </span>
+                                        <span class="comboo-title">
+                                            2pcs humbergur with drinks & sauce
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-auto text-anime-style-3">
-                    <a href="blog.html" class="th-btn btn-mask">BROWSE ALL POST</a>
-                </div>
-            </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="blogSlider1"
-                    data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"2"}}, "autoHeight": "true"}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="blog-card style-2">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="{{ asset('kebab') }}/img/blog/blog_2_1.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a class="author text-white" href="blog.html"><i class="fal fa-user"></i>By
-                                            Jonson</a>
-                                        <a class="text-white" href="blog.html"><i class="fal fa-calendar"></i>12
-                                            April, 2025</a>
+                    <div class="col-xl-6">
+                        <div class="tab-content" id="nav-tab-Content">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                aria-labelledby="nav-home-tab">
+                                <div class="comboo-image bg-cover"
+                                    style="background-image: url('kebab/img/banner/comboo-bg.jpg');">
+                                    <div class="pizza-text">
+                                        <img src="{{ asset('kebab') }}/img/shape/combo-pizza-text.png" alt="shape-img">
                                     </div>
-                                    <h3 class="box-title text-white"><a href="blog-details.html">Join Us on a Flavor
-                                            Journey Through Italy – One Perfectly Baked Slice at a Time</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-mask">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card style-2">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="{{ asset('kebab') }}/img/blog/blog_2_2.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a class="author text-white" href="blog.html"><i class="fal fa-user"></i>By
-                                            Jonson</a>
-                                        <a class="text-white" href="blog.html"><i class="fal fa-calendar"></i>16
-                                            March, 2025</a>
+                                    <div class="pizza-image">
+                                        <img src="{{ asset('kebab') }}/img/food/big-pizza.png" alt="food-img">
                                     </div>
-                                    <h3 class="box-title text-white"><a href="blog-details.html">Explore a World of
-                                            Fresh Dough, Melting Mozzarella, and Toppings You Love</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-mask">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card style-2">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="{{ asset('kebab') }}/img/blog/blog_2_3.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a class="author text-white" href="blog.html"><i class="fal fa-user"></i>By
-                                            Jonson</a>
-                                        <a class="text-white" href="blog.html"><i class="fal fa-calendar"></i>17
-                                            June, 2025</a>
+                                    <div class="offer-shape">
+                                        <img src="{{ asset('kebab') }}/img/offer/50percent-off-2.png" alt="shape-img">
                                     </div>
-                                    <h3 class="box-title text-white"><a href="blog-details.html">Join Us on a Flavor
-                                            Journey Through Italy – One Perfectly Baked Slice at a Time</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-mask">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card style-2">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="{{ asset('kebab') }}/img/blog/blog_2_4.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a class="author text-white" href="blog.html"><i class="fal fa-user"></i>By
-                                            Jonson</a>
-                                        <a class="text-white" href="blog.html"><i class="fal fa-calendar"></i>12
-                                            April, 2025</a>
+                                    <div class="vegetable-shape">
+                                        <img src="{{ asset('kebab') }}/img/shape/vegetable.png" alt="shape-img">
                                     </div>
-                                    <h3 class="box-title text-white"><a href="blog-details.html">Explore a World of
-                                            Fresh Dough, Melting Mozzarella, and Toppings You Love</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-mask">Read More</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <div class="comboo-image bg-cover"
+                                    style="background-image: url('kebab/img/banner/comboo-bg.jpg');">
+                                    <div class="pizza-text">
+                                        <img src="{{ asset('kebab') }}/img/shape/combo-pizza-text.png" alt="shape-img">
+                                    </div>
+                                    <div class="pizza-image">
+                                        <img src="{{ asset('kebab') }}/img/food/big-pizza.png" alt="food-img">
+                                    </div>
+                                    <div class="offer-shape">
+                                        <img src="{{ asset('kebab') }}/img/offer/50percent-off-2.png" alt="shape-img">
+                                    </div>
+                                    <div class="vegetable-shape">
+                                        <img src="{{ asset('kebab') }}/img/shape/vegetable.png" alt="shape-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                aria-labelledby="nav-contact-tab">
+                                <div class="comboo-image bg-cover"
+                                    style="background-image: url('kebab/img/banner/comboo-bg.jpg');">
+                                    <div class="pizza-text">
+                                        <img src="{{ asset('kebab') }}/img/shape/combo-pizza-text.png" alt="shape-img">
+                                    </div>
+                                    <div class="pizza-image">
+                                        <img src="{{ asset('kebab') }}/img/food/big-pizza.png" alt="food-img">
+                                    </div>
+                                    <div class="offer-shape">
+                                        <img src="{{ asset('kebab') }}/img/offer/50percent-off-2.png" alt="shape-img">
+                                    </div>
+                                    <div class="vegetable-shape">
+                                        <img src="{{ asset('kebab') }}/img/shape/vegetable.png" alt="shape-img">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-                </div>
-                <button data-slider-prev="#blogSlider1" class="slider-arrow slider-prev"><img
-                        src="{{ asset('kebab') }}/img/icon/left-arrow.svg" alt=""></button>
-                <button data-slider-next="#blogSlider1" class="slider-arrow slider-next"><img
-                        src="{{ asset('kebab') }}/img/icon/right-arrow.svg" alt=""></button>
-            </div>
-        </div>
-    </section> --}}
-    <!--==============================
-Instragram Area
-==============================-->
-    {{-- <section class="instragram-sec-1 space overflow-hidden" id="instragram-sec-1"
-        data-bg-src="{{ asset('kebab') }}/img/bg/insta-bg-shape.png">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="title-area text-center mb-50">
-                        <span class="sub-title style-2 text-anime-style-1">Our Instagram</span>
-                        <h2 class="sec-title text-anime-style-2">Connect with <span class="text-theme">Us</span>
-                        </h2>
-                        <p class="box-text pe-xl-5 ps-xl-5 text-anime-style-3">The concept of “quick food” actually
-                            dates back to ancient civilizations, where street vendors and food stalls offered simple,
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-area">
-                <div class="swiper th-slider instsSlider2" id="instsSlider2"
-                    data-slider-options='{"autoplay":true,"centeredSlides":"true","loop":true,"breakpoints":{"0":{"slidesPerView":1},"400":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"},"1400":{"slidesPerView":"5"}}}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-1.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-1.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-2.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-2.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-3.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-3.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-4.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-4.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-5.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-5.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-1.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-1.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-2.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-2.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-3.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-3.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-4.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-4.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="insta-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('kebab') }}/img/insta/insta1-5.jpg" alt="img">
-                                    <a href="{{ asset('kebab') }}/img/insta/insta1-5.jpg" class="icon popup-image"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    <!--==============================
-Restaurant location Area
-==============================-->
-    <section class="restaurant-location-sec-1 overflow-hidden" id="restaurant-location-sec">
-        <div class="shape-mockup d-none d-xxl-block jump-reverse" style="top: 26%; left: 3%;">
-            <img src="{{ asset('kebab') }}/img/shape/location-left.png" alt="img">
-        </div>
-        <div class="shape-mockup d-none d-xxl-block jump-reverse" style="bottom: 10%; left: 40%;">
-            <img src="{{ asset('kebab') }}/img/shape/location-right.png" alt="img">
-        </div>
-        <div class="container">
-            <div class="row gy-4 justify-content-center">
-                <div class="col-xl-6">
-                    <div class="title-area location-content">
-                        <span class="sub-title style-2 text-anime-style-1">Kebab Yasmin Office Location</span>
-                        <h2 class="sec-title text-anime-style-2">Visit Our Office</h2>
-                        <p class="box-text pe-xxl-5 ps-xxl-5 text-anime-style-3">Jl. Kampung Melayu Darat (Samping Gang
-                            Kenari), Banjarmasin Tengah, Banjarmasin</p>
-                        <div class="line"></div>
-                        <div class="opening ow fadeinup" data-wow-delay=".3s">
-                            <p>Buka Jam 08:00 – 21:00</p>
-                        </div>
-                        <div class="th-social ow fadeinup" data-wow-delay=".5s">
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            {{-- <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> --}}
-                            <a href=""><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="map-location">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3983.1315525073182!2d114.59925107374414!3d-3.317644641218036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMTknMDMuNSJTIDExNMKwMzYnMDYuNiJF!5e0!3m2!1sen!2sid!4v1769695999795!5m2!1sen!2sid"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--==============================
- Footer Area
-==============================-->
-    <footer class="footer-wrapper footer-default overflow-hidden">
-        <div class="shape-mockup d-none d-xxl-block wow fadeinup" data-top="22%" data-left="0%">
-            <img src="{{ asset('kebab') }}/img/footer/footer-left.png" alt="img">
-        </div>
-        <div class="shape-mockup moving d-none d-lg-block" data-top="10%" data-right="4%">
-            <img src="{{ asset('kebab') }}/img/shape/footer-top.png" alt="img">
-        </div>
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="row gy-40 align-items-center justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="subscribe-box">
-                            <h2 class="footer-top_title">Surganya Ngebab</h2>
-                        </div>
-                    </div>
-                </div>
+    <!-- Marque Section Start -->
+    <div class="marque-section fix section-padding pt-0 section-bg">
+        <div class="marquee-wrapper text-slider">
+            <div class="marquee-inner to-left">
+                <ul class="marqee-list d-flex">
+                    <li class="marquee-item">
+                        <span class="text-slider text-color">populer</span><span class="text-slider"></span> <span
+                            class="text-slider text-color">dishes</span>
+                        <span class="text-slider"><img src="{{ asset('kebab') }}/img/icon/burger.png"
+                                alt="icon-img"></span> <span class="text-slider"></span> <span
+                            class="text-slider text-color-2">delicious</span>
+                        <span class="text-slider text-color-2">food</span> <img
+                            src="{{ asset('kebab') }}/img/icon/pizza.png" alt="icon-img"> <span
+                            class="text-slider"></span> <span class="text-slider text-color">populer</span>
+                        <span class="text-slider text-color">dishes</span> <span class="text-slider"></span><span
+                            class="text-slider"><img src="{{ asset('kebab') }}/img/icon/burger.png"
+                                alt="icon-img"></span> <span class="text-slider"></span> <span
+                            class="text-slider text-color-2">delicious</span>
+                        <span class="text-slider text-color">populer</span><span class="text-slider"></span> <span
+                            class="text-slider text-color">dishes</span>
+                        <span class="text-slider"><img src="{{ asset('kebab') }}/img/icon/burger.png"
+                                alt="icon-img"></span> <span class="text-slider"></span> <span
+                            class="text-slider text-color-2">delicious</span>
+                        <span class="text-slider text-color-2">food</span> <img
+                            src="{{ asset('kebab') }}/img/icon/pizza.png" alt="icon-img"> <span
+                            class="text-slider"></span> <span class="text-slider text-color">populer</span>
+                        <span class="text-slider text-color">dishes</span> <span class="text-slider"></span><span
+                            class="text-slider"><img src="{{ asset('kebab') }}/img/icon/burger.png"
+                                alt="icon-img"></span> <span class="text-slider"></span> <span
+                            class="text-slider text-color-2">delicious</span>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="widget-area">
-            {{-- <div class="container">
-                <div class="row gy-4 justify-content-center">
-                    <div class="col-md-12 col-lg-6 col-xl-4">
-                        <div class="widget footer-widget">
-                            <h3 class="widget_title">Contact Info</h3>
-                            <div class="icon">
-                                <img src="{{ asset('kebab') }}/img/icon/f-title-icon2.png" alt="icon">
-                            </div>
-                            <div class="th-widget-contact">
-                                <div class="info-box">
-                                    <p class="info-box_text">
-                                        <span>Phone:</span>
-                                        <a href="tel:256369854789" class="info-box_link">+256 3698 54789</a>
-                                        <a href="tel:16354786985" class="info-box_link">+16354786985</a>
-                                    </p>
-                                </div>
-                                <div class="info-box">
-                                    <p class="info-box_text">
-                                        <span>Email:</span>
-                                        <a href="mailto:info@Kebab Yasmin.com" class="info-box_link">info@Kebab
-                                            Yasmin.com</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6 col-xl-4">
-                        <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Quick Links</h3>
-                            <div class="icon">
-                                <img src="{{ asset('kebab') }}/img/icon/f-title-icon3.png" alt="icon">
-                            </div>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu">
-                                    <li><a href="">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="service.html">Our Services</a></li>
-                                    <li><a href="blog.html">News</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6 col-xl-4">
-                        <div class="widget widget_download footer-widget">
-                            <h4 class="widget_title">Download</h4>
-                            <div class="icon">
-                                <img src="{{ asset('kebab') }}/img/icon/f-title-icon2.png" alt="icon">
-                            </div>
-                            <div class="download-widget-wrap">
-                                <a href="https://www.apple.com/app-store/">
-                                    <img src="{{ asset('kebab') }}/img/icon/f-app-store.png" alt="img">
-                                </a>
-                                <a href="https://play.google.com/store/games?device=windows">
-                                    <img src="{{ asset('kebab') }}/img/icon/f-google-store.png" alt="img">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-        </div>
-        <div class="copyright-wrap">
-            <div class="container">
-                <div class="copy-right-content">
-                    <div class="copyright-text-wrap">
-                        <p class="copyright-text">
-                            <i class="fal fa-copyright"></i> Copyright 2026 <a href="">Kebab Yasmin</a>.
-                            All Rights Reserved.
-                        </p>
-                    </div>
-                    <div class="footer-bottom-logo">
-                        <a href="">
-                            <img src="{{ asset('img') }}/kebab-yasmin.png" style="max-height: 100px;"
-                                alt="img">
-                        </a>
-                    </div>
-                    <div class="footer-card">
-                        {{-- <img src="{{ asset('kebab') }}/img/icon/f-card.png" alt="img "> --}}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!--********************************
-   Code End  Here
- ******************************** -->
-
-    <!-- Scroll To Top -->
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-            </path>
-        </svg>
     </div>
 
-    <!--==============================
-    All Js File
-============================== -->
-    <!-- Jquery -->
-    <script src="{{ asset('kebab') }}/js/vendor/jquery-3.7.1.min.js"></script>
-    <!-- Swiper Js -->
-    <script src="{{ asset('kebab') }}/js/swiper-bundle.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="{{ asset('kebab') }}/js/bootstrap.min.js"></script>
-    <!-- Magnific Popup -->
-    <script src="{{ asset('kebab') }}/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up -->
-    <script src="{{ asset('kebab') }}/js/jquery.counterup.min.js"></script>
-    <!-- Range Slider -->
-    <script src="{{ asset('kebab') }}/js/jquery-ui.min.js"></script>
-    <!-- Isotope Filter -->
-    <script src="{{ asset('kebab') }}/js/imagesloaded.pkgd.min.js"></script>
-    <script src="{{ asset('kebab') }}/js/isotope.pkgd.min.js"></script>
-    <!-- datetimepicker -->
-    <script src="{{ asset('kebab') }}/js/jquery.datetimepicker.min.js"></script>
-    <!-- Tilt JS -->
-    <script src="{{ asset('kebab') }}/js/tilt.jquery.min.js"></script>
-    <!-- Scroll Trigger -->
-    <script src="{{ asset('kebab') }}/js/ScrollTrigger.min.js"></script>
-    <!-- Gsap -->
-    <script src="{{ asset('kebab') }}/js/gsap.min.js"></script>
-    <!-- Lenis Smooth Scroll -->
-    <script src="{{ asset('kebab') }}/js/lenis.min.js"></script>
-    <!-- Wow Js -->
-    <script src="{{ asset('kebab') }}/js/wow.min.js"></script>
+    <!-- Choose Us Section Start -->
+    <section class="choose-us fix section-padding pt-0 section-bg">
+        <div class="container">
+            <div class="food-icon-wrapper bg-cover" style="background-image: url('kebab/img/shape/food-shape-2.png');">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="single-food-icon">
+                            <div class="icon">
+                                <i class="flaticon-quality"></i>
+                            </div>
+                            <div class="content">
+                                <h4>super quality food</h4>
+                                <p>
+                                    A team of dreamers and doers building
+                                    unique interactive music and art
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="single-food-icon">
+                            <div class="icon">
+                                <i class="flaticon-cooking"></i>
+                            </div>
+                            <div class="content">
+                                <h4>original recipes</h4>
+                                <p>
+                                    A team of dreamers and doers building
+                                    unique interactive music and art
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="single-food-icon">
+                            <div class="icon">
+                                <i class="flaticon-fast-delivery"></i>
+                            </div>
+                            <div class="content">
+                                <h4>quick fast delivery</h4>
+                                <p>
+                                    A team of dreamers and doers building
+                                    unique interactive music and art
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".9s">
+                        <div class="single-food-icon">
+                            <div class="icon">
+                                <i class="flaticon-quality"></i>
+                            </div>
+                            <div class="content">
+                                <h4>100% fresh foods</h4>
+                                <p>
+                                    A team of dreamers and doers building
+                                    unique interactive music and art
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Main Js File -->
-    <script src="{{ asset('kebab') }}/js/main.js"></script>
-</body>
+    <!-- About Section Start -->
+    <section class="about-section fix section-padding pt-0 section-bg">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="about-image">
+                            <img src="{{ asset('kebab') }}/img/about/burger.png" alt="about-img">
+                            <div class="burger-text">
+                                <img src="{{ asset('kebab') }}/img/about/burger-text.png" alt="shape-img">
+                            </div>
+                            <div class="price">
+                                <h2>$<span class="count">4,99</span></h2>
+                            </div>
+                            <div class="since-text bg-cover"
+                                style="background-image: url('kebab/img/shape/food-shape.png');">
+                                <h3>since /1985</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 mt-5 mt-lg-0">
+                        <div class="about-content">
+                            <div class="section-title">
+                                <span class="wow fadeInUp">about our food</span>
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                    Where Quality Meet
+                                    Excellent <span>Service.</span>
+                                </h2>
+                            </div>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">
+                                It's the perfect dining experience where every dish is crafted with fresh, high-quality
+                                Experience quick and efficient service that ensures your food is servead fresh It's the
+                                dining experience where every dish is crafted with fresh, high-quality ingredients
+                            </p>
+                            <div class="icon-area">
+                                <div class="icon-items d-flex wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="icon">
+                                        <i class="flaticon-quality"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>super quality food</h4>
+                                        <p>
+                                            A team of dreamers and doers build
+                                            unique interactive music and art
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="icon-items d-flex wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="icon">
+                                        <i class="flaticon-reputation"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>well reputation</h4>
+                                        <p>
+                                            A team of dreamers and doers build
+                                            unique interactive music and art
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-area d-flex align-items-center">
+                                <a href="about.html" class="theme-btn wow style-line-height fadeInUp"
+                                    data-wow-delay=".3s">more about us</a>
+                                <div class="info-content wow fadeInUp" data-wow-delay=".5s">
+                                    <span>BRENDON GARREY</span>
+                                    <h6>Customer’s experience is our highest priority.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</html>
+    <!-- Food Banner Section Start -->
+    <section class="food-banner-section fix section-padding section-bg pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-9 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="burger-banner-items bg-cover"
+                        style="background-image: url('kebab/img/banner/burger-bg.png');">
+                        <div class="burger-content text-center">
+                            <h3>today</h3>
+                            <h2>special</h2>
+                            <h4><a href="shop.html" class="text-white">beef <span>burger</span></a></h4>
+                            <a href="shop-single.html" class="theme-btn mt-4">
+                                <span class="button-content-wrapper d-flex align-items-center">
+                                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                    <span class="button-text">order now</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="burger-image">
+                            <img src="{{ asset('kebab') }}/img/food/big-burger.png" alt="food-img">
+                        </div>
+                        <div class="text-shape">
+                            <img src="{{ asset('kebab') }}/img/shape/pizza-text-2.png" alt="shape-img">
+                        </div>
+                        <div class="burger-text">
+                            <img src="{{ asset('kebab') }}/img/shape/burger-text.png" alt="shape-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-9 mt-5 mt-xl-0 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="single-offer-items style-2 bg-cover"
+                        style="background-image: url('kebab/img/banner/pepsi-bg.png');">
+                        <div class="offer-content">
+                            <h5>crispy, every bite taste</h5>
+                            <h3>
+                                FASH FOOD <br>
+                                MEAL
+                            </h3>
+                            <p>
+                                The mouth-watering aroma of <br>
+                                sizzling burgers
+                            </p>
+                            <a href="shop-single.html" class="theme-btn mt-4">
+                                <span class="button-content-wrapper d-flex align-items-center">
+                                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                    <span class="button-text">order now</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="offer-img">
+                            <img src="{{ asset('kebab') }}/img/offer/50percent-off-3.png" alt="shape-img">
+                        </div>
+                        <div class="roller-box">
+                            <img src="{{ asset('kebab') }}/img/food/roller-box.png" alt="food-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KFC Banner Section Start -->
+    <section class="kfc-banner fix bg-cover section-padding" style="background-image: url('kebab/img/bg-image/bg.jpg');">
+        <div class="kfc-wrapper">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-lg-5">
+                        <div class="kfc-image-items bg-cover"
+                            style="background-image: url('kebab/img/banner/kfc-bg.png');">
+                            <div class="kfc-image">
+                                <img src="{{ asset('kebab') }}/img/food/kfc.png" alt="food-img">
+                            </div>
+                            <div class="offer-shape">
+                                <img src="{{ asset('kebab') }}/img/offer/50percent-off-2.png" alt="shape-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="kfc-content text-center">
+                            <div class="section-title">
+                                <span class="wow fadeInUp">crispy, every bite taste</span>
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                    kfc chiken hot <br>
+                                    wing & french fries
+                                </h2>
+                            </div>
+                            <p class="mt-3 mt-lg-0 wow fadeInUp" data-wow-delay=".5s">
+                                Wheat tortilla with spicy chicken bites, cheese sauce <br>
+                                tomatoes and soft cheese
+                            </p>
+                            <ul class="countdown-items wow fadeInUp" data-wow-delay=".7s">
+                                <li>
+                                    <span id="day">30</span>
+                                    <p>Days</p>
+                                </li>
+                                <li>
+                                    <span id="Hours">22</span>
+                                    <p class="cont">hours</p>
+                                </li>
+                                <li>
+                                    <span id="Minutes">48</span>
+                                    <p>Min</p>
+                                </li>
+                                <li>
+                                    <span id="Seconds">22</span>
+                                    <p>Sec</p>
+                                </li>
+                            </ul>
+                            <a href="shop-single.html" class="theme-btn mt-5 wow fadeInUp" data-wow-delay=".8s">
+                                <span class="button-content-wrapper d-flex align-items-center">
+                                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                                    <span class="button-text">order now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section Start -->
+    <section class="testimonial-section fix section-padding section-bg">
+        <div class="burger-shape">
+            <img src="{{ asset('kebab') }}/img/shape/burger-shape-3.png" alt="burger-shape">
+        </div>
+        <div class="fry-shape">
+            <img src="{{ asset('kebab') }}/img/shape/fry-shape-2.png" alt="burger-shape">
+        </div>
+        <div class="pizza-shape">
+            <img src="{{ asset('kebab') }}/img/shape/pizzashape.png" alt="burger-shape">
+        </div>
+        <div class="container">
+            <div class="testimonial-wrapper style-responsive">
+                <div class="testimonial-items text-center">
+                    <div class="swiper testimonial-content-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-content">
+                                    <div class="client-info">
+                                        <h4>Piter Bowman</h4>
+                                        <h5>Business CEO & co founder</h5>
+                                    </div>
+                                    <h3>
+                                        “Thank you for dinner last night. It was amazing!! I have
+                                        say it’s the best meal I have had in quite some time.
+                                        will definitely be seeing more eating next year.”
+                                    </h3>
+                                    <div class="star">
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-content">
+                                    <div class="client-info">
+                                        <h4>Piter Bowman</h4>
+                                        <h5>Business CEO & co founder</h5>
+                                    </div>
+                                    <h3>
+                                        “Thank you for dinner last night. It was amazing!! I have
+                                        say it’s the best meal I have had in quite some time.
+                                        will definitely be seeing more eating next year.”
+                                    </h3>
+                                    <div class="star">
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-content">
+                                    <div class="client-info">
+                                        <h4>Piter Bowman</h4>
+                                        <h5>Business CEO & co founder</h5>
+                                    </div>
+                                    <h3>
+                                        “Thank you for dinner last night. It was amazing!! I have
+                                        say it’s the best meal I have had in quite some time.
+                                        will definitely be seeing more eating next year.”
+                                    </h3>
+                                    <div class="star">
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper testimonial-image-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="client-image-item">
+                                    <div class="client-img bg-cover"
+                                        style="background-image: url('kebab/img/client/01.jpg')"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="client-image-item">
+                                    <div class="client-img bg-cover"
+                                        style="background-image: url('kebab/img/client/02.jpg')"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="client-image-item">
+                                    <div class="client-img bg-cover"
+                                        style="background-image: url('kebab/img/client/03.jpg')"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Cta Banner Section Start -->
+    <section class="main-cta-banner section-padding pt-0">
+        <div class="container">
+            <div class="main-cta-banner-wrapper bg-cover mt-10"
+                style="background-image: url('kebab/img/banner/main-cta-bg.jpg');">
+                <div class="section-title">
+                    <span class="theme-color-3 wow fadeInUp">crispy, every bite taste</span>
+                    <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                        30 minutes fast <br>
+                        <span class="theme-color-3">delivery</span> challage
+                    </h2>
+                </div>
+                <a href="shop-single.html" class="theme-btn bg-white mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
+                    <span class="button-content-wrapper d-flex align-items-center">
+                        <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                        <span class="button-text">order now</span>
+                    </span>
+                </a>
+                <div class="arrow-shape">
+                    <img src="{{ asset('kebab') }}/img/shape/arrow-shape.png" alt="shape-img">
+                </div>
+                <div class="delivery-man">
+                    <img src="{{ asset('kebab') }}/img/delivery-man.png" alt="img">
+                </div>
+                <div class="frame-shape">
+                    <img src="{{ asset('kebab') }}/img/shape/frame.png" alt="shape-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section Start -->
+    <section class="booking-section fix section-padding bg-cover"
+        style="background-image: url('kebab/img/banner/main-bg.jpg');">
+        <div class="container">
+            <div class="booking-wrapper style-responsive section-padding pb-0">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-6">
+                        <div class="booking-content">
+                            <div class="section-title">
+                                <span class="wow fadeInUp">crispy, every bite taste</span>
+                                <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                                    need booking? <br>
+                                    reserve your table?
+                                </h2>
+                            </div>
+                            <div class="icon-items d-flex align-items-center wow fadeInUp" data-wow-delay=".5s">
+                                <div class="icon">
+                                    <i class="flaticon-phone-call-2"></i>
+                                </div>
+                                <div class="content">
+                                    <h5>24/7 Support center</h5>
+                                    <h3><a href="tel:+1718-904-4450">+1718-904-4450</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 mt-5 mt-lg-0 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="booking-contact bg-cover"
+                            style="background-image: url('kebab/img/shape/booking-shape.png');">
+                            <h4 class="text-center text-white">create an reservation</h4>
+                            <div class="booking-items">
+                                <div class="form-clt">
+                                    <div class="nice-select" tabindex="0">
+                                        <span class="current">
+                                            no of person
+                                        </span>
+                                        <ul class="list">
+                                            <li data-value="1" class="option selected">
+                                                no of person
+                                            </li>
+                                            <li data-value="1" class="option">
+                                                no of person
+                                            </li>
+                                            <li data-value="1" class="option">
+                                                no of person
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-clt">
+                                    <input type="text" name="number" id="number" placeholder="phone number">
+                                    <div class="icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                </div>
+                                <div class="form-clt">
+                                    <input type="date" id="calendar" name="calendar">
+                                </div>
+                                <div class="form-clt">
+                                    <a href="reservation.html" class="theme-btn bg-yellow">
+                                        booking now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
