@@ -614,7 +614,7 @@
             </div>
             <div class="row">
                 @foreach ($menu as $mn)
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-md-4 col-12 wow fadeInUp" data-wow-delay=".3s">
                         <div class="catagory-product-card-2 text-center">
                             {{-- <div class="icon">
                                 <a href=""><i class="far fa-heart"></i></a>
@@ -1040,7 +1040,7 @@
         <div class="container">
             <div class="food-icon-wrapper bg-cover" style="background-image: url('kebab/img/shape/food-shape-2.png');">
                 <div class="row g-4">
-                    <div class="col-3 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay=".3s">
                         <div class="single-food-icon">
                             <div class="icon">
                                 <i class="flaticon-quality"></i>
@@ -1054,7 +1054,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay=".5s">
                         <div class="single-food-icon">
                             <div class="icon">
                                 <i class="flaticon-cooking"></i>
@@ -1068,7 +1068,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay=".7s">
                         <div class="single-food-icon">
                             <div class="icon">
                                 <i class="flaticon-fast-delivery"></i>
@@ -1082,7 +1082,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 wow fadeInUp" data-wow-delay=".9s">
+                    <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay=".9s">
                         <div class="single-food-icon">
                             <div class="icon">
                                 <i class="flaticon-quality"></i>
