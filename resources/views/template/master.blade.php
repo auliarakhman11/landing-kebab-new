@@ -242,6 +242,85 @@
     <script src="{{ asset('kebab') }}/js/wow.min.js"></script>
     <!--<< Main.js >>-->
     <script src="{{ asset('kebab') }}/js/main.js"></script>
+
+    <script type="text/javascript" src="{{ asset('lazy') }}/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="{{ asset('lazy') }}/jquery.lazy.plugins.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.boxselect').click(function() {
+                $this = $(this);
+                $('.box').hide();
+                $('.' + $this.attr('kategori_id')).show();
+                console.log("showing " + $this.attr('kategori_id') + " boxes");
+            });
+        });
+
+        var btsearch = {
+            init: function(search_field, searchable_elements, searchable_text_class) {
+                $(search_field).keyup(function(e) {
+                    e.preventDefault();
+                    var query = $(this).val().toLowerCase();
+
+                    if (query) {
+                        // loop through all elements to find match
+                        $.each($(searchable_elements), function() {
+                            var title = $(this).find(searchable_text_class).text()
+                                .toLowerCase();
+                            if (title.indexOf(query) == -1) {
+                                $(this).hide();
+                            } else {
+                                $(this).show();
+                            }
+                        });
+                    } else {
+                        // empty query so show everything
+                        $(searchable_elements).show();
+                    }
+                });
+            }
+        }
+
+        // INIT
+        $(function() {
+
+            btsearch.init('#search_field', '#demonames div', '.demoname');
+        });
+        //end search
+
+        var btsearch2 = {
+            init: function(search_field, searchable_elements, searchable_text_class) {
+                $(document).on('keyup', search_field, function(e) {
+                    e.preventDefault();
+                    var query = $(this).val().toLowerCase();
+
+                    if (query) {
+                        // loop through all elements to find match
+                        $.each($(searchable_elements), function() {
+                            var title = $(this).find(searchable_text_class).text()
+                                .toLowerCase();
+                            if (title.indexOf(query) == -1) {
+                                $(this).hide();
+                            } else {
+                                $(this).show();
+                            }
+                        });
+                    } else {
+                        // empty query so show everything
+                        $(searchable_elements).show();
+                    }
+                });
+            }
+        }
+
+        // INIT
+        $(function() {
+
+            btsearch2.init('#search_field2', '#demonames2 div', '.demoname2');
+        });
+        //end search
+    </script>
+
 </body>
 
 </html>

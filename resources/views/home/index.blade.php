@@ -237,9 +237,9 @@
                                 style="background-image: url('kebab/img/shape/catagory-card-shape.jpg');">
                                 <h5>{{ $tr->nm_produk }}</h5>
                                 <div class="catagory-product-image text-center">
-                                    <a href="shop.html">
+                                    <a href="{{ route('menu') }}">
                                         <img src="https://admin.kebabyasmin.id/{{ $tr->foto }}" alt="product-img"
-                                            style="max-height: 277px;">
+                                            style="max-height: 277px;" class="lazy" loading="lazy">
                                         <div class="decor-leaf">
                                             <img src="{{ asset('kebab') }}/img/shape/decor-leaf.svg" alt="shape-img">
                                         </div>
@@ -253,7 +253,8 @@
                                 </div>
                                 <div class="catagory-product-content text-center">
                                     <div class="catagory-product-icon">
-                                        <img src="{{ asset('img') }}/yasmin-kebab.svg" alt="shape-text">
+                                        <img src="{{ asset('img') }}/yasmin-kebab.svg" alt="shape-text" class="lazy"
+                                            loading="lazy">
                                     </div>
                                     <h3>
                                         <a href="">
@@ -609,7 +610,7 @@
         <div class="container">
             <div class="section-title text-center">
                 <span class="wow fadeInUp">Surganya Ngebab!</span>
-                <h2 class="wow fadeInUp" data-wow-delay=".3s">Menu Produk Kami</h2>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">Menu Kami</h2>
             </div>
             <div class="row">
                 @foreach ($menu as $mn)
@@ -620,7 +621,7 @@
                             </div> --}}
                             <div class="catagory-product-image">
                                 <img src="https://admin.kebabyasmin.id/{{ $mn->foto }}" height="200px;"
-                                    alt="product-img">
+                                    alt="product-img" class="lazy" loading="lazy">
                             </div>
                             <div class="catagory-product-content">
                                 <div class="catagory-button">
@@ -632,7 +633,7 @@
                                     {{-- <span>$28.52</span> --}}
                                 </div>
                                 <h4>
-                                    <a href="">{{ $mn->nm_produk }}</a>
+                                    <a href="{{ route('menu') }}">{{ $mn->nm_produk }}</a>
                                 </h4>
                                 <div class="star">
                                     <span class="fas fa-star"></span>
@@ -864,10 +865,10 @@
                 </div> --}}
             </div>
             <div class="catagory-button text-center pt-4 wow fadeInUp" data-wow-delay=".3s">
-                <a href="" class="theme-btn">
+                <a href="{{ route('menu') }}" class="theme-btn">
                     <span class="button-content-wrapper d-flex align-items-center">
                         <span class="button-icon"><i class="flaticon-delivery"></i></span>
-                        <span class="button-text">view more</span>
+                        <span class="button-text">Lihat lainnya</span>
                     </span>
                 </a>
             </div>
@@ -1413,10 +1414,10 @@
                         <span class="theme-color-3">Order Online</span><br>Ambil Ditempat
                     </h2>
                 </div>
-                <a href="shop-single.html" class="theme-btn bg-white mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
+                <a href="" class="theme-btn bg-white mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
                     <span class="button-content-wrapper d-flex align-items-center">
                         <span class="button-icon"><i class="flaticon-delivery"></i></span>
-                        <span class="button-text">Order</span>
+                        <span class="button-text">Order Online</span>
                     </span>
                 </a>
                 <div class="arrow-shape">
