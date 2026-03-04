@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PenjualanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 //home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 //end home
+
+//nota
+Route::get('print', [PenjualanController::class, 'printNota'])->name('printNota');
+//end nota
 
 //contact us
 Route::get('cotactUs', [HomeController::class, 'cotactUs'])->name('cotactUs');
